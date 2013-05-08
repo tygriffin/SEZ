@@ -12,6 +12,9 @@ SEZWebsite::Application.routes.draw do
 
   match '/contact', :to => 'sez_core#contact'
 
+  devise_for :admin_users, ActiveAdmin::Devise.config
+  ActiveAdmin.routes(self)
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
