@@ -1,17 +1,16 @@
 SEZWebsite::Application.routes.draw do
-  # get "sez_core/index"
 
   root :to => 'sez_core#index'
 
-  get "sez_core/about"
+  match '/about', :to => 'sez_core#about'
 
-  get "sez_core/archive"
+  match '/archive', :to => 'sez_core#archive'
 
-  get "sez_core/contribute"
+  match '/contribute', :to => 'sez_core#contribute'
 
-  get "sez_core/blog"
+  match '/blog', :to => 'sez_core#blog'
 
-  get "sez_core/contact"
+  match '/contact', :to => 'sez_core#contact'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
