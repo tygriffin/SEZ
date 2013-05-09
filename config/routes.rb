@@ -12,6 +12,9 @@ SEZWebsite::Application.routes.draw do
 
   match '/contact', :to => 'sez_core#contact'
 
+  # get "article/index"
+  resources :article
+
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
 
