@@ -5,6 +5,12 @@
   <section>
     <%= raw @body %>
   </section>
+  <section>
+    <ul>
+      <% @vocabulary_words.each do | vocab | %>
+        <li><%= vocab.word %> (<%= vocab.part_of_speech %>): <%= vocab.definition %> [<%= vocab.translation %>]</li>
+      <% end %>
+    </ul>
   <footer>
     <%= @article.author %>
   </footer>
