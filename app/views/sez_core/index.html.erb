@@ -1,5 +1,6 @@
 <% @articles.each do |article| %>
   <section>
+    <%= image_tag article.image_url(:thumb) if article.image? %>
     <h1><%= link_to article.title, article %></h1>
     <p>
       <%= article.description %>
