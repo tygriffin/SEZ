@@ -3,7 +3,7 @@
     <h1><%= @article.title %></h1>
   </header>
   <section>
-    <p><%= @article.body %></p>
+    <%= raw @body %>
   </section>
   <footer>
     <%= @article.author %>
