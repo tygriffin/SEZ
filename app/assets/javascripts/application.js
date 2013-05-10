@@ -13,4 +13,5 @@
 //= require modernizr-2.6.2
 //= require jquery
 //= require jquery_ujs
+//= require popup_bubble
 //= require_tree .

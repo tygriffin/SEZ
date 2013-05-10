@@ -3,6 +3,18 @@
 *
 */
 
+section#latest_articles {
+
+  ul li {
+    display: inline-block;
+    width: 200px;
+
+    h1, p {
+      font-size: 15px;
+    }
+  }
+}
+
 nav#detail {
   ul {
     ul {
