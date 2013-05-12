@@ -1,3 +1,43 @@
-// Place all the styles related to the SezCore controller here.
+// Place all the styles related to the Sez_core controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+/* sez_core.css.scss
+* Main page styles
+*
+*/
+
+section#latest_articles {
+
+  ul li {
+    display: inline-block;
+    width: 200px;
+
+    h1, p {
+      font-size: 15px;
+    }
+
+    .bubble_close {
+      display: none;
+    }
+
+    .bubble_info {
+      padding: 6px;
+      -moz-border-radius: 6px;
+      border-radius: 6px;
+
+      h1, p {
+        width: 200px;
+      }
+    }
+  }
+}
+
+nav#detail {
+  ul {
+    ul {
+      display: inline-block;
+      width: 200px;
+    }
+  }
+}

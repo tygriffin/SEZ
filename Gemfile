@@ -11,6 +11,7 @@ gem 'meta_search', '>= 1.1.0.pre'
 gem 'bluecloth', '>= 2.0.0'
 gem 'carrierwave'
 gem 'rmagick'
+gem 'gon'
 
 # Gems used only for assets and not required
 # in production environments by default.
