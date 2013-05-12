@@ -7,6 +7,7 @@
         <div class="bubble_info" id=<%= "bubble_info"+id_counter.to_s %> >
           <h1><%= link_to article.title, article %></h1>
           <p><%= article.description %></p>
+          <a class="bubble_close">Close</a>
         </div>
       </li>
       <% id_counter += 1 %>

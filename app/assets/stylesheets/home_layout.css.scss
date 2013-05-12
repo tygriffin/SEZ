@@ -12,6 +12,21 @@ section#latest_articles {
     h1, p {
       font-size: 15px;
     }
+
+    .bubble_close {
+      display: none;
+    }
+
+    .bubble_info {
+      background-color: #ccc;
+      padding: 6px;
+      -moz-border-radius: 6px;
+      border-radius: 6px;
+
+      h1, p {
+        width: 200px;
+      }
+    }
   }
 }
 
