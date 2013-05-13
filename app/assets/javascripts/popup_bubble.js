@@ -8,7 +8,11 @@ $(document).ready(function() {
   $('.bubble_info').css({
     backgroundColor: '#ccc',
     position: 'absolute',
-    margin: '0 0 0 80px'
+    margin: '0 0 0 80px',
+    zIndex: '100'
+  });
+  $('.bubble_info p, .bubble_info h1').css({
+    width: '300px'
   });
   $('.bubble_info').hide();
   $('.bubble_close').css('display', 'block');
@@ -18,27 +22,21 @@ $(document).ready(function() {
 });
 
 $(function() {
-  var counter = 1;
   $('.bubble_wrapper').each(function() {
-    var trigger = $('#bubble_trigger'+counter, this);
-    var popup = $('#bubble_info'+counter, this);
-
-    $([trigger.get(0), popup.get(0)]).click(function() {
+    $('.bubble_trigger').click(function() {
       $('.bubble_info').hide();
-      popup.show('fast');
+      $(this).next().stop().show('fast');
     });
 
     $('.bubble_close').click(function(e) {
       e.stopPropagation();
-      popup.hide('fast');
+      $('.bubble_info').hide('fast');
     });
-
-    counter += 1;
   });
 });
 
 $(function() {
-  $('.vocab_bubble_trigger').click(function() {
+  $('.vocab_bubble_trigger').mouseenter(function() {
     for (i=0; i<gon.vocab.length; i++) {
       entry = gon.vocab[i];
       if ($(this).attr('id') == entry['word']) {
@@ -46,12 +44,19 @@ $(function() {
         $('.vocab_bubble').css({
           position: 'absolute',
           width: '200px',
+          padding: '5px',
+          fontSize: '125%',
           backgroundColor: '#ccc'
         });
         $('.vocab_bubble').hide();
         $('.vocab_bubble').show('fast');
       }
     }
+  });
+  $('.vocab_bubble_trigger').mouseout(function() {
+    $('.vocab_bubble').hide('fast', function() {
+      $('.vocab_bubble').remove();
+    });
   });
 });
 

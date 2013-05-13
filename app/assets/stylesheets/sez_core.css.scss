@@ -7,7 +7,7 @@
 *
 */
 
-section#latest_articles {
+section#latest_articles, section#latest_blog_posts {
 
   ul li {
     display: inline-block;
@@ -23,14 +23,16 @@ section#latest_articles {
 
     .bubble_info {
       padding: 6px;
-      -moz-border-radius: 6px;
-      border-radius: 6px;
 
       h1, p {
         width: 200px;
       }
     }
   }
+}
+
+section#latest_blog_posts {
+  width: 500px;
 }
 
 nav#detail {
