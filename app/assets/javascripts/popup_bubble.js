@@ -6,9 +6,9 @@ $(document).ready(function() {
 
   $('.bubble_wrapper').css('position', 'relative');
   $('.bubble_info').css({
-    backgroundColor: '#ccc',
+    backgroundColor: '#a9caa68',
+    opacity:'90%',
     position: 'absolute',
-    margin: '0 0 0 80px',
     zIndex: '100'
   });
   $('.bubble_info p, .bubble_info h1').css({

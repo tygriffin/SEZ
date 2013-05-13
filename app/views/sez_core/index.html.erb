@@ -13,6 +13,10 @@
   </ul>
 </section>
 
+<section id="featured_article">
+
+</section>
+
 <section id="latest_blog_posts">
   <ul>
     <% @posts.each do |post| %>
@@ -20,7 +24,7 @@
         <%= image_tag(post.image_url(:thumb), :class => "bubble_trigger") if post.image? %>
         <div class="bubble_info">
           <h1><%= link_to post.title, post %></h1>
-          <p><%= truncate post.body %></p>
+          <p><%= truncate(post.body, :length => 200, :omission => '...') %></p>
           <a class="bubble_close">Close</a>
         </div>
       </li>
