@@ -14,7 +14,12 @@
 </section>
 
 <section id="featured_article">
-
+  <%= image_tag(@featured.image_url, :class => "bubble_trigger") if @featured.image? %>
+  <div class="bubble_info">
+    <h1><%= link_to @featured.title, @featured %></h1>
+    <p><%= @featured.description %></p>
+    <a class="bubble_close">Close</a>
+  </div>
 </section>
 
 <section id="latest_blog_posts">

@@ -7,7 +7,7 @@ class ArticleController < ApplicationController
     @article = Article.find(params[:id])
     @body = markdown_parse(@article.body, {:escape_html => false, :strict_mode => false,})
     @title = @article.title
-    @vocabulary_words = VocabularyWord.all(params[:article_id => :id])
+    @vocabulary_words = VocabularyWord.where(:article_id => @article.id).order("word")
 
     if @vocabulary_words
       @vocabulary_words.each do |entry|

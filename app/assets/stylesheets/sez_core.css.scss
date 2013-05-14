@@ -7,6 +7,11 @@
 *
 */
 
+div#container {
+  width: 1120px;
+  margin: 0 auto;
+}
+
 header#main_header {
   width: 1020px;
   margin-bottom: 10px;
@@ -15,11 +20,13 @@ header#main_header {
   h1 {
     display: inline-block;
     margin: 0;
+    font-family: Acknowledgement;
     font-size: 500%;
 
     a {
       text-decoration: none;
       color: black;
+      font-family: Chivo;
     }
   }
 
@@ -46,7 +53,26 @@ header#main_header {
 }
 
 section#latest_articles, section#featured_article, section#latest_blog_posts {
-  clear:both;
+  clear: both;
+
+  h1, p, a {
+    color: black;
+    font-size: 15px;
+    text-align: left;
+  }
+
+  .bubble_close {
+    display: none;
+  }
+
+  .bubble_info {
+    padding: 6px;
+
+    h1, p {
+      width: 200px;
+      color: black;
+    }
+  }
 
   ul {
     padding: 0;
@@ -56,24 +82,6 @@ section#latest_articles, section#featured_article, section#latest_blog_posts {
     display: inline-block;
     width: 200px;
     }
-
-    h1, p, a {
-      color: black;
-      font-size: 15px;
-    }
-
-    .bubble_close {
-      display: none;
-    }
-
-    .bubble_info {
-      padding: 6px;
-
-      h1, p {
-        width: 200px;
-        color: black;
-      }
-    }
   }
 }
 
@@ -81,15 +89,17 @@ section#featured_article {
   display: inline-block;
   width: 600px;
   height: 405px;
-  background-color: #eee;
+  text-align: center;
+  border: 1px solid gray;
 }
 
 section#latest_blog_posts {
-  display: inline-block;
+  float: right;
   width: 500px;
 }
 
 footer#main_footer {
+  clear: both;
   text-align: top;
 
   nav {
