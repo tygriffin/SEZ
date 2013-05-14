@@ -40,13 +40,14 @@ $(function() {
     for (i=0; i<gon.vocab.length; i++) {
       entry = gon.vocab[i];
       if ($(this).attr('id') == entry['word']) {
-        $('.vocab_bubble_trigger').append('<span class="vocab_bubble">'+entry['translation']+'</span>');
+        $(this).append('<span class="vocab_bubble">'+entry['translation']+'</span>');
         $('.vocab_bubble').css({
           position: 'absolute',
           width: '200px',
           padding: '5px',
           fontSize: '125%',
-          backgroundColor: '#ccc'
+          backgroundColor: '#a9caa68',
+          zIndex: '100'
         });
         $('.vocab_bubble').hide();
         $('.vocab_bubble').show('fast');
@@ -55,7 +56,7 @@ $(function() {
   });
   $('.vocab_bubble_trigger').mouseout(function() {
     $('.vocab_bubble').hide('fast', function() {
-      $('.vocab_bubble').remove();
+      $(this).closest('.vocab_bubble').remove();
     });
   });
 });

@@ -6,3 +6,59 @@
 * Article styles
 *
 */
+
+article {
+  padding: 20px;
+  max-width: 1100px;
+
+  p {
+    line-height: 140%;
+  }
+
+  header {
+    min-width: 700px;
+    min-height: 350px;
+    margin-bottom: 10px;
+    position: relative;
+
+    h1 {
+      display: inline-block;
+      margin: 0;
+      font-size: 500%;
+
+      a {
+        text-decoration: none;
+        color: black;
+      }
+    }
+
+    h2 {
+      width: 400px;
+      font-size: 200%;
+    }
+
+    img {
+      position: absolute;
+      top: 0;
+      right: 0;
+    }
+  }
+
+  section#vocab {
+    border-top: 1px dashed gray;
+  }
+
+  a.vocab_bubble_trigger {
+    text-decoration: none;
+    color: black;
+    border-bottom: 2px dotted red;
+  }
+
+  footer {
+    border-top: 1px dashed gray;
+
+    p {
+      font-size: 90%;
+    }
+  }
+}

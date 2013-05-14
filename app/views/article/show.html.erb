@@ -1,18 +1,22 @@
 <article>
   <header>
+    <h1><%= link_to "SEZ", root_path %></h1>
     <%= image_tag @article.image %>
-    <h1><%= @article.title %></h1>
+    <h2><%= @article.title %></h2>
   </header>
   <section>
     <%= raw @body %>
   </section>
-  <section>
+  <section id="vocab">
+    <h3>Vocabulary</h3>
     <ul>
       <% @vocabulary_words.each do | vocab | %>
-        <li><%= vocab.word %> (<%= vocab.part_of_speech %>): <%= vocab.definition %> [<%= vocab.translation %>]</li>
+        <%= content_tag :li, :id => vocab.word.tr(" ", "_")+'_detail' do %>
+          <strong><%= vocab.word %></strong> (<%= vocab.part_of_speech %>): <%= vocab.definition %> [<%= vocab.translation %>]
+        <% end %>
       <% end %>
     </ul>
   <footer>
-    <%= @article.author %>
+    <p>Published on <%= @article.pubdate.strftime("%B %d, %Y") %> by <%= @article.author %></p>
   </footer>
 </article>
