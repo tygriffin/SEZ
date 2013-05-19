@@ -8,6 +8,10 @@ class SezCoreController < ApplicationController
     @articles.delete_at(random)
 
     @posts = Post.find(:all, :limit => 4)
+    @posts.each do |post|
+      post.body = markdown_parse(post.body)
+      post.body = post.body.truncate(200, :separator => ' ')
+    end
   end
 
   def about
@@ -16,6 +20,7 @@ class SezCoreController < ApplicationController
 
   def archive
     @title = "Archive"
+    @articles = Article.all(:order => "title")
   end
 
   def contribute
@@ -24,6 +29,7 @@ class SezCoreController < ApplicationController
 
   def blog
     @title = "Blog"
+    @posts = Post.all
   end
 
   def contact

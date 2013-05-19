@@ -1,9 +1,9 @@
-// Place all the styles related to the Article controller here.
+// Place all the styles related to the Post controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-/* article.css.scss
-* Article styles
+/* post.css.scss
+* Post styles
 *
 */
 
@@ -17,7 +17,7 @@ article {
 
   header {
     min-width: 700px;
-    min-height: 350px;
+    min-height: 220px;
     margin-bottom: 10px;
     position: relative;
 
@@ -34,8 +34,7 @@ article {
     }
 
     h2 {
-      width: 400px;
-      font-size: 200%;
+      font-size: 180%;
     }
 
     img {
@@ -45,15 +44,9 @@ article {
     }
   }
 
-  section#vocab, section#audio {
-    border-top: 1px dashed gray;
-    margin: 20px 0 20px 0;
-  }
-
-  a.vocab_bubble_trigger {
-    text-decoration: none;
-    color: black;
-    border-bottom: 2px dotted red;
+  img {
+    float: left;
+    margin: 0 20px 5px 0;
   }
 
   footer {

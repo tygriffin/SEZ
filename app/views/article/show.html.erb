@@ -16,6 +16,13 @@
         <% end %>
       <% end %>
     </ul>
+  </section>
+  <% if @article.audio %>
+    <section id="audio">
+      <h3>Audio</h3>
+      <%= raw @article.audio %>
+    </section>
+  <% end %>
   <footer>
     <p>Published on <%= @article.pubdate.strftime("%B %d, %Y") %> by <%= @article.author %></p>
   </footer>

@@ -1,5 +1,9 @@
 SEZWebsite::Application.routes.draw do
 
+  get "post/index"
+
+  get "post/show"
+
   root :to => 'sez_core#index'
 
   match '/about', :to => 'sez_core#about'

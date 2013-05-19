@@ -6,6 +6,7 @@
         <div class="bubble_info">
           <h1><%= link_to article.title, article %></h1>
           <p><%= article.description %></p>
+          <p><%= "Includes Audio!" if article.audio %></p>
           <a class="bubble_close">Close</a>
         </div>
       </li>
@@ -13,11 +14,12 @@
   </ul>
 </section>
 
-<section id="featured_article">
+<section id="featured_article" class="bubble_wrapper">
   <%= image_tag(@featured.image_url, :class => "bubble_trigger") if @featured.image? %>
   <div class="bubble_info">
     <h1><%= link_to @featured.title, @featured %></h1>
     <p><%= @featured.description %></p>
+    <p><%= "Includes Audio!" if @featured.audio %></p>
     <a class="bubble_close">Close</a>
   </div>
 </section>
@@ -29,7 +31,9 @@
         <%= image_tag(post.image_url(:thumb), :class => "bubble_trigger") if post.image? %>
         <div class="bubble_info">
           <h1><%= link_to post.title, post %></h1>
-          <p><%= truncate(post.body, :length => 200, :omission => '...') %></p>
+          <p>
+            <%= raw post.body %>
+          </p>
           <a class="bubble_close">Close</a>
         </div>
       </li>

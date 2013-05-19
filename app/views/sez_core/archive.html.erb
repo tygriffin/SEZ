@@ -1,2 +1,13 @@
-<h1>SezCore#archive</h1>
-<p>Find me in app/views/sez_core/archive.html.erb</p>
+<h1>Archive</h1>
+
+<ul>
+
+  <% @articles.each do |article| %>
+    <li>
+      <h2><%= article.title %></h2>
+      <p><%= truncate(article.description, :length => 150, :ommision => "...") %></p>
+      <%= "Includes Audio!" if article.audio %>
+    </li>
+  <% end %>
+
+</ul>

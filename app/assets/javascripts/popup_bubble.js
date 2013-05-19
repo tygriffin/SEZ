@@ -7,8 +7,10 @@ $(document).ready(function() {
   $('.bubble_wrapper').css('position', 'relative');
   $('.bubble_info').css({
     backgroundColor: '#a9caa68',
-    opacity:'90%',
+    opacity:'0.9',
     position: 'absolute',
+    top: '180px',
+    left: '10px',
     zIndex: '100'
   });
   $('.bubble_info p, .bubble_info h1').css({

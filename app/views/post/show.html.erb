@@ -1,0 +1,13 @@
+<article>
+  <header>
+    <h1><%= link_to "SEZ", root_path %></h1>
+    <h2><%= @post.title %></h2>
+  </header>
+  <section>
+    <%= image_tag(@post.image_url(:thumb)) %>
+    <%= raw @body %>
+  </section>
+  <footer>
+    <p>Posted on <%= @post.updated_at.strftime("%B %d, %Y") %> by <%= @post.author %></p>
+  </footer>
+</article>
