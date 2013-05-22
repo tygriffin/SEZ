@@ -12,11 +12,12 @@ gem 'bluecloth', '>= 2.0.0'
 gem 'carrierwave'
 gem 'rmagick'
 gem 'gon'
-# gem 'thin'
+gem 'thin'
 
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
+  gem 'therubyracer'
   gem 'sass-rails',   '~> 3.2.3'
   gem 'coffee-rails', '~> 3.2.1'
 
