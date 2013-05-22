@@ -1,7 +1,7 @@
 <article>
   <header>
     <h1><%= link_to "SEZ", root_path %></h1>
-    <%= image_tag(@article.image_url(:article)) %>
+    <%= image_tag(@article.image) %>
     <h2><%= @article.title %></h2>
   </header>
   <section id="article_body">
@@ -31,7 +31,7 @@
       </ul>
     </section>
   <% end %>
-  <% if @article.audio %>
+  <% unless @article.audio.empty? %>
     <section id="audio">
       <h3>Audio</h3>
       <%= raw @article.audio %>

@@ -2,7 +2,7 @@
   <ul>
     <% @articles.each do |article| %>
       <li class="bubble_wrapper">
-        <%= image_tag(article.image_url(:thumb), :class => "bubble_trigger") if article.image? %>
+        <%= image_tag(article.image, :class => "bubble_trigger") if article.image? %>
         <div class="bubble_info">
           <h1><%= link_to article.title, article %></h1>
           <p><%= article.description %></p>
@@ -15,7 +15,7 @@
 </section>
 
 <section id="featured_article" class="bubble_wrapper">
-  <%= image_tag(@featured.image_url(:feature), :class => "bubble_trigger") if @featured.image? %>
+  <%= image_tag(@featured.image_url(:featured), :class => "bubble_trigger") if @featured.image? %>
   <div class="bubble_info">
     <h1><%= link_to @featured.title, @featured %></h1>
     <p><%= @featured.description %></p>
@@ -28,7 +28,7 @@
   <ul>
     <% @posts.each do |post| %>
       <li class="bubble_wrapper">
-        <%= image_tag(post.image_url(:thumb), :class => "bubble_trigger") if post.image? %>
+        <%= image_tag(post.post_image_url(:main), :class => "bubble_trigger") if post.post_image? %>
         <div class="bubble_info">
           <h1><%= link_to post.title, post %></h1>
           <p>

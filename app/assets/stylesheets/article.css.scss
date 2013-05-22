@@ -17,7 +17,7 @@ article {
 
   header {
     min-width: 700px;
-    min-height: 350px;
+    min-height: 300px;
     margin-bottom: 10px;
     position: relative;
 
@@ -42,6 +42,13 @@ article {
       position: absolute;
       top: 0;
       right: 0;
+      height: 300px;
+      width: 300px;
+      filter: grayscale(100%);
+      -webkit-filter: grayscale(100%);
+      -moz-filter: grayscale(100%);
+      -ms-filter: grayscale(100%);
+      -o-filter: grayscale(100%);
     }
   }
 
