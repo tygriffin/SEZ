@@ -2,10 +2,10 @@ class SezCoreController < ApplicationController
   def index
     @title = "Home"
     @articles = Article.find(:all, :limit => 6, :order => "pubdate DESC")
-    # Generate a featured article randomly
-    # random = rand(6)
-    #@featured = @articles[random]
-    #@articles.delete_at(random)
+    Generate a featured article randomly
+    random = rand(6)
+    @featured = @articles[random]
+    @articles.delete_at(random)
 
     @posts = Post.find(:all, :limit => 4)
     @posts.each do |post|
