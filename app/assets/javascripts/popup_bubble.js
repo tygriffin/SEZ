@@ -18,11 +18,11 @@ $(document).ready(function() {
   });
   $('.bubble_info').hide();
   $('.bubble_close').css('display', 'block');
-  $('.vocab_bubble_wrapper').css('position', 'relative');
 
   jQuery.easing.def = "easeInOutBack";
 });
 
+// Home page popups ////////////////////////////////
 $(function() {
   $('.bubble_wrapper').each(function() {
     $('.bubble_trigger').click(function() {
@@ -37,28 +37,40 @@ $(function() {
   });
 });
 
+// Article body popups /////////////////////////////
 $(function() {
-  $('.vocab_bubble_trigger').mouseenter(function() {
-    for (i=0; i<gon.vocab.length; i++) {
-      entry = gon.vocab[i];
+  $('.article_bubble_trigger').mouseenter(function() {
+    //Vocabulary word popup
+    for (var i=0; i<gon.vocab.length; i++) {
+      var entry = gon.vocab[i];
       if ($(this).attr('id') == entry['word']) {
-        $(this).append('<span class="vocab_bubble">'+entry['translation']+'</span>');
-        $('.vocab_bubble').css({
-          position: 'absolute',
-          width: '200px',
-          padding: '5px',
-          fontSize: '125%',
-          backgroundColor: '#a9caa68',
-          zIndex: '100'
-        });
-        $('.vocab_bubble').hide();
-        $('.vocab_bubble').show('fast');
+        $(this).append('<p class="article_bubble">'+entry['translation']+'</p>');
       }
     }
+    //Culture note popup
+    for (var i=0; i<gon.culture_notes.length; i++) {
+      var entry = gon.culture_notes[i];
+      if ($(this).attr('id') == entry['title']) {
+        $(this).append('<p class="article_bubble">'+entry['body']+'</p>');
+      }
+    }
+    $('.article_bubble').css({
+      position: 'fixed',
+      bottom: '30px',
+      left: '5px',
+      fontSize: '150%',
+      padding: '5px',
+      margin: '0',
+      maxWidth: '400px',
+      backgroundColor: '#a9caa68',
+      zIndex: '100'
+    });
+    $('.article_bubble').hide();
+    $('.article_bubble').show('fast');
   });
-  $('.vocab_bubble_trigger').mouseout(function() {
-    $('.vocab_bubble').hide('fast', function() {
-      $(this).closest('.vocab_bubble').remove();
+  $('.article_bubble_trigger').mouseout(function() {
+    $('.article_bubble').hide('fast', function() {
+      $(this).closest('.article_bubble').remove();
     });
   });
 });

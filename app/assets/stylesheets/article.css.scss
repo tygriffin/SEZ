@@ -45,12 +45,36 @@ article {
     }
   }
 
-  section#vocab, section#audio {
-    border-top: 1px dashed gray;
-    margin: 20px 0 20px 0;
+  section#article_body {
+    figure{
+      float: left;
+      width: 400px;
+      margin: 5px 15px 0 0;
+    }
+
+    img {
+      width: 400px;
+      height: auto;
+    }
+
+    figcaption {
+      background-color: #eee;
+      padding: 3px;
+      font-size: 80%;
+    }
   }
 
-  a.vocab_bubble_trigger {
+  section#vocab, section#audio, section#culture_notes {
+    border-top: 1px dashed gray;
+    margin: 20px 0 20px 0;
+    line-height: 150%;
+
+    li {
+      margin: 15px;
+    }
+  }
+
+  a.article_bubble_trigger {
     text-decoration: none;
     color: black;
     border-bottom: 2px dotted red;
