@@ -12,7 +12,7 @@ gem 'bluecloth', '>= 2.0.0'
 gem 'carrierwave'
 gem 'rmagick'
 gem 'gon'
-gem 'thin'
+# gem 'thin'
 
 # Gems used only for assets and not required
 # in production environments by default.
