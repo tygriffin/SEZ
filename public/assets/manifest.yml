@@ -1,14 +1,26 @@
 ---
+Acknowledgement-webfont.eot: Acknowledgement-webfont-8df558b56e985de10edbc73424cc9344.eot
+Acknowledgement-webfont/index.eot: Acknowledgement-webfont-8df558b56e985de10edbc73424cc9344.eot
+Acknowledgement-webfont.svg: Acknowledgement-webfont-c767cf2e8178bbb8e9540816bdb4be99.svg
+Acknowledgement-webfont/index.svg: Acknowledgement-webfont-c767cf2e8178bbb8e9540816bdb4be99.svg
+Acknowledgement-webfont.ttf: Acknowledgement-webfont-9711686ee9662f7c2c55f3fd171661de.ttf
+Acknowledgement-webfont/index.ttf: Acknowledgement-webfont-9711686ee9662f7c2c55f3fd171661de.ttf
+Acknowledgement-webfont.woff: Acknowledgement-webfont-33867bc1c671f0371e186aa4f139576a.woff
+Acknowledgement-webfont/index.woff: Acknowledgement-webfont-33867bc1c671f0371e186aa4f139576a.woff
+SIL Open Font License 1.1.txt: SIL Open Font License 1.1-983911e6f3d34fcd88f6ca9864e96e57.txt
+SIL Open Font License 1/index.1.txt: SIL Open Font License 1.1-983911e6f3d34fcd88f6ca9864e96e57.txt
+demo.html: demo-500e3078e37150110fa170d055c6cbf4.html
+demo/index.html: demo-500e3078e37150110fa170d055c6cbf4.html
 active_admin.js: active_admin-74c5a2a0ebd04577979929732488c14b.js
 active_admin/index.js: active_admin-74c5a2a0ebd04577979929732488c14b.js
-application.js: application-93647aefcad616e7855b4275b6ae81d2.js
-application/index.js: application-93647aefcad616e7855b4275b6ae81d2.js
+application.js: application-62769f12fd7362191eb34b23e774f6a6.js
+application/index.js: application-62769f12fd7362191eb34b23e774f6a6.js
 ! 'jquery.easing.compatibility.js ': ! 'jquery.easing.compatibility.js '
 ! 'jquery/index.easing.compatibility.js ': ! 'jquery.easing.compatibility.js '
 active_admin.css: active_admin-f6eab3903eabe26e294bb5e070593cb6.css
 active_admin/index.css: active_admin-f6eab3903eabe26e294bb5e070593cb6.css
-application.css: application-2b08fbe76db82c97175b37f887b2216c.css
-application/index.css: application-2b08fbe76db82c97175b37f887b2216c.css
+application.css: application-35dcc9e6a757ffd498eea319d4eab8db.css
+application/index.css: application-35dcc9e6a757ffd498eea319d4eab8db.css
 active_admin/admin_notes_icon.png: active_admin/admin_notes_icon-25b05cd8197f7a271d0624853a6dbdd5.png
 active_admin/admin_notes_icon/index.png: active_admin/admin_notes_icon-25b05cd8197f7a271d0624853a6dbdd5.png
 active_admin/datepicker/datepicker-header-bg.png: active_admin/datepicker/datepicker-header-bg-6f0baad739953cb1a0413c031841e82f.png
