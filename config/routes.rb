@@ -19,6 +19,7 @@ SEZWebsite::Application.routes.draw do
   # get "article/index"
   resources :article
   resources :vocabulary_word
+  resources :culture_note
   resources :post
 
   devise_for :admin_users, ActiveAdmin::Devise.config

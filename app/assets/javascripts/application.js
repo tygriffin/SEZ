@@ -15,5 +15,5 @@
 //= require jquery_ujs
 //= require jquery.easing.1.3.js
 //= reuqire jquery.easing.compatibility.js
-//= require popup_bubble
+//= require popup_bubble.js
 //= require_tree .

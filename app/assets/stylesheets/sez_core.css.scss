@@ -8,15 +8,15 @@
 */
 
 //Google font
-//@import url(http://fonts.googleapis.com/css?family=Chivo);
+@import url(http://fonts.googleapis.com/css?family=Chivo);
 
 @font-face {
   font-family: 'Acknowledgement';
-  src: asset-url('Acknowledgement-webfont.eot', font);
-  src: asset-url('Acknowledgement-webfont.eot?#iefix', font) format('embedded-opentype'),
-       asset-url('Acknowledgement-webfont.woff', font) format('woff'),
-       asset-url('Acknowledgement-webfont.ttf', font) format('truetype'),
-       asset-url('Acknowledgement-webfont.svg#Acknowledgement-webfont', font) format('svg');
+  src: font-url('Acknowledgement-webfont.eot');
+  src: font-url('Acknowledgement-webfont.eot?#iefix') format('embedded-opentype'),
+       font-url('Acknowledgement-webfont.woff') format('woff'),
+       font-url('Acknowledgement-webfont.ttf') format('truetype'),
+       font-url('Acknowledgement-webfont.svg#Acknowledgement-webfont') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -34,12 +34,12 @@ div#container {
   h1 {
     display: inline-block;
     margin: 0;
-    font-family: 'Acknowledgement', sans-serif;
-    font-size: 500%;
+    font-size: 600%;
 
     a {
       text-decoration: none;
       color: black;
+      font-family: 'Acknowledgement', sans-serif;
     }
   }
 
@@ -55,6 +55,7 @@ div#container {
         display: inline-block;
         list-style: none;
         margin-left: 13px;
+        font-family: 'Chivo', sans-serif;
       }
 
       a {
@@ -72,6 +73,7 @@ div#container {
     color: black;
     font-size: 15px;
     text-align: left;
+    font-family: 'Chivo', sans-serif;
   }
 
   img {
@@ -84,6 +86,7 @@ div#container {
   }
 
   img:hover {
+    background-color: #f5fcfa;
     filter: grayscale(0%);
     -webkit-filter: grayscale(0%);
     -moz-filter: grayscale(0%);
@@ -152,6 +155,7 @@ footer#main_footer {
 
         li {
           font-size: 75%;
+          font-family: 'Chivo', sans-serif;
         }
       }
     }

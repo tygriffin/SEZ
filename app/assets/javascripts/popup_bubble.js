@@ -62,8 +62,8 @@ $(function() {
       padding: '5px',
       margin: '0',
       maxWidth: '400px',
-      backgroundColor: '#a9caa68',
-      zIndex: '100'
+      backgroundColor: '#000',
+      zIndex: '200'
     });
     $('.article_bubble').hide();
     $('.article_bubble').show('fast');
