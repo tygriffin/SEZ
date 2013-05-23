@@ -11,6 +11,9 @@ class SezCoreController < ApplicationController
     @posts.each do |post|
       post.body = markdown_parse(post.body)
       post.body = post.body.truncate(200, :separator => ' ')
+      if post.body.include?('<a')
+        post.body = post.body.slice!(0..(post.body.index('<a')))
+      end
     end
   end
 

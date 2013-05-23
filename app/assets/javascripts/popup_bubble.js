@@ -6,16 +6,20 @@ $(document).ready(function() {
 
   $('.bubble_wrapper').css('position', 'relative');
   $('.bubble_info').css({
-    backgroundColor: '#a9caa68',
-    opacity:'0.9',
+    backgroundColor: '#6f8500',
+    opacity:'0.95',
     position: 'absolute',
-    top: '180px',
-    left: '10px',
+    top: '175px',
+    left: '5px',
     zIndex: '100'
   });
-  $('.bubble_info p, .bubble_info h1').css({
-    width: '300px'
+  $('#latest_blog_posts div.bubble_info').css('background-color', '#953c10')
+  $('.bubble_info p, .bubble_info h1, .bubble_info a').css({
+    width: '300px',
+    color: '#fff'
   });
+  $('#latest_blog_posts div.bubble_info').append('<img class="bubble_close" src="/images/close_red.png">');
+  $('#latest_articles div.bubble_info, #featured_article div.bubble_info').append('<img class="bubble_close" src="/images/close_green.png">');
   $('.bubble_info').hide();
   $('.bubble_close').css('display', 'block');
 
@@ -62,7 +66,9 @@ $(function() {
       padding: '5px',
       margin: '0',
       maxWidth: '400px',
-      backgroundColor: '#000',
+      opacity: '0.95',
+      backgroundColor: '#6f8500',
+      color: '#fff',
       zIndex: '200'
     });
     $('.article_bubble').hide();

@@ -7,7 +7,6 @@
           <h1><%= link_to article.title, article %></h1>
           <p><%= article.description %></p>
           <p><%= "Includes Audio!" if article.audio %></p>
-          <a class="bubble_close">Close</a>
         </div>
       </li>
     <% end %>
@@ -20,7 +19,6 @@
     <h1><%= link_to @featured.title, @featured %></h1>
     <p><%= @featured.description %></p>
     <p><%= "Includes Audio!" if @featured.audio %></p>
-    <a class="bubble_close">Close</a>
   </div>
 </section>
 
@@ -34,7 +32,6 @@
           <p>
             <%= raw post.body %>
           </p>
-          <a class="bubble_close">Close</a>
         </div>
       </li>
     <% end %>
