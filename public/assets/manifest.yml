@@ -21,6 +21,8 @@ active_admin.css: active_admin-f6eab3903eabe26e294bb5e070593cb6.css
 active_admin/index.css: active_admin-f6eab3903eabe26e294bb5e070593cb6.css
 application.css: application-35dcc9e6a757ffd498eea319d4eab8db.css
 application/index.css: application-35dcc9e6a757ffd498eea319d4eab8db.css
+article.css: article-4b2ff5691bfd971d9747aaf448a5ab69.css
+article/index.css: article-4b2ff5691bfd971d9747aaf448a5ab69.css
 active_admin/admin_notes_icon.png: active_admin/admin_notes_icon-25b05cd8197f7a271d0624853a6dbdd5.png
 active_admin/admin_notes_icon/index.png: active_admin/admin_notes_icon-25b05cd8197f7a271d0624853a6dbdd5.png
 active_admin/datepicker/datepicker-header-bg.png: active_admin/datepicker/datepicker-header-bg-6f0baad739953cb1a0413c031841e82f.png
