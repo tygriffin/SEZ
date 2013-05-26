@@ -25,7 +25,7 @@
       <ul>
       <% @culture_notes.each do | entry | %>
         <%= content_tag :li, :id => entry.title.tr(" ", "_")+'_detail' do %>
-          <strong><%= entry.title %></strong>: <%= entry.body %>
+          <strong><%= entry.title %></strong>: <%= raw entry.body %>
         <% end %>
       <% end %>
       </ul>

@@ -6,7 +6,9 @@
         <div class="bubble_info">
           <h1><%= link_to article.title, article %></h1>
           <p><%= article.description %></p>
-          <p><%= "Includes Audio!" if article.audio %></p>
+          <% unless article.audio.empty? %>
+            <%= image_tag("/images/audio_icon.png", :class => "inline_icon") %>音声付き!
+          <% end %>
         </div>
       </li>
     <% end %>
@@ -18,7 +20,9 @@
   <div class="bubble_info">
     <h1><%= link_to @featured.title, @featured %></h1>
     <p><%= @featured.description %></p>
-    <p><%= "Includes Audio!" if @featured.audio %></p>
+    <% unless @featured.audio.empty? %>
+      <%= image_tag("/images/audio_icon.png", :class => "inline_icon") %>音声付き!
+    <% end %>
   </div>
 </section>
 

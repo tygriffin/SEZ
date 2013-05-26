@@ -4,24 +4,11 @@ $(document).ready(function() {
   //
   //
 
-  $('.bubble_wrapper').css('position', 'relative');
-  $('.bubble_info').css({
-    backgroundColor: '#6f8500',
-    opacity:'0.95',
-    position: 'absolute',
-    top: '175px',
-    left: '5px',
-    zIndex: '100'
-  });
-  $('#latest_blog_posts div.bubble_info').css('background-color', '#953c10')
-  $('.bubble_info p, .bubble_info h1, .bubble_info a').css({
-    width: '300px',
-    color: '#fff'
-  });
+  $('head').append('<link href="/assets/popup_base.css.scss" media="all" rel="stylesheet" type="text/css" />');
   $('#latest_blog_posts div.bubble_info').append('<img class="bubble_close" src="/images/close_red.png">');
   $('#latest_articles div.bubble_info, #featured_article div.bubble_info').append('<img class="bubble_close" src="/images/close_green.png">');
+  $('#vocab').append('<img class="popup_placeholder" src="/images/plus_tab_green.png">');
   $('.bubble_info').hide();
-  $('.bubble_close').css('display', 'block');
 
   jQuery.easing.def = "easeInOutBack";
 });
@@ -29,7 +16,8 @@ $(document).ready(function() {
 // Home page popups ////////////////////////////////
 $(function() {
   $('.bubble_wrapper').each(function() {
-    $('.bubble_trigger').click(function() {
+    $('.bubble_trigger').click(function(e) {
+      e.stopPropagation();
       $('.bubble_info').hide();
       $(this).next().stop().show('fast');
     });
@@ -39,11 +27,19 @@ $(function() {
       $('.bubble_info').hide('fast');
     });
   });
+  $('html').click(function() {
+    $('.bubble_info').hide('fast');
+  });
 });
 
 // Article body popups /////////////////////////////
 $(function() {
-  $('.article_bubble_trigger').mouseenter(function() {
+  var hide_delay = 0;
+  var hide_delay_timer = null;
+
+  $('.article_bubble_trigger').mouseenter(function(e) {
+    if (hide_delay_timer) clearTimeout(hide_delay_timer);
+    $('.popup_placeholder').stop();
     //Vocabulary word popup
     for (var i=0; i<gon.vocab.length; i++) {
       var entry = gon.vocab[i];
@@ -61,11 +57,11 @@ $(function() {
     $('.article_bubble').css({
       position: 'fixed',
       bottom: '30px',
-      left: '5px',
-      fontSize: '150%',
+      left: '10px',
+      fontSize: '130%',
       padding: '5px',
       margin: '0',
-      maxWidth: '400px',
+      maxWidth: '600px',
       opacity: '0.95',
       backgroundColor: '#6f8500',
       color: '#fff',
@@ -73,11 +69,19 @@ $(function() {
     });
     $('.article_bubble').hide();
     $('.article_bubble').show('fast');
-  });
-  $('.article_bubble_trigger').mouseout(function() {
-    $('.article_bubble').hide('fast', function() {
-      $(this).closest('.article_bubble').remove();
-    });
+    $('.popup_placeholder').hide();
+    $('.article_bubble').mouseover(function() {
+      if (hide_delay_timer) clearTimeout(hide_delay_timer);
+    })
+  }).mouseout(function() {
+    if (hide_delay_timer) clearTimeout(hide_delay_timer);
+    hide_delay_timer = setTimeout(function() {
+      hide_delay_timer = null;
+      $('.article_bubble').hide('fast', function() {
+        $(this).closest('.article_bubble').remove();
+      });
+      $('.popup_placeholder').show('fast');
+    }, hide_delay);
   });
 });
 
