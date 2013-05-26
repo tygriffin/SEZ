@@ -4,7 +4,7 @@ $(document).ready(function() {
   //
   //
 
-  $('head').append('<link href="/assets/popup_base.css" media="all" rel="stylesheet" type="text/css" />');
+  $('head').append('<link href="assets/popup_base.css" media="all" rel="stylesheet" type="text/css" />');
   $('#latest_blog_posts div.bubble_info').append('<img class="bubble_close" src="/images/close_red.png">');
   $('#latest_articles div.bubble_info, #featured_article div.bubble_info').append('<img class="bubble_close" src="/images/close_green.png">');
   $('#vocab').append('<img class="popup_placeholder" src="/images/plus_tab_green.png">');
