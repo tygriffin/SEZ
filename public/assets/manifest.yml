@@ -21,6 +21,8 @@ active_admin.css: active_admin-f6eab3903eabe26e294bb5e070593cb6.css
 active_admin/index.css: active_admin-f6eab3903eabe26e294bb5e070593cb6.css
 application.css: application-c6816f4b5993d3eeb59ec15a22a63ea1.css
 application/index.css: application-c6816f4b5993d3eeb59ec15a22a63ea1.css
+article.css: article-e9b7e171dfee98d4a21c16571dec9859.css
+article/index.css: article-e9b7e171dfee98d4a21c16571dec9859.css
 popup_base.css: popup_base-27aacce566079c9767d879206fc7c82f.css
 popup_base/index.css: popup_base-27aacce566079c9767d879206fc7c82f.css
 active_admin/admin_notes_icon.png: active_admin/admin_notes_icon-25b05cd8197f7a271d0624853a6dbdd5.png
