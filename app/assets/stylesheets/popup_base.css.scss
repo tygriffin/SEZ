@@ -20,6 +20,7 @@
 
   .bubble_info {
     background-color: #6f8500;
+    width: 300px;
     opacity: 0.95;
     position: absolute;
     top: 175px;
@@ -28,17 +29,15 @@
     color: #fff;
     text-align: left;
 
-    h1 a {
-      font-size: 150%;
-      text-decoration: none;
+    h2, p {
+      width: 285px;
     }
 
-    h1 a:hover {
+    h2 a:hover {
       text-decoration: underline;
     }
 
-    h1, p, a {
-      width: 300px;
+    h2, p, a {
       color: #fff;
     }
 

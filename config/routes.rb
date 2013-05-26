@@ -14,7 +14,8 @@ SEZWebsite::Application.routes.draw do
 
   match '/blog', :to => 'sez_core#blog'
 
-  match '/contact', :to => 'sez_core#contact'
+  match '/contact' => 'contact#new', :as => 'contact', :via => :get
+  match '/contact' => 'contact#create', :as => 'contact', :via => :post
 
   # get "article/index"
   resources :article

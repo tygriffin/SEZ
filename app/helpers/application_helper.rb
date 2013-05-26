@@ -9,4 +9,10 @@ module ApplicationHelper
     end
   end
 
+  def local_stylesheet
+    if @local_stylesheet
+      "#{local_stylesheet}"
+    end
+  end
+
 end

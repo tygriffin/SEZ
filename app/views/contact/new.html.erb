@@ -1,0 +1,30 @@
+<% if flash[:alert] %>
+  <p><%= flash[:alert] %></p>
+<% end %>
+
+<% if flash[:notice] %>
+  <p><%= flash[:notice] %></p>
+<% end %>
+
+<%= form_for @message, :url => contact_path do |form| %>
+  <fieldset>
+    <dl>
+      <dt><%= form.label :first_name %></dt>
+      <dd><%= form.text_field :first_name %></dd>
+
+      <dt><%= form.label :last_name %></dt>
+      <dd><%= form.text_field :last_name %></dd>
+
+      <dt><%= form.label :email %></dt>
+      <dd><%= form.text_field :email %></dd>
+
+      <dt><%= form.label :subject %></dt>
+      <dd><%= form.text_field :subject %></dd>
+
+      <dt><%= form.label :body %></dt>
+      <dd><%= form.text_area :body %></dd>
+    </dl>
+  </fieldset>
+
+  <%= form.submit "送る" %>
+<% end %>

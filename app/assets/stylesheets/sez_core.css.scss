@@ -3,7 +3,7 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 /* sez_core.css.scss
-* Main page styles
+* Global styles for Sez_core
 *
 */
 
@@ -21,13 +21,22 @@
   font-style: normal;
 }
 
+h2, h3, h4, p, li {
+  color: black;
+  font-family: 'Chivo', sans-serif;
+}
+
+p {
+  line-height: 160%;
+  padding: 5px 0 10px 0;
+}
+
 div#container {
-  width: 1120px;
+  width: 1025px;
   margin: 0 auto;
 }
 
 #main_header {
-  width: 1020px;
   margin-bottom: 10px;
   position: relative;
 
@@ -55,7 +64,6 @@ div#container {
         display: inline-block;
         list-style: none;
         margin-left: 13px;
-        font-family: 'Chivo', sans-serif;
       }
 
       a {
@@ -64,73 +72,6 @@ div#container {
       }
     }
   }
-}
-
-#latest_articles, #featured_article, #latest_blog_posts {
-
-  h1, p, a {
-    color: black;
-    font-size: 15px;
-    text-align: left;
-    font-family: 'Chivo', sans-serif;
-  }
-
-  img:first-child {
-    filter: grayscale(80%);
-    -webkit-filter: grayscale(80%);
-    -moz-filter: grayscale(80%);
-    -ms-filter: grayscale(80%);
-    -o-filter: grayscale(80%);
-    -webkit-transition: all .4s ease;
-  }
-
-  .bubble_info {
-    padding: 6px;
-
-    .inline_icon {
-      margin-right: 10px;
-      padding: 1px;
-      background-color: #333;
-    }
-
-    .bubble_close {
-      float: right;
-    }
-  }
-
-  ul {
-    padding: 0;
-    margin: 0;
-
-    li {
-      position: relative;
-      display: inline-block;
-      width: 200px;
-    }
-  }
-}
-
-#latest_articles img:first-child, #latest_blog_posts img:first-child {
-      height: 200px;
-      width: 200px;
-}
-
-#featured_article {
-  position: relative;
-  display: inline-block;
-  width: 600px;
-  text-align: center;
-  border: 1px solid gray;
-}
-
-#latest_articles {
-  margin-bottom: 6px;
-}
-
-#latest_blog_posts {
-  float: right;
-  width: 500px;
-  clear: left;
 }
 
 footer#main_footer {
@@ -152,7 +93,6 @@ footer#main_footer {
 
         li {
           font-size: 75%;
-          font-family: 'Chivo', sans-serif;
         }
       }
     }

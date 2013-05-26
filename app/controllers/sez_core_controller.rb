@@ -1,6 +1,7 @@
 class SezCoreController < ApplicationController
   def index
     @title = "Home"
+    @local_stylesheet = "home.css.scss"
     @articles = Article.find(:all, :limit => 6, :order => "pubdate DESC")
     #Generate a featured article randomly
     random = rand(6)
@@ -12,7 +13,7 @@ class SezCoreController < ApplicationController
       post.body = markdown_parse(post.body)
       post.body = post.body.truncate(200, :separator => ' ')
       if post.body.include?('<a')
-        post.body = post.body.slice!(0..(post.body.index('<a')))
+        post.body = post.body.slice!(0..(post.body.index('<a')))[0..-2]+"..."
       end
     end
   end
@@ -33,9 +34,5 @@ class SezCoreController < ApplicationController
   def blog
     @title = "Blog"
     @posts = Post.all
-  end
-
-  def contact
-    @title = "Contact"
   end
 end
