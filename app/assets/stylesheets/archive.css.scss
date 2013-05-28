@@ -1,0 +1,58 @@
+/* archive.css.scss
+* Archive page styles
+*
+*/
+
+#archive {
+
+  padding: 0;
+  margin: 0;
+
+  li {
+    list-style: none;
+    float: left;
+    width: 310px;
+    padding: 3px;
+    border: 1px solid gray;
+
+    .archive_thumb {
+      width: 100px;
+      height: 100px;
+      float: left;
+      margin: 3px;
+      filter: grayscale(60%);
+      -webkit-filter: grayscale(60%);
+      -moz-filter: grayscale(60%);
+      -ms-filter: grayscale(60%);
+      -o-filter: grayscale(60%);
+    }
+
+    h2 {
+      padding: 0;
+      margin: 0;
+
+      a {
+        text-decoration: none;
+        color: black;
+      }
+    }
+
+    h2 a:hover {
+      text-decoration: underline;
+    }
+
+    p {
+      font-size: 80%;
+    }
+
+    .includes_audio {
+      width: 32px;
+      background-color: #aaa;
+      padding: 3px;
+
+    }
+
+  }
+
+
+}

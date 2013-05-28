@@ -1,5 +1,5 @@
 class NotificationsMailer < ActionMailer::Base
-  default :from => "noreply@simpleenglishzine.com"
+  default :from => "info@simpleenglishzine.com"
   default :to => "info@simpleenglishzine.com"
 
   def new_message(message)

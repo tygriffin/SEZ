@@ -24,6 +24,7 @@ class SezCoreController < ApplicationController
 
   def archive
     @title = "Archive"
+    @local_stylesheet = "archive.css.scss"
     @articles = Article.all(:order => "title")
   end
 

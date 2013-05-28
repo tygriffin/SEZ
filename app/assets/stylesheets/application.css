@@ -10,5 +10,5 @@
  *
  *= require_self
  *= require normalize-2.1.1
- *= require sez_core
+ *= require_tree .
  */

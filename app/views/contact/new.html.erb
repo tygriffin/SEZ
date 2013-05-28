@@ -1,12 +1,9 @@
-<% if flash[:alert] %>
-  <p><%= flash[:alert] %></p>
-<% end %>
-
-<% if flash[:notice] %>
-  <p><%= flash[:notice] %></p>
+<% flash.each do |name, msg| %>
+  <%= content_tag :div, msg, :id => "flash_#{name}" %>
 <% end %>
 
 <%= form_for @message, :url => contact_path do |form| %>
+  <%= form.error_messages %>
   <fieldset>
     <dl>
       <dt><%= form.label :first_name %></dt>
@@ -24,7 +21,8 @@
       <dt><%= form.label :body %></dt>
       <dd><%= form.text_area :body %></dd>
     </dl>
-  </fieldset>
 
-  <%= form.submit "送る" %>
+
+  <%= form.submit "送る", :class => "submit" %>
+  </fieldset>
 <% end %>

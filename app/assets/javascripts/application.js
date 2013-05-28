@@ -13,7 +13,10 @@
 //= require modernizr-2.6.2
 //= require jquery
 //= require jquery_ujs
-//= require jquery.easing.1.3.js
-//= reuqire jquery.easing.compatibility.js
-//= require popup_bubble.js
+//= require jquery.easing.1.3
+//= reuqire jquery.easing.compatibility
+//= require popup_bubble
+//= require jquery.masonry.js
+//= require jquery.masonry.min.js
+//= require archive.js
 //= require_tree .

@@ -1,11 +1,12 @@
 ActionMailer::Base.smtp_settings = {
-  :address              => "smtp.gmail.com",
-  :port                 => 587,
-  :domain               => "gmail.com",
-  :user_name            => "tygriffin@gmail.com",
-  :password             => "lgqpliznscjmzanr",
+  :address              => "mail.simpleenglishzine.com",
+  :port                 => 26,
+  :domain               => "simpleenglishzine.com",
+  :user_name            => "info@simpleenglishzine.com",
+  :password             => "xVYiKVj3XzmK66Vy",
   :authentication       => :plain,
-  :enable_starttls_auto => true
+  :enable_starttls_auto => true,
+  :openssl_verify_mode  => OpenSSL::SSL::VERIFY_NONE
 }
 
 ActionMailer::Base.default_url_options[:host] = "localhost:3000"
