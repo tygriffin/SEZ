@@ -4,7 +4,7 @@
 
   <% @articles.each do |article| %>
     <li class="item">
-      <h2><%= link_to article.title, article %></h2>
+      <h2><%= link_to article.title, article_path(:id => article.id) %></h2>
       <%= image_tag(article.image_url(:thumb), :class => "archive_thumb") %>
       <p><%= article.description %></p>
       <% unless article.audio.empty? %>
@@ -12,6 +12,5 @@
       <% end %>
     </li>
   <% end %>
-
 
 </ul>

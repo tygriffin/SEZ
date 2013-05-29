@@ -3,7 +3,7 @@ class PostController < ApplicationController
   end
 
   def show
-    @post = Post.find(params[:id])
+    @post = Publication.find(params[:id])
     @body = markdown_parse(@post.body)
   end
 end

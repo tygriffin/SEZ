@@ -2,20 +2,13 @@ class SezCoreController < ApplicationController
   def index
     @title = "Home"
     @local_stylesheet = "home.css.scss"
-    @articles = Article.find(:all, :limit => 6, :order => "pubdate DESC")
+    @articles = Publication.where(:pubtype => "article").order("pubdate DESC").limit(6)
     #Generate a featured article randomly
     random = rand(6)
     @featured = @articles[random]
     @articles.delete_at(random)
 
-    @posts = Post.find(:all, :limit => 4)
-    @posts.each do |post|
-      post.body = markdown_parse(post.body)
-      post.body = post.body.truncate(200, :separator => ' ')
-      if post.body.include?('<a')
-        post.body = post.body.slice!(0..(post.body.index('<a')))[0..-2]+"..."
-      end
-    end
+    @posts = Publication.where(:pubtype => "blog").order("pubdate DESC").limit(4)
   end
 
   def about
@@ -25,7 +18,7 @@ class SezCoreController < ApplicationController
   def archive
     @title = "Archive"
     @local_stylesheet = "archive.css.scss"
-    @articles = Article.all(:order => "title")
+    @articles = Publication.where(:pubtype => "article").order("pubdate DESC")
   end
 
   def contribute
@@ -34,6 +27,6 @@ class SezCoreController < ApplicationController
 
   def blog
     @title = "Blog"
-    @posts = Post.all
+    @posts = Publication.where(:pubtype => "blog").order("pubdate DESC")
   end
 end

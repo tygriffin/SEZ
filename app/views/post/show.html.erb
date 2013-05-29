@@ -4,7 +4,7 @@
     <h2><%= @post.title %></h2>
   </header>
   <section>
-    <%= image_tag(@post.post_image_url(:main)) %>
+    <%= image_tag(@post.image_url(:thumb)) %>
     <%= raw @body %>
   </section>
   <footer>

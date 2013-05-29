@@ -17,14 +17,14 @@ article {
 
   header {
     min-width: 700px;
-    min-height: 220px;
+    min-height: 180px;
     margin-bottom: 10px;
     position: relative;
 
     h1 {
       display: inline-block;
       margin: 0;
-      font-size: 500%;
+      font-size: 400%;
       font-family: Acknowledgement;
 
       a {
@@ -34,7 +34,8 @@ article {
     }
 
     h2 {
-      font-size: 180%;
+      font-size: 240%;
+      width: 100%;
     }
 
     img {
@@ -46,7 +47,7 @@ article {
 
   img {
     float: left;
-    margin: 0 20px 5px 0;
+    padding: 15px 20px 5px 0;
   }
 
   footer {

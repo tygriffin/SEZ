@@ -14,14 +14,17 @@ SEZWebsite::Application.routes.draw do
 
   match '/blog', :to => 'sez_core#blog'
 
+  match '/article', :to => 'article#show', :as => :article
+  match '/post', :to => 'post#show', :as => :post
+
   match '/contact' => 'contact#new', :as => 'contact', :via => :get
   match '/contact' => 'contact#create', :as => 'contact', :via => :post
 
   # get "article/index"
   resources :article
+  resources :post
   resources :vocabulary_word
   resources :culture_note
-  resources :post
 
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)

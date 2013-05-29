@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130526110041) do
+ActiveRecord::Schema.define(:version => 20130529064028) do
 
   create_table "active_admin_comments", :force => true do |t|
     t.string   "resource_id",   :null => false
@@ -46,18 +46,6 @@ ActiveRecord::Schema.define(:version => 20130526110041) do
   add_index "admin_users", ["email"], :name => "index_admin_users_on_email", :unique => true
   add_index "admin_users", ["reset_password_token"], :name => "index_admin_users_on_reset_password_token", :unique => true
 
-  create_table "articles", :force => true do |t|
-    t.string   "title"
-    t.text     "description"
-    t.text     "body"
-    t.string   "author"
-    t.datetime "created_at",  :null => false
-    t.datetime "updated_at",  :null => false
-    t.string   "image"
-    t.date     "pubdate"
-    t.string   "audio"
-  end
-
   create_table "contacts", :force => true do |t|
     t.string   "first_name"
     t.string   "last_name"
@@ -71,19 +59,23 @@ ActiveRecord::Schema.define(:version => 20130526110041) do
   create_table "culture_notes", :force => true do |t|
     t.string   "title"
     t.text     "body"
-    t.integer  "article_id"
+    t.integer  "publication_id"
     t.string   "instance"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.datetime "created_at",     :null => false
+    t.datetime "updated_at",     :null => false
   end
 
-  create_table "posts", :force => true do |t|
+  create_table "publications", :force => true do |t|
     t.string   "title"
+    t.text     "description"
     t.text     "body"
     t.string   "author"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
-    t.string   "post_image"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
+    t.string   "image"
+    t.date     "pubdate"
+    t.string   "audio"
+    t.string   "pubtype"
   end
 
   create_table "vocabulary_words", :force => true do |t|
@@ -91,7 +83,7 @@ ActiveRecord::Schema.define(:version => 20130526110041) do
     t.string   "definition"
     t.string   "translation"
     t.string   "part_of_speech"
-    t.integer  "article_id"
+    t.integer  "publication_id"
     t.datetime "created_at",     :null => false
     t.datetime "updated_at",     :null => false
     t.string   "instance"
