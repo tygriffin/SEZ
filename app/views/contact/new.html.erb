@@ -2,27 +2,27 @@
   <%= content_tag :div, msg, :id => "flash_#{name}" %>
 <% end %>
 
-<%= form_for @message, :url => contact_path do |form| %>
-  <%= form.error_messages %>
+<%= form_for @message, :url => contact_path do |f| %>
+  <%= f.error_messages %>
   <fieldset>
     <dl>
-      <dt><%= form.label :first_name %></dt>
-      <dd><%= form.text_field :first_name %></dd>
+      <dt><%= f.label :first_name %></dt>
+      <dd><%= f.text_field :first_name %></dd>
 
-      <dt><%= form.label :last_name %></dt>
-      <dd><%= form.text_field :last_name %></dd>
+      <dt><%= f.label :last_name %></dt>
+      <dd><%= f.text_field :last_name %></dd>
 
-      <dt><%= form.label :email %></dt>
-      <dd><%= form.text_field :email %></dd>
+      <dt><%= f.label :email %></dt>
+      <dd><%= f.text_field :email %></dd>
 
-      <dt><%= form.label :subject %></dt>
-      <dd><%= form.text_field :subject %></dd>
+      <dt><%= f.label :subject %></dt>
+      <dd><%= f.text_field :subject %></dd>
 
-      <dt><%= form.label :body %></dt>
-      <dd><%= form.text_area :body %></dd>
+      <dt><%= f.label :body %></dt>
+      <dd><%= f.text_area :body %></dd>
     </dl>
 
 
-  <%= form.submit "送る", :class => "submit" %>
+  <%= f.submit "送る", :class => "submit" %>
   </fieldset>
 <% end %>

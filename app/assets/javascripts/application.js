@@ -10,13 +10,13 @@
 // WARNING: THE FIRST BLANK LINE MARKS THE END OF WHAT'S TO BE PROCESSED, ANY BLANK LINE SHOULD
 // GO AFTER THE REQUIRES BELOW.
 //
-//= require modernizr-2.6.2
 //= require jquery
 //= require jquery_ujs
+//= require font_loader
+//= require modernizr-2.6.2
 //= require jquery.easing.1.3
 //= reuqire jquery.easing.compatibility
 //= require popup_bubble
 //= require jquery.masonry.js
 //= require jquery.masonry.min.js
-//= require archive.js
 //= require_tree .

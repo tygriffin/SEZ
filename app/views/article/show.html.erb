@@ -5,6 +5,7 @@
     <h2><%= @article.title %></h2>
   </header>
   <section id="article_body">
+    <%= raw @article.figure unless @article.figure.nil? %>
     <%= raw @body %>
   </section>
   <% unless @vocabulary_words.empty? %>

@@ -27,6 +27,7 @@ class SezCoreController < ApplicationController
 
   def blog
     @title = "Blog"
-    @posts = Publication.where(:pubtype => "blog").order("pubdate DESC")
+    @local_stylesheet ="blog.css.scss"
+    @posts = Publication.where(:pubtype => "blog").order("pubdate DESC").limit(20)
   end
 end

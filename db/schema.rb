@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130529064028) do
+ActiveRecord::Schema.define(:version => 20130529120343) do
 
   create_table "active_admin_comments", :force => true do |t|
     t.string   "resource_id",   :null => false
@@ -76,7 +76,17 @@ ActiveRecord::Schema.define(:version => 20130529064028) do
     t.date     "pubdate"
     t.string   "audio"
     t.string   "pubtype"
+    t.text     "figure"
   end
+
+  create_table "tags", :force => true do |t|
+    t.string   "name"
+    t.integer  "publication_id"
+    t.datetime "created_at",     :null => false
+    t.datetime "updated_at",     :null => false
+  end
+
+  add_index "tags", ["publication_id"], :name => "index_tags_on_publication_id"
 
   create_table "vocabulary_words", :force => true do |t|
     t.string   "word"

@@ -7,6 +7,7 @@
       <h2><%= link_to article.title, article_path(:id => article.id) %></h2>
       <%= image_tag(article.image_url(:thumb), :class => "archive_thumb") %>
       <p><%= article.description %></p>
+      <p>Published on <%= article.pubdate %>
       <% unless article.audio.empty? %>
         <%= image_tag("/images/audio_icon.png", :class => "includes_audio") %>
       <% end %>

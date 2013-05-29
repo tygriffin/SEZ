@@ -11,6 +11,14 @@
     text-align: left;
   }
 
+  h2 a {
+    text-decoration: none;
+  }
+
+  h2 a:hover {
+    text-decoration: underline;
+  }
+
   p {
     font-size: 80%;
     text-align: left;
@@ -70,6 +78,6 @@
 
 #latest_blog_posts {
   float: right;
-  width: 410px;
+  width: 407px;
   clear: left;
 }

@@ -1,9 +1,9 @@
-/* archive.css.scss
-* Archive page styles
+/* blog.css.scss
+* Blog front page styles
 *
 */
 
-#archive {
+#blog {
 
   padding: 0;
   margin: 0 0 50px 0;
@@ -15,7 +15,7 @@
     margin-bottom: 10px;
     border: 1px solid gray;
 
-    .archive_thumb {
+    .post_thumb {
       width: 100px;
       height: 100px;
       float: left;
@@ -45,14 +45,6 @@
       margin: 0;
       padding: 0 0 10px 0;
       font-size: 80%;
-    }
-
-    .includes_audio {
-      width: 28px;
-      background-color: #aaa;
-      padding: 3px;
-      float: right;
-
     }
 
   }

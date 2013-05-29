@@ -7,7 +7,10 @@
 *
 */
 
-
+.wf-loading * {
+    // Hides flash of unstyled text
+    opacity: 0;
+}
 
 @font-face {
   font-family: 'Acknowledgement';
@@ -69,6 +72,10 @@ div#container {
         text-decoration: none;
         color: black;
       }
+
+      a:hover {
+        text-decoration: underline;
+      }
     }
   }
 }
@@ -84,14 +91,28 @@ footer#main_footer {
     ul {
       padding: 0;
 
+      #license {
+        width: 380px;
+      }
+
       ul {
         vertical-align: top;
         display: inline-block;
         list-style: none;
-        width: 200px;
+        width: 198px;
 
         li {
-          font-size: 75%;
+          margin-bottom: 6px;
+          font-size: 90%;
+
+          a {
+            text-decoration: none;
+            color: black;
+          }
+
+          a:hover {
+            text-decoration: underline;
+          }
         }
       }
     }

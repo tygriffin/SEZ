@@ -13,4 +13,49 @@ ActiveAdmin.register Publication do
     column :pubdate
     column :updated_at
   end
+
+  show do |p|
+    attributes_table do
+      row :title
+      row :description
+      row :author
+      row :pubdate
+      row :pubtype
+      row :body
+      row :figure
+      row :image
+      row :audio
+      row "Tags" do |t|
+        p.tags.map(&:name).join(", ").html_safe
+      end
+      row :created_at
+      row :updated_at
+    end
+    active_admin_comments
+  end
+
+  form do |f|
+    f.inputs "References" do
+      f.input :title
+      f.input :description
+      f.input :author
+      f.input :pubdate
+      f.input :pubtype
+    end
+    f.inputs "Content" do
+      f.input :body
+    end
+    f.inputs "Media" do
+      f.input :figure
+      f.input :image
+      f.input :audio
+    end
+    f.inputs "Meta" do
+      f.has_many :tags do |t|
+        t.input :name
+      end
+    end
+    f.actions
+  end
+
 end

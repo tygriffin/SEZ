@@ -1,12 +1,13 @@
 <h1>Blog</h1>
 
-<ul>
+<ul id="blog">
 
   <% @posts.each do |post| %>
-    <li>
-      <h2><%= post.title %></h2>
-      <p><%= truncate(post.body, :length => 150, :ommision => "...") %></p>
-      <span>Posted on <%= post.updated_at %></span>
+    <li class="item">
+      <h2><%= link_to post.title, post_path(:id => post.id) %></h2>
+      <%= image_tag(post.image_url(:thumb), :class => "post_thumb") %>
+      <p><%= post.description %></p>
+      <p>Posted on <%= post.pubdate %></p>
     </li>
   <% end %>
 
