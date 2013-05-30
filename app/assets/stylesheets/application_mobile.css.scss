@@ -26,6 +26,7 @@ h2, h3, h4, p, li {
 }
 
 #main_header {
+  text-align: center;
 
   h1 {
 
@@ -43,12 +44,13 @@ h2, h3, h4, p, li {
     width: 100%;
     background-color: #000;
     margin: 0 0 30px 0;
+    text-align: left;
 
       li {
         display: inline-block;
         list-style: none;
-        font-size: 150%;
-        margin-left: 40px;
+        font-size: 180%;
+        margin-right: 40px;
       }
 
       a {
@@ -78,19 +80,22 @@ h2, h3, h4, p, li {
   h2 {
     padding: 0;
     margin: 0;
+    font-size: 150%;
   }
 
   h2 a {
     text-decoration: underline;
     color: black;
-    font-size: 120%;
   }
 
   p {
     font-size: 110%;
+    line-height: 180%;
   }
 
   .includes_audio {
+    padding: 5px 5px 3px 5px;
+    border-radius: 4px;
     width: 100px;
     color: #fff;
     background-color: #6f8500;
@@ -106,9 +111,9 @@ h2, h3, h4, p, li {
   }
 }
 
-#latest_articles {
+#latest_articles, #latest_blog_posts {
   li {
-    min-height: 320px;
+    min-height: 350px;
   }
 
   .pub_info {
@@ -127,40 +132,29 @@ h2, h3, h4, p, li {
   border-bottom: 1px solid gray;
 }
 
-#latest_blog_posts {
-  li {
-    min-height: 220px;
-  }
-
-  img {
-    float: left;
-  }
-
-  .pub_info {
-    margin-left: 210px;
-  }
-}
-
 footer#main_footer {
 
   nav {
 
     ul {
-    padding: 0;
-    margin: 0 0 0 30px;
+      padding: 0;
+      margin: 0 0 0 30px;
 
       ul {
 
-      padding: 20px;
+        padding: 20px;
 
         li {
-        list-style: none;
-        font-size: 150%;
-        padding: 20px;
+          background-color: #eee;
+          border-radius: 4px;
+          list-style: none;
+          font-size: 150%;
+          margin-top: 20px;
+          padding: 20px;
+          font-size: 130%;
 
           a {
             text-decoration: none;
-            color: black;
           }
         }
       }

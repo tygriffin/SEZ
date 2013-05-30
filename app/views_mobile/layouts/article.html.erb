@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title><%= title %></title>
+  <%= stylesheet_link_tag    "application_mobile" %>
+  <%= stylesheet_link_tag    "article_mobile" %>
+  <%= javascript_include_tag "application_mobile" %>
+  <%= csrf_meta_tags %>
+  <%= include_gon %>
+</head>
+<body>
+
+<%= yield %>
+
+<%= render 'layouts/footer' %>
+
+</body>
+</html>

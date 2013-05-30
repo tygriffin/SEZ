@@ -1,0 +1,48 @@
+<article>
+  <header>
+    <h1><%= link_to "SEZ", root_path %></h1>
+    <%= image_tag(@article.image_url(:main)) %>
+    <h2><%= @article.title %></h2>
+  </header>
+  <section id="article_body">
+    <%= raw @body %>
+    <%= raw @article.figure unless @article.figure.nil? %>
+  </section>
+  <% unless @vocabulary_words.empty? %>
+    <section id="vocab">
+      <h3>Vocabulary</h3>
+      <ul>
+        <% @vocabulary_words.each do | vocab | %>
+          <%= content_tag :li, :id => vocab.word.tr(" ", "_")+'_detail' do %>
+            <strong><%= vocab.word %></strong> (<%= vocab.part_of_speech %>): <%= vocab.definition %> [<%= vocab.translation %>]
+          <% end %>
+        <% end %>
+      </ul>
+    </section>
+  <% end %>
+  <% unless @culture_notes.empty? %>
+    <section id="culture_notes">
+      <h3>Culture Notes</h3>
+      <ul>
+      <% @culture_notes.each do | entry | %>
+        <%= content_tag :li, :id => entry.title.tr(" ", "_")+'_detail' do %>
+          <strong><%= entry.title %></strong>: <%= raw entry.body %>
+        <% end %>
+      <% end %>
+      </ul>
+    </section>
+  <% end %>
+  <% unless @article.audio.empty? %>
+    <section id="audio">
+      <h3>Audio</h3>
+      <%= raw @article.audio %>
+    </section>
+  <% end %>
+  <footer>
+    <p>Published on <%= @article.pubdate.strftime("%B %d, %Y") %> by <%= @article.author %></p>
+    <div class="tags">
+      <h4>Tags:</h4>
+      <p><%= @article.tags.map { |t| t.name }.join(", ") %></p>
+    </div>
+  </footer>
+</article>

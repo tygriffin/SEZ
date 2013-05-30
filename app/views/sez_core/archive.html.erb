@@ -9,7 +9,7 @@
       <p><%= article.description %></p>
       <p>Published on <%= article.pubdate %>
       <% unless article.audio.empty? %>
-        <%= image_tag("/images/audio_icon.png", :class => "includes_audio") %>
+        <p class="includes_audio">音声付き</p>
       <% end %>
     </li>
   <% end %>

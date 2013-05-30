@@ -1,5 +1,8 @@
 class ArticleController < ApplicationController
 
+  #check for mobile
+  before_filter :check_for_mobile
+
   def index
   end
 

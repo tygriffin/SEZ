@@ -1,5 +1,5 @@
 <section id="featured_article">
-  <%= image_tag(@in_focus.image_url(:featured)) %>
+  <%= image_tag(@in_focus.image_url(:in_focus)) %>
   <div class="pub_info">
     <h2><%= link_to @in_focus.title, article_path(:id => @in_focus.id) %></h2>
     <p><%= @in_focus.description %></p>
@@ -13,7 +13,7 @@
   <ul>
     <% @features.each do |f| %>
       <li>
-        <%= image_tag(f.image) %>
+        <%= image_tag(f.image_url(:main)) %>
         <div class="pub_info">
           <h2><%= link_to f.title, article_path(:id => f.id) %></h2>
           <p><%= f.description %></p>
@@ -30,7 +30,7 @@
   <ul>
     <% @posts.each do |p| %>
       <li>
-        <%= image_tag(p.image_url(:thumb)) %>
+        <%= image_tag(p.image_url(:main)) %>
         <div class="pub_info">
           <h2><%= link_to p.title, post_path(:id => p.id) %></h2>
           <p><%= p.description %></p>

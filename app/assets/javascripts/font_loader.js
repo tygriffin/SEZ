@@ -12,7 +12,7 @@ $(document).ready(function () {
       $('#archive, #blog').imagesLoaded(function(){
         $('#archive, #blog').masonry({
             itemSelector : '.item',
-            columnWidth: 333,
+            columnWidth: 330,
             gutterWidth: 10
         });
       });
