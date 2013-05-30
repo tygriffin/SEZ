@@ -1,15 +1,13 @@
 <section id="latest_articles">
   <ul>
-    <% @articles.each do |article| %>
+    <% @features.each do |f| %>
       <li class="bubble_wrapper">
-        <%= image_tag(article.image, :class => "bubble_trigger") %>
+        <%= image_tag(f.image_url(:main), :class => "bubble_trigger") %>
         <div class="bubble_info">
-          <h2><%= link_to article.title, article_path(:id => article.id) %></h2>
-          <p><%= article.description %></p>
-          <% unless article.audio.empty? %>
-            <p class="includes_audio">
-            <%= image_tag("/images/audio_icon.png", :class => "inline_icon") %>音声付き!
-            </p>
+          <h2><%= link_to f.title, article_path(:id => f.id) %></h2>
+          <p><%= f.description %></p>
+          <% unless f.audio.empty? %>
+            <p class="includes_audio">音声付き!</p>
           <% end %>
         </div>
       </li>
@@ -18,26 +16,24 @@
 </section>
 
 <section id="featured_article" class="bubble_wrapper">
-  <%= image_tag(@featured.image_url(:featured), :class => "bubble_trigger") %>
+  <%= image_tag(@in_focus.image_url(:in_focus), :class => "bubble_trigger") %>
   <div class="bubble_info">
-    <h2><%= link_to @featured.title, article_path(:id => @featured.id) %></h2>
-    <p><%= @featured.description %></p>
-    <% unless @featured.audio.empty? %>
-      <p class="includes_audio">
-      <%= image_tag("/images/audio_icon.png", :class => "inline_icon") %>音声付き!
-      </p>
+    <h2><%= link_to @in_focus.title, article_path(:id => @in_focus.id) %></h2>
+    <p><%= @in_focus.description %></p>
+    <% unless @in_focus.audio.empty? %>
+      <p class="includes_audio">音声付き!</p>
     <% end %>
   </div>
 </section>
 
 <section id="latest_blog_posts">
   <ul>
-    <% @posts.each do |post| %>
+    <% @posts.each do |p| %>
       <li class="bubble_wrapper">
-        <%= image_tag(post.image_url(:thumb), :class => "bubble_trigger") %>
+        <%= image_tag(p.image_url(:main), :class => "bubble_trigger") %>
         <div class="bubble_info">
-          <h2><%= link_to post.title, post_path(:id => post.id) %></h2>
-          <p><%= post.description %></p>
+          <h2><%= link_to p.title, article_path(:id => p.id) %></h2>
+          <p><%= p.description %></p>
         </div>
       </li>
     <% end %>

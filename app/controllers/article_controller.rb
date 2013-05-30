@@ -1,18 +1,13 @@
 class ArticleController < ApplicationController
 
-  @articles = Publication.where(:pubtype => "article").order("pudate DESC").limit(20)
-  respond_to do |format|
-    format.rss { render :layout => false }
-  end
-
   def index
   end
 
   def show
-    @article = Publication.find(params[:id])
+    @article = Article.find(params[:id])
     @body = markdown_parse(@article.body, {:escape_html => false, :strict_mode => false,})
-    @vocabulary_words = VocabularyWord.where(:publication_id => @article.id).order("word")
-    @culture_notes = CultureNote.where(:publication_id => @article.id).order("title")
+    @vocabulary_words = VocabularyWord.where(:article_id => @article.id).order("word")
+    @culture_notes = CultureNote.where(:article_id => @article.id).order("title")
 
     if @vocabulary_words
       @vocabulary_words.each do |entry|
@@ -38,3 +33,6 @@ class ArticleController < ApplicationController
 
   end
 end
+
+
+

@@ -1,7 +1,7 @@
 <article>
   <header>
     <h1><%= link_to "SEZ", root_path %></h1>
-    <%= image_tag(@article.image) %>
+    <%= image_tag(@article.image_url(:main)) %>
     <h2><%= @article.title %></h2>
   </header>
   <section id="article_body">
@@ -40,5 +40,9 @@
   <% end %>
   <footer>
     <p>Published on <%= @article.pubdate.strftime("%B %d, %Y") %> by <%= @article.author %></p>
+    <div class="tags">
+      <h4>Tags:</h4>
+      <p><%= @article.tags.map { |t| t.name }.join(", ") %></p>
+    </div>
   </footer>
 </article>

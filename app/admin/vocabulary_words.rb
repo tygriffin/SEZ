@@ -5,7 +5,7 @@ ActiveAdmin.register VocabularyWord do
     column :definition
     column :translation
     column :part_of_speech
-    column :publication_id
+    column :article_id
     column :updated_at
     default_actions
   end

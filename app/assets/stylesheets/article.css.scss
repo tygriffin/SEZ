@@ -18,8 +18,8 @@ article {
   }
 
   header {
-    min-width: 700px;
-    min-height: 250px;
+    min-width: 800px;
+    min-height: 260px;
     margin-bottom: 10px;
     position: relative;
 
@@ -37,8 +37,8 @@ article {
     }
 
     h2 {
-      width: 600px;
-      font-size: 240%;
+      width: 500px;
+      font-size: 200%;
       padding: 20px 0;
       margin: 0;
     }
@@ -46,9 +46,8 @@ article {
     img {
       position: absolute;
       top: 0;
-      right: 0;
-      height: 250px;
-      width: 250px;
+      right: 25px;
+      width: 260px;
       filter: grayscale(100%);
       -webkit-filter: grayscale(100%);
       -moz-filter: grayscale(100%);
@@ -98,5 +97,21 @@ article {
     p {
       font-size: 90%;
     }
+
+    .tags {
+      background-color: #dedede;
+      padding: 1px;
+
+      h4, p {
+        display: inline-block;
+        padding: 0;
+        margin: 0;
+      }
+    }
   }
+}
+
+#main_footer {
+  padding: 0 0 20px 20px;
+
 }

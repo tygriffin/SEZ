@@ -1,4 +1,4 @@
 class CultureNote < ActiveRecord::Base
-  attr_accessible :publication_id, :body, :instance, :title
-  belongs_to :publication
+  attr_accessible :article_id, :body, :instance, :title
+  belongs_to :article
 end

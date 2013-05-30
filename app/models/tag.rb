@@ -1,4 +1,4 @@
 class Tag < ActiveRecord::Base
-  belongs_to :publication
+  belongs_to :article
   attr_accessible :name
 end
