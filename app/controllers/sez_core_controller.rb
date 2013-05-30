@@ -5,7 +5,7 @@ class SezCoreController < ApplicationController
 
   def index
     @title = "Home"
-    @local_stylesheet = "home.css.scss"
+    @local_stylesheet = "home.css"
     @articles = Publication.where(:pubtype => "article").order("pubdate DESC").limit(6)
     #Generate a featured article randomly
     random = rand(6)
@@ -21,7 +21,7 @@ class SezCoreController < ApplicationController
 
   def archive
     @title = "Archive"
-    @local_stylesheet = "archive.css.scss"
+    @local_stylesheet = "archive.css"
     @articles = Publication.where(:pubtype => "article").order("pubdate DESC")
   end
 
@@ -31,7 +31,7 @@ class SezCoreController < ApplicationController
 
   def blog
     @title = "Blog"
-    @local_stylesheet ="blog.css.scss"
+    @local_stylesheet ="blog.css"
     @posts = Publication.where(:pubtype => "blog").order("pubdate DESC").limit(20)
   end
 end
