@@ -15,6 +15,8 @@ active_admin.js: active_admin-74c5a2a0ebd04577979929732488c14b.js
 active_admin/index.js: active_admin-74c5a2a0ebd04577979929732488c14b.js
 application.js: application-5eea5a3ec6e56fc639f90af925868d24.js
 application/index.js: application-5eea5a3ec6e56fc639f90af925868d24.js
+application_mobile.js: application_mobile-1b13569e9620782f423d4cd3ce931750.js
+application_mobile/index.js: application_mobile-1b13569e9620782f423d4cd3ce931750.js
 ! 'jquery.easing.compatibility.js ': ! 'jquery.easing.compatibility.js '
 ! 'jquery/index.easing.compatibility.js ': ! 'jquery.easing.compatibility.js '
 active_admin.css: active_admin-f6eab3903eabe26e294bb5e070593cb6.css
