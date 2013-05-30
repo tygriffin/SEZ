@@ -23,6 +23,8 @@ archive.css: archive-c44abbc6d37ad24a0e87c4b1bfa7bd85.css
 archive/index.css: archive-c44abbc6d37ad24a0e87c4b1bfa7bd85.css
 article.css: article-2a16f05cdd9e54f8b9f4401e35911bfe.css
 article/index.css: article-2a16f05cdd9e54f8b9f4401e35911bfe.css
+article_mobile.css: article_mobile-5c4880352336bed56f0d45661edf00b0.css
+article_mobile/index.css: article_mobile-5c4880352336bed56f0d45661edf00b0.css
 blog.css: blog-850fce1f8d43490ee0a860ef54e8c83e.css
 blog/index.css: blog-850fce1f8d43490ee0a860ef54e8c83e.css
 home.css: home-7fec9a467cd8dbe8261bf0bf33e37169.css
