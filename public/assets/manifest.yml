@@ -21,6 +21,8 @@ active_admin.css: active_admin-f6eab3903eabe26e294bb5e070593cb6.css
 active_admin/index.css: active_admin-f6eab3903eabe26e294bb5e070593cb6.css
 application.css: application-76f7b86fd0d3e8b98f67bbe9e2cce3b4.css
 application/index.css: application-76f7b86fd0d3e8b98f67bbe9e2cce3b4.css
+application_mobile.css: application_mobile-c6a1a876dc0457f76e07bfad3680eee6.css
+application_mobile/index.css: application_mobile-c6a1a876dc0457f76e07bfad3680eee6.css
 archive.css: archive-1d3e9a7a565e2e92d6a19877a1019c92.css
 archive/index.css: archive-1d3e9a7a565e2e92d6a19877a1019c92.css
 article.css: article-412035eb9173362ac1aee81e4998c878.css
