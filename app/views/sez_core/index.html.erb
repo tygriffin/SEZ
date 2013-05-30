@@ -7,7 +7,9 @@
           <h2><%= link_to article.title, article_path(:id => article.id) %></h2>
           <p><%= article.description %></p>
           <% unless article.audio.empty? %>
+            <p class="includes_audio">
             <%= image_tag("/images/audio_icon.png", :class => "inline_icon") %>音声付き!
+            </p>
           <% end %>
         </div>
       </li>
@@ -21,7 +23,9 @@
     <h2><%= link_to @featured.title, article_path(:id => @featured.id) %></h2>
     <p><%= @featured.description %></p>
     <% unless @featured.audio.empty? %>
+      <p class="includes_audio">
       <%= image_tag("/images/audio_icon.png", :class => "inline_icon") %>音声付き!
+      </p>
     <% end %>
   </div>
 </section>

@@ -1,7 +1,7 @@
 class SezCoreController < ApplicationController
 
   #check for mobile
-  before_filter :prepare_for_mobile
+  before_filter :check_for_mobile
 
   def index
     @title = "Home"

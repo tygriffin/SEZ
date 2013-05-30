@@ -25,6 +25,8 @@ archive.css: archive-1d3e9a7a565e2e92d6a19877a1019c92.css
 archive/index.css: archive-1d3e9a7a565e2e92d6a19877a1019c92.css
 article.css: article-412035eb9173362ac1aee81e4998c878.css
 article/index.css: article-412035eb9173362ac1aee81e4998c878.css
+blog.css: blog-86c1cacd6a44e7ee6237f2504d58dc6b.css
+blog/index.css: blog-86c1cacd6a44e7ee6237f2504d58dc6b.css
 home.css: home-7fec9a467cd8dbe8261bf0bf33e37169.css
 home/index.css: home-7fec9a467cd8dbe8261bf0bf33e37169.css
 popup_base.css: popup_base-f8159b736f5f3c2a3a92440089162d12.css
