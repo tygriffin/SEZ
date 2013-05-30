@@ -32,7 +32,7 @@
       <li>
         <%= image_tag(p.image_url(:main)) %>
         <div class="pub_info">
-          <h2><%= link_to p.title, post_path(:id => p.id) %></h2>
+          <h2><%= link_to p.title, article_path(:id => p.id) %></h2>
           <p><%= p.description %></p>
         </div>
       </li>
