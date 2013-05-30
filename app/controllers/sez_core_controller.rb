@@ -1,4 +1,8 @@
 class SezCoreController < ApplicationController
+
+  #check for mobile
+  before_filter :prepare_for_mobile
+
   def index
     @title = "Home"
     @local_stylesheet = "home.css.scss"
