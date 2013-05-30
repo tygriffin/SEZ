@@ -16,7 +16,7 @@
 </section>
 
 <section id="featured_article" class="bubble_wrapper">
-
+  <%= image_tag(@featured.image_url(:featured), :class => "bubble_trigger") %>
   <div class="bubble_info">
     <h2><%= link_to @featured.title, article_path(:id => @featured.id) %></h2>
     <p><%= @featured.description %></p>
