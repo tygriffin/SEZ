@@ -39,14 +39,8 @@
     }
   }
 
-  .includes_audio {
-    margin: 0;
-    font-size: 60%;
-    width: auto;
+  .includes_tool {
     border: 1px solid #fff;
-    border-radius: 4px;
-    display: inline-block;
-    padding: 5px 7px 3px 5px;
   }
 
   .bubble_close {
@@ -55,10 +49,32 @@
     right: 5px;
   }
 
+  .study_tools {
+
+    li {
+      color: #fff;
+      position: static;
+      background-image: none;
+    }
+
+    li:after {
+      background-image: none;
+      content: none;
+    }
+  }
+
   ul {
 
     li {
       height: 200px;
+
+      .study_tools {
+
+        li {
+          width: auto;
+          height: auto;
+        }
+      }
     }
   }
 }

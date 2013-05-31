@@ -10,11 +10,12 @@ $(document).ready(function() {
 // Article body popups /////////////////////////////
 $(function() {
 
-  $('html').click(function() {
+  $('html').on('touchstart mousedown', function() {
     $('.article_bubble').hide('fast');
+    $('.article_bubble').remove();
   });
 
-  $('.article_bubble_trigger').click(function(e) {
+  $('.article_bubble_trigger').on('touchstart', function(e) {
     e.stopPropagation();
     //Vocabulary word popup
     for (var i=0; i<gon.vocab.length; i++) {

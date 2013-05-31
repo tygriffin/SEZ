@@ -6,9 +6,11 @@
         <div class="bubble_info">
           <h2><%= link_to f.title, article_path(:id => f.id) %></h2>
           <p><%= f.description %></p>
-          <% unless f.audio.empty? %>
-            <p class="includes_audio">音声付き</p>
-          <% end %>
+          <ul class="study_tools">
+            <%= content_tag(:li, "音声付き", :class => "includes_tool") unless f.audio.empty? %>
+            <%= content_tag(:li, "文化説明", :class => "includes_tool") unless f.culture_notes.empty? %>
+            <%= content_tag(:li, "単語付き", :class => "includes_tool") unless f.vocabulary_words.empty? %>
+          </ul>
         </div>
       </li>
     <% end %>
@@ -20,9 +22,11 @@
   <div class="bubble_info">
     <h2><%= link_to @in_focus.title, article_path(:id => @in_focus.id) %></h2>
     <p><%= @in_focus.description %></p>
-    <% unless @in_focus.audio.empty? %>
-      <p class="includes_audio">音声付き</p>
-    <% end %>
+    <ul class="study_tools">
+            <%= content_tag(:li, "音声付き", :class => "includes_tool") unless @in_focus.audio.empty? %>
+            <%= content_tag(:li, "文化説明", :class => "includes_tool") unless @in_focus.culture_notes.empty? %>
+            <%= content_tag(:li, "単語付き", :class => "includes_tool") unless @in_focus.vocabulary_words.empty? %>
+          </ul>
   </div>
 </section>
 
@@ -34,6 +38,11 @@
         <div class="bubble_info">
           <h2><%= link_to p.title, article_path(:id => p.id) %></h2>
           <p><%= p.description %></p>
+          <ul class="study_tools">
+            <%= content_tag(:li, "音声付き", :class => "includes_tool") unless p.audio.empty? %>
+            <%= content_tag(:li, "文化説明", :class => "includes_tool") unless p.culture_notes.empty? %>
+            <%= content_tag(:li, "単語付き", :class => "includes_tool") unless p.vocabulary_words.empty? %>
+          </ul>
         </div>
       </li>
     <% end %>
