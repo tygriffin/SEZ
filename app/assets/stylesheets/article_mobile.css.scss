@@ -5,12 +5,12 @@
 
 
 article {
-  padding: 10px;
   width: 100%;
 
   p {
     line-height: 200%;
     font-size: 200%;
+    padding: 40px;
   }
 
   figcaption {
@@ -18,8 +18,11 @@ article {
   }
 
   header {
+    background-color: #eee;
+    min-height: 300px;
 
     h1 {
+      display: inline-block;
       margin: 0;
       padding: 0;
       font-size: 400%;
@@ -32,10 +35,15 @@ article {
     }
 
     h2 {
+      margin: 0;
+      padding: 0;
+      width: 60%;
       font-size: 300%;
     }
 
     img {
+      float: right;
+      margin-right: 50px;
       filter: grayscale(100%);
       -webkit-filter: grayscale(100%);
       -moz-filter: grayscale(100%);
@@ -45,6 +53,7 @@ article {
   }
 
   section#vocab, section#audio, section#culture_notes {
+    padding: 30px;
     border-top: 1px dashed gray;
     line-height: 200%;
     font-size: 200%;
@@ -65,7 +74,7 @@ article {
 
     .tags {
       background-color: #dedede;
-      padding: 4px;
+      padding: 20px;
 
       h4, p {
         display: inline-block;

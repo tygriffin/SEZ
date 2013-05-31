@@ -15,7 +15,11 @@ class ArticleController < ApplicationController
     if @vocabulary_words
       @vocabulary_words.each do |entry|
         if @body.include? entry.instance
-          text = '<a href="#' + entry.word.tr(" ", "_") + '_detail"  class="article_bubble_trigger" id="' + entry.word + '">' + entry.instance + '</a>'
+          if mobile_device?
+            text = '<a class="article_bubble_trigger" id="' + entry.word + '">' + entry.instance + '</a>'
+          else
+            text = '<a href="#' + entry.word.tr(" ", "_") + '_detail" class="article_bubble_trigger" id="' + entry.word + '">' + entry.instance + '</a>'
+          end
           @body.gsub!(entry.instance, text)
         end
       end
@@ -26,7 +30,11 @@ class ArticleController < ApplicationController
     if @culture_notes
       @culture_notes.each do |entry|
         if @body.include? entry.instance
-          text = '<a href="#' + entry.title.tr(" ", "_") + '_detail"  class="article_bubble_trigger" id="' + entry.title + '">' + entry.instance + '</a>'
+          if mobile_device?
+            text = '<a class="article_bubble_trigger" id="' + entry.title + '">' + entry.instance + '</a>'
+          else
+            text = '<a href="#' + entry.title.tr(" ", "_") + '_detail"  class="article_bubble_trigger" id="' + entry.title + '">' + entry.instance + '</a>'
+          end
           @body.gsub!(entry.instance, text)
         end
       end

@@ -34,4 +34,5 @@ class SezCoreController < ApplicationController
     @local_stylesheet ="blog.css"
     @posts = Article.where(:pubtype => "blog").order("pubdate DESC").limit(20)
   end
+
 end

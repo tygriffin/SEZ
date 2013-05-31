@@ -7,7 +7,7 @@
           <h2><%= link_to f.title, article_path(:id => f.id) %></h2>
           <p><%= f.description %></p>
           <% unless f.audio.empty? %>
-            <p class="includes_audio">音声付き!</p>
+            <p class="includes_audio">音声付き</p>
           <% end %>
         </div>
       </li>
@@ -21,7 +21,7 @@
     <h2><%= link_to @in_focus.title, article_path(:id => @in_focus.id) %></h2>
     <p><%= @in_focus.description %></p>
     <% unless @in_focus.audio.empty? %>
-      <p class="includes_audio">音声付き!</p>
+      <p class="includes_audio">音声付き</p>
     <% end %>
   </div>
 </section>

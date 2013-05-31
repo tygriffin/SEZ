@@ -1,6 +1,10 @@
 class ContactController < ApplicationController
 
+  #check for mobile device
+  before_filter :check_for_mobile
+
   def new
+    @local_stylesheet = "contact.css"
     @message = Contact.new
   end
 
