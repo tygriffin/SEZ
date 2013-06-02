@@ -96,18 +96,6 @@ h2 {
     line-height: 180%;
   }
 
-  .study_tools {
-    li {
-      min-height: auto;
-      height: auto;
-    }
-
-    .includes_tool {
-      min-height: auto !important;
-      height: auto;
-    }
-  }
-
   img {
     padding: 0 10px 10px 0;
     filter: grayscale(40%);
@@ -148,6 +136,18 @@ h2 {
 
   .pub_info {
     margin-left: 310px;
+
+    .study_tools {
+      li {
+        min-height: auto;
+        height: auto;
+      }
+
+      .includes_tool {
+        min-height: auto !important;
+        height: auto;
+      }
+    }
   }
 
   img {
