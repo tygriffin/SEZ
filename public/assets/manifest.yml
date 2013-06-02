@@ -15,6 +15,8 @@ application.js: application-389803d8546ec7d0c730a1ea7d86067c.js
 application/index.js: application-389803d8546ec7d0c730a1ea7d86067c.js
 application_mobile.js: application_mobile-7391c8707914d0f893570f672c226ef5.js
 application_mobile/index.js: application_mobile-7391c8707914d0f893570f672c226ef5.js
+popup_bubble.js: popup_bubble-b2c0ea5d059a032f40b166a983959856.js
+popup_bubble/index.js: popup_bubble-b2c0ea5d059a032f40b166a983959856.js
 popup_mobile.js: popup_mobile-52658cdc39f68eabe8367d6776090af6.js
 popup_mobile/index.js: popup_mobile-52658cdc39f68eabe8367d6776090af6.js
 application.css: application-76f7b86fd0d3e8b98f67bbe9e2cce3b4.css

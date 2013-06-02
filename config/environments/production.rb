@@ -46,7 +46,7 @@ SEZWebsite::Application.configure do
   # config.action_controller.asset_host = "http://assets.example.com"
 
   # Precompile additional assets (application.js, application.css, and all non-JS/CSS are already added)
-  config.assets.precompile += ['article.css', 'popup_base.css', 'home.css', 'archive.css', 'blog.css', 'contact.css', 'application_mobile.css', 'article_mobile.css', 'application_mobile.js', 'popup_mobile.js']
+  config.assets.precompile += ['article.css', 'popup_base.css', 'home.css', 'archive.css', 'blog.css', 'contact.css', 'application_mobile.css', 'article_mobile.css', 'application_mobile.js', 'popup_mobile.js', 'popup_bubble.js']
 
   # Disable delivery errors, bad email addresses will be ignored
   # config.action_mailer.raise_delivery_errors = false
