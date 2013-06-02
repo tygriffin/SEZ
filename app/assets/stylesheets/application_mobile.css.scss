@@ -135,13 +135,13 @@ h2 {
 
     .study_tools {
       li {
-        min-height: auto;
-        height: auto;
+        min-height: auto !important;
+        height: auto !important;
       }
 
       .includes_tool {
         min-height: auto !important;
-        height: auto;
+        height: auto !important;
       }
     }
   }
