@@ -20,10 +20,13 @@ $(function() {
     $('.bubble_trigger').click(function(e) {
       e.stopPropagation();
       $('.bubble_info').hide();
-      $(this).next().stop().show('fast');
+      $(this).next().stop().show('fast', function() {
+        alert( $('.bubble_info').css("display"));
+      });
       if($.browser.msie) {  // fix for IE
         $('.bubble_info').css({"visibility":"visible"});
       }
+      $('.bubble_info').css({"visibility":"visible"});
     });
 
     $('.bubble_close').click(function(e) {

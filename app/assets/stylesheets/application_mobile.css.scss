@@ -99,10 +99,12 @@ h2 {
   .study_tools {
     li {
       min-height: auto;
+      height: auto;
     }
 
     .includes_tool {
-      min-height: auto;
+      min-height: auto !important;
+      height: auto;
     }
   }
 
@@ -229,7 +231,7 @@ form {
     -moz-appearance: none;
     display: block;
     margin: 0;
-    width: 90%;
+    width: 80%;
     height: 80px;
     line-height: 40px;
     font-size: 300%;

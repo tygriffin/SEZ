@@ -17,6 +17,7 @@ $(function() {
 
   $('.article_bubble_trigger').on('touchstart', function(e) {
     e.stopPropagation();
+    $('.article_bubble').remove();
     //Vocabulary word popup
     for (var i=0; i<gon.vocab.length; i++) {
       var entry = gon.vocab[i];
