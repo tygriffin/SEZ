@@ -83,23 +83,7 @@
   background-color: #953c10;
 }
 
-#latest_articles li:after, #latest_blog_posts li:after {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  content: " ";
-  width: 200px;
-  height: 200px;
-  pointer-events: none;
-}
 
-#latest_articles li:after, #featured_article:after {
-  background: url('/images/plus_tab_green.png') no-repeat bottom left;
-}
-
-#latest_blog_posts li:after {
-  background: url('/images/plus_tab_red.png') no-repeat bottom left;
-}
 
 #featured_article:after {
   position: absolute;
