@@ -132,10 +132,6 @@ h2 {
 #latest_articles, #latest_blog_posts {
   li {
     min-height: 350px;
-  }
-
-  .pub_info {
-    margin-left: 310px;
 
     .study_tools {
       li {
@@ -148,6 +144,10 @@ h2 {
         height: auto;
       }
     }
+  }
+
+  .pub_info {
+    margin-left: 310px;
   }
 
   img {

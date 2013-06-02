@@ -27,6 +27,7 @@ $(function() {
         $('.bubble_info').css({"visibility":"visible"});
       }
       $('.bubble_info').css({"visibility":"visible"});
+      alert( $('.bubble_info').css("display"));
     });
 
     $('.bubble_close').click(function(e) {
