@@ -8,6 +8,7 @@
       <%= image_tag(post.image_url(:thumb), :class => "post_thumb") %>
       <p><%= post.description %></p>
       <p>Posted on <%= post.pubdate %></p>
+      <%= render 'layouts/study_tools', :a => post %>
     </li>
   <% end %>
 

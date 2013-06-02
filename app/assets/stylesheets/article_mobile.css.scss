@@ -13,8 +13,17 @@ article {
     padding: 40px;
   }
 
-  figcaption {
-    font-size: 200%;
+  figure {
+    width: 400px;
+
+    img {
+      width: 400px;
+    }
+
+    figcaption {
+      font-size: 200%;
+      background-color: #eee;
+    }
   }
 
   header {

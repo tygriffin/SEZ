@@ -8,9 +8,7 @@
       <%= image_tag(article.image_url(:thumb), :class => "archive_thumb") %>
       <p><%= article.description %></p>
       <p>Published on <%= article.pubdate %>
-      <% unless article.audio.empty? %>
-        <p class="includes_audio">音声付き</p>
-      <% end %>
+      <%= render 'layouts/study_tools', :a => article %>
     </li>
   <% end %>
 

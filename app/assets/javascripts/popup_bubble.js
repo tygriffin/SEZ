@@ -1,3 +1,4 @@
+
 $(document).ready(function() {
   // Set up bubble CSS when page is loaded so bubble info is hidden unless user acts.
   // If JavaScript is turned off bubble info displays normally.
@@ -20,6 +21,9 @@ $(function() {
       e.stopPropagation();
       $('.bubble_info').hide();
       $(this).next().stop().show('fast');
+      if($.browser.msie) {  // fix for IE
+        $('.bubble_info').css({"visibility":"visible"});
+      }
     });
 
     $('.bubble_close').click(function(e) {

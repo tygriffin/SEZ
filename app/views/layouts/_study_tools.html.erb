@@ -1,0 +1,6 @@
+<ul class="study_tools">
+  <%= content_tag(:li, "音声付き", :class => "includes_tool") unless a.audio.empty? %>
+  <%= content_tag(:li, "文化説明", :class => "includes_tool") unless a.culture_notes.empty? %>
+  <%= content_tag(:li, "単語付き", :class => "includes_tool") unless a.vocabulary_words.empty? %>
+  <%= content_tag(:li, "学習ツールは準備中", :class => "includes_tool") if a.audio.empty? && a.culture_notes.empty? && a.vocabulary_words.empty? %>
+</ul>

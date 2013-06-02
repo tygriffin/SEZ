@@ -15,7 +15,6 @@
     list-style: none;
     float: left;
     padding: 10px 5px 20px 5px;
-    margin-bottom: 10px;
     border-bottom: 1px solid #bbb;
 
     .post_thumb {
@@ -48,6 +47,23 @@
       margin: 0;
       padding: 0 10px 10px 10px;
       font-size: 80%;
+    }
+
+    .study_tools {
+      padding: 0;
+      margin: 0;
+      float: right;
+
+      .includes_tool {
+        display: inline-block;
+        margin-left: 6px;
+        width: auto !important;
+        color: #999;
+        border: 1px solid #999;
+        border-radius: 4px;
+        padding: 5px 5px 3px 5px;
+        font-size: 60%;
+      }
     }
 
   }

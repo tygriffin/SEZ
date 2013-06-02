@@ -1,11 +1,9 @@
 <section id="featured_article">
-  <%= image_tag(@in_focus.image_url(:in_focus)) %>
+  <div id="in_focus"><%= image_tag(@in_focus.image_url(:in_focus)) %></div>
   <div class="pub_info">
     <h2><%= link_to @in_focus.title, article_path(:id => @in_focus.id) %></h2>
     <p><%= @in_focus.description %></p>
-    <% unless @in_focus.audio.empty? %>
-      <p class="includes_audio">音声付き</p>
-    <% end %>
+    <%= render 'layouts/study_tools', :a => @in_focus %>
   </div>
 </section>
 
@@ -17,9 +15,7 @@
         <div class="pub_info">
           <h2><%= link_to f.title, article_path(:id => f.id) %></h2>
           <p><%= f.description %></p>
-          <% unless f.audio.empty? %>
-            <p class="includes_audio">音声付き</p>
-          <% end %>
+          <%= render 'layouts/study_tools', :a => f %>
         </div>
       </li>
     <% end %>
@@ -34,6 +30,7 @@
         <div class="pub_info">
           <h2><%= link_to p.title, article_path(:id => p.id) %></h2>
           <p><%= p.description %></p>
+          <%= render 'layouts/study_tools', :a => p %>
         </div>
       </li>
     <% end %>

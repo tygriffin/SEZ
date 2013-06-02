@@ -36,7 +36,7 @@ $(function() {
       bottom: '0',
       left: '0',
       fontSize: '130%',
-      padding: '20px',
+      padding: '20px 40px 20px 20px',
       margin: '0',
       width: '100%',
       opacity: '0.95',
