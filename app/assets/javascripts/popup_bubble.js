@@ -46,9 +46,6 @@ $(document).ready(function() {
     $('.bubble_info').hide('fast');
   });
 
-  $('html').click(function() {
-    $('.bubble_info').hide('fast');
-  });
 
 
   // Article body popups /////////////////////////////
