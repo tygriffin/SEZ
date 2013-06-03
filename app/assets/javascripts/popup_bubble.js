@@ -16,11 +16,29 @@ $(document).ready(function() {
 
   // Home page popups ////////////////////////////////
 
+  function passThrough(e) {
+      $(".bubble_trigger").each(function() {
+         // check if clicked point (taken from event) is inside element
+         var mouseX = e.pageX;
+         var mouseY = e.pageY;
+         var offset = $(this).offset();
+         var width = $(this).width();
+         var height = $(this).height();
+
+         if (mouseX > offset.left && mouseX < offset.left+width
+             && mouseY > offset.top && mouseY < offset.top+height)
+           $(this).click(); // force click event
+      });
+  }
+
+  $('html').click(passThrough);
+
+
+
   $('.bubble_trigger').click(function(e) {
     e.stopPropagation();
     $('.bubble_info').hide();
     $(this).next().stop().show('fast');
-    alert( 'hello?');
   });
 
   $('.bubble_close').click(function(e) {
