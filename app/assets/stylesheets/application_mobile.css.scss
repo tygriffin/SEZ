@@ -110,16 +110,9 @@ h2 {
   padding: 0;
   margin: 0;
 
-  li {
-    display: inline-block;
-    width: auto;
-    min-height: auto;
-  }
-
   .includes_tool {
     width: auto;
     margin-right: 10px;
-    min-height: auto;
     display: inline-block;
     padding: 5px 5px 3px 5px;
     border: 1px solid #6f8500;
@@ -130,25 +123,26 @@ h2 {
 }
 
 #latest_articles, #latest_blog_posts {
-  li {
-    min-height: 350px;
+  ul:first-child {
+    li {
+      min-height: 350px;
 
-    .pub_info {
-      margin-left: 310px;
-    }
-  }
+      .pub_info {
+        margin-left: 310px;
 
-  img {
-    float: left;
-    width: 300px;
-  }
+        .study_tools {
+
+          .includes_tool {
+            min-height: auto;
+          }
 }
+      }
+    }
 
-.study_tools {
-
-  .includes_tool {
-    display: list-item;
-    min-height: inherit;
+    img {
+      float: left;
+      width: 300px;
+    }
   }
 }
 
