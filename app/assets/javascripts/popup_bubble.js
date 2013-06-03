@@ -16,22 +16,24 @@ $(document).ready(function() {
 
   // Home page popups ////////////////////////////////
 
-  function passThrough(e) {
-      $(".bubble_trigger").each(function() {
-         // check if clicked point (taken from event) is inside element
-         var mouseX = e.pageX;
-         var mouseY = e.pageY;
-         var offset = $(this).offset();
-         var width = $(this).width();
-         var height = $(this).height();
+  // Hack to compensate for lack of pointer-events in IE
 
-         if (mouseX > offset.left && mouseX < offset.left+width
-             && mouseY > offset.top && mouseY < offset.top+height)
-           $(this).click(); // force click event
-      });
+  function passThrough(e) {
+    $(".bubble_trigger").each(function() {
+     // check if clicked point (taken from event) is inside element
+     var mouseX = e.pageX;
+     var mouseY = e.pageY;
+     var offset = $(this).offset();
+     var width = $(this).width();
+     var height = $(this).height();
+
+     if (mouseX > offset.left && mouseX < offset.left+width && mouseY > offset.top && mouseY < offset.top+height)
+      $(this).click(); // force click event
+    });
   }
 
   $('html').click(passThrough);
+  // end hack
 
 
 

@@ -135,20 +135,20 @@ h2 {
 
     .pub_info {
       margin-left: 310px;
-
-      .study_tools {
-
-        .includes_tool {
-          min-height: auto;
-          height: auto;
-        }
-      }
     }
   }
 
   img {
     float: left;
     width: 300px;
+  }
+}
+
+.study_tools {
+
+  .includes_tool {
+    display: list-item;
+    min-height: inherit;
   }
 }
 
