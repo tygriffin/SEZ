@@ -1,5 +1,11 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery
+  before_filter :topics_menu
+
+  def topics_menu
+    @topics_menu = Topic.all
+  end
+  helper_method :topics_menu
 
   def check_for_mobile
     session[:mobile_override] = params[:mobile] if params[:mobile]

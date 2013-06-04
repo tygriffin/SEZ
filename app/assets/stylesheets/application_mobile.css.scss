@@ -133,7 +133,7 @@ h2 {
         .study_tools {
 
           .includes_tool {
-            min-height: 36px;
+            min-height: 36px !important;
           }
         }
       }
@@ -183,6 +183,16 @@ footer#main_footer {
             text-decoration: none;
           }
         }
+      }
+      #social_media li {
+        display: inline-block;
+        text-align: center;
+        width: 100px;
+      }
+      #license li {
+        background-color: #fff;
+        margin: 0;
+        padding: 0;
       }
     }
   }

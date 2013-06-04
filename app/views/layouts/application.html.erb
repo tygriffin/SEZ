@@ -1,14 +1,6 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <meta charset="utf-8">
-  <title><%= title %></title>
-  <%= stylesheet_link_tag    "application", :media => "all" %>
-  <%= stylesheet_link_tag    @local_stylesheet, :media => "all" unless @local_stylesheet.nil? %>
-  <%= javascript_include_tag "application" %>
-  <%= csrf_meta_tags %>
-  <%= include_gon %>
-</head>
+<%= render 'layouts/head' %>
 <body>
 
 <div id="container">

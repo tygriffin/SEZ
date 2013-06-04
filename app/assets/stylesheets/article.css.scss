@@ -103,9 +103,18 @@ article {
       padding: 1px;
 
       h4, p {
-        display: inline-block;
+        display: inline;
         padding: 0;
         margin: 0;
+      }
+    }
+
+    #social_media_recommend {
+      margin-bottom: 30px;
+
+      a {
+        display: inline-block;
+        margin-left: 15px;
       }
     }
   }

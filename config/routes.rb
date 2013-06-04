@@ -1,5 +1,8 @@
 SEZWebsite::Application.routes.draw do
 
+
+  get "topic/show"
+
   root :to => 'sez_core#index'
 
   match '/about', :to => 'sez_core#about'
@@ -12,6 +15,8 @@ SEZWebsite::Application.routes.draw do
 
   match '/article', :to => 'article#show', :as => :article
 
+  match '/topic', :to => 'topic#show', :as => :topic
+
   match '/contact' => 'contact#new', :as => 'contact', :via => :get
   match '/contact' => 'contact#create', :as => 'contact', :via => :post
 
@@ -19,6 +24,9 @@ SEZWebsite::Application.routes.draw do
   resources :article
   resources :vocabulary_word
   resources :culture_note
+  resources :tag
+  resources :topic
+  match '/feed' => 'article#feed', :as => :feed, :defaults => { :format => 'atom' }
 
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)

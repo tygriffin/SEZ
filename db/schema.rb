@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130530135956) do
+ActiveRecord::Schema.define(:version => 20130604143158) do
 
   create_table "active_admin_comments", :force => true do |t|
     t.string   "resource_id",   :null => false
@@ -58,6 +58,7 @@ ActiveRecord::Schema.define(:version => 20130530135956) do
     t.string   "audio"
     t.string   "pubtype"
     t.text     "figure"
+    t.integer  "topic_id"
   end
 
   create_table "contacts", :force => true do |t|
@@ -87,6 +88,13 @@ ActiveRecord::Schema.define(:version => 20130530135956) do
   end
 
   add_index "tags", ["article_id"], :name => "index_tags_on_publication_id"
+
+  create_table "topics", :force => true do |t|
+    t.string   "name"
+    t.text     "description"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
+  end
 
   create_table "vocabulary_words", :force => true do |t|
     t.string   "word"

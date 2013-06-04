@@ -3,10 +3,12 @@ class ArticleController < ApplicationController
   #check for mobile
   before_filter :check_for_mobile
 
-  def index
-  end
-
   def show
+    if mobile_device?
+      @local_stylesheet = "article_mobile.css"
+    else
+      @local_stylesheet = "article.css"
+    end
     @article = Article.find(params[:id])
     @body = markdown_parse(@article.body, {:escape_html => false, :strict_mode => false,})
     @vocabulary_words = VocabularyWord.where(:article_id => @article.id).order("word")
@@ -43,6 +45,20 @@ class ArticleController < ApplicationController
     end
 
   end
+
+  def feed
+    @title = "SEZ"
+    @articles = Article.order("pubdate DESC")
+    @updated = @articles.first.updated_at unless @articles.empty?
+
+    respond_to do |format|
+      format.atom { render :layout => false }
+
+      format.rss { redirect_to feed_path(:format => :atom), :status => :moved_permanently }
+    end
+  end
+
+
 end
 
 

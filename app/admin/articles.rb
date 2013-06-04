@@ -18,6 +18,7 @@ ActiveAdmin.register Article do
     attributes_table do
       row :title
       row :description
+      row :topic
       row :author
       row :pubdate
       row :pubtype
@@ -38,6 +39,7 @@ ActiveAdmin.register Article do
     f.inputs "References" do
       f.input :title
       f.input :description
+      f.input :topic
       f.input :author
       f.input :pubdate
       f.input :pubtype
