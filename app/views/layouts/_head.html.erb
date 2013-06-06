@@ -3,6 +3,7 @@
   <title><%= title %></title>
   <% if mobile_device? %>
     <%= stylesheet_link_tag    "application_mobile" %>
+    <%= stylesheet_link_tag    @local_stylesheet, :media => "all" unless @local_stylesheet.nil? %>
     <%= javascript_include_tag "application_mobile" %>
   <% else %>
     <%= stylesheet_link_tag    "application", :media => "all" %>

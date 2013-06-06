@@ -37,13 +37,16 @@ $(function() {
       bottom: '0',
       left: '0',
       fontSize: '130%',
-      padding: '20px 40px 20px 20px',
+      padding: '20px',
       margin: '0',
       width: '100%',
       opacity: '0.95',
       backgroundColor: '#6f8500',
       color: '#fff',
       zIndex: '200'
+    });
+    $('.article_bubble p').css({
+      width: '90%'
     });
     $('.article_bubble').hide();
     $('.article_bubble').show('fast');
