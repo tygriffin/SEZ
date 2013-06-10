@@ -25,6 +25,7 @@ ActiveAdmin.register Article do
       row :body
       row :figure
       row :image
+      row :image_attribution
       row :audio
       row "Tags" do |t|
         a.tags.map(&:name).join(", ").html_safe
@@ -50,6 +51,7 @@ ActiveAdmin.register Article do
     f.inputs "Media" do
       f.input :figure
       f.input :image
+      f.input :image_attribution
       f.input :audio
     end
     f.inputs "Meta" do

@@ -1,7 +1,12 @@
-<article>
+<article class="<%= @article.pubtype %>">
   <header>
     <h1><%= link_to "SEZ", root_path %></h1>
-    <%= image_tag(@article.image_url(:main)) %>
+    <figure>
+      <%= image_tag(@article.image_url(:main)) %>
+      <% if @article.image_attribution %>
+        <figcaption>Image by <%= @article.image_attribution %></figcaption>
+      <% end %>
+    </figure>
     <h2><%= @article.title %></h2>
   </header>
   <section id="article_body">

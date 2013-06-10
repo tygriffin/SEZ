@@ -7,6 +7,57 @@
 *
 */
 
+.feature, .blog {
+  section#article_body {
+    figure {
+      float: left;
+      width: 400px;
+      padding: 5px 15px 15px 0;
+    }
+
+    img {
+      width: 400px;
+      height: auto;
+    }
+
+    figcaption {
+      background-color: #eee;
+      padding: 3px;
+      font-size: 80%;
+    }
+  }
+}
+
+.recipe {
+
+  section#article_body {
+
+    h3 {
+      font-size: 120%;
+    }
+
+    h4 {
+      font-weight: bold;
+      font-size: 110%;
+    }
+
+    ol {
+      width: 660px;
+      margin-left: 30px;
+
+      li {
+        background-color: #faf8fa;
+        padding: 0 5px 0 5px;
+        margin-bottom: 20px;
+
+        img {
+          margin-top: 10px;
+          display: block;
+        }
+      }
+    }
+  }
+}
 
 article {
   padding: 20px;
@@ -43,35 +94,24 @@ article {
       margin: 0;
     }
 
-    img {
+    figure {
       position: absolute;
       top: 0;
       right: 25px;
-      width: 260px;
-      filter: grayscale(100%);
-      -webkit-filter: grayscale(100%);
-      -moz-filter: grayscale(100%);
-      -ms-filter: grayscale(100%);
-      -o-filter: grayscale(100%);
-    }
-  }
 
-  section#article_body {
-    figure {
-      float: left;
-      width: 400px;
-      padding: 5px 15px 15px 0;
-    }
+      img {
+        width: 240px;
+        filter: grayscale(100%);
+        -webkit-filter: grayscale(100%);
+        -moz-filter: grayscale(100%);
+        -ms-filter: grayscale(100%);
+        -o-filter: grayscale(100%);
+      }
 
-    img {
-      width: 400px;
-      height: auto;
-    }
-
-    figcaption {
-      background-color: #eee;
-      padding: 3px;
-      font-size: 80%;
+      figcaption {
+        font-size: 70%;
+        color: #444;
+      }
     }
   }
 
