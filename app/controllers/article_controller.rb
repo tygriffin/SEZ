@@ -48,7 +48,7 @@ class ArticleController < ApplicationController
     #Facebook Open Graph
     @og_title = @article.title
     @og_url = request.host_with_port + request.fullpath
-    @og_image = @article.image_url(:thumb)
+    @og_image = request.host_with_port + @article.image_url(:thumb)
     @og_description = @article.description
 
   end
