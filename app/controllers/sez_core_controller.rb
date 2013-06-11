@@ -12,7 +12,7 @@ class SezCoreController < ApplicationController
     @in_focus = @features[random]
     @features.delete_at(random)
 
-    @posts = Article.where(:pubtype => "blog").order("pubdate DESC").limit(4)
+    @posts = Article.where(:pubtype => ['blog', 'recipe']).order("pubdate DESC").limit(4)
   end
 
   def about

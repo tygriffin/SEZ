@@ -3,7 +3,7 @@
     <h1><%= link_to "SEZ", root_path %></h1>
     <figure>
       <%= image_tag(@article.image_url(:main)) %>
-      <% if @article.image_attribution %>
+      <% unless @article.image_attribution.empty? %>
         <figcaption>Image by <%= @article.image_attribution %></figcaption>
       <% end %>
     </figure>

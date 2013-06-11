@@ -1,31 +1,29 @@
-<head>
-  <meta charset="utf-8">
-  <title><%= title %></title>
-  <% if mobile_device? %>
-    <%= stylesheet_link_tag    "application_mobile" %>
-    <%= stylesheet_link_tag    @local_stylesheet, :media => "all" unless @local_stylesheet.nil? %>
-    <%= javascript_include_tag "application_mobile" %>
-  <% else %>
-    <%= stylesheet_link_tag    "application", :media => "all" %>
-    <%= stylesheet_link_tag    @local_stylesheet, :media => "all" unless @local_stylesheet.nil? %>
-    <%= javascript_include_tag "application" %>
-  <% end %>
-  <%= csrf_meta_tags %>
-  <%= include_gon %>
-  <%= auto_discovery_link_tag :atom, "/feed" %>
-  <%= auto_discovery_link_tag :rss, "/feed.rss" %>
-  <!-- Google Analytics script -->
-    <script type="text/javascript">
+<meta charset="utf-8">
+<title><%= title.html_safe %></title>
+<% if mobile_device? %>
+  <%= stylesheet_link_tag    "application_mobile" %>
+  <%= stylesheet_link_tag    @local_stylesheet, :media => "all" unless @local_stylesheet.nil? %>
+  <%= javascript_include_tag "application_mobile" %>
+<% else %>
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= stylesheet_link_tag    @local_stylesheet, :media => "all" unless @local_stylesheet.nil? %>
+  <%= javascript_include_tag "application" %>
+<% end %>
+<%= csrf_meta_tags %>
+<%= include_gon %>
+<%= auto_discovery_link_tag :atom, "/feed" %>
+<%= auto_discovery_link_tag :rss, "/feed.rss" %>
+<!-- Google Analytics script -->
+  <script type="text/javascript">
 
-    var _gaq = _gaq || [];
-    _gaq.push(['_setAccount', 'UA-41460687-1']);
-    _gaq.push(['_trackPageview']);
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-41460687-1']);
+  _gaq.push(['_trackPageview']);
 
-    (function() {
-      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-    })();
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
 
-  </script>
-</head>
+</script>

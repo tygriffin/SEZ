@@ -10,6 +10,7 @@ class ArticleController < ApplicationController
       @local_stylesheet = "article.css"
     end
     @article = Article.find(params[:id])
+    @title = @article.title
     @body = markdown_parse(@article.body, {:escape_html => false, :strict_mode => false,})
     @vocabulary_words = VocabularyWord.where(:article_id => @article.id).order("word")
     @culture_notes = CultureNote.where(:article_id => @article.id).order("title")
@@ -43,6 +44,12 @@ class ArticleController < ApplicationController
 
       gon.culture_notes = @culture_notes
     end
+
+    #Facebook Open Graph
+    @og_title = @article.title
+    @og_url = request.host_with_port + request.fullpath
+    @og_image = @article.image_url(:thumb)
+    @og_description = @article.description
 
   end
 
