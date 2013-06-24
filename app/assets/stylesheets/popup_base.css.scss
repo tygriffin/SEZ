@@ -24,7 +24,6 @@
     width: 300px;
     opacity: 0.95;
     position: absolute;
-    top: 175px;
     left: 5px;
     z-index: 100;
     color: #fff;
@@ -66,7 +65,6 @@
   ul {
 
     li {
-      height: 200px;
 
       .study_tools {
 
@@ -79,13 +77,31 @@
   }
 }
 
+#latest_articles {
+  .bubble_info {
+    top: 175px;
+  }
+}
+
+#featured_article {
+  .bubble_info {
+    bottom: 7px;
+  }
+}
+
+#latest_blog_posts {
+  .bubble_info {
+    top: 100px;
+  }
+}
+
 #latest_blog_posts div.bubble_info {
   background-color: #953c10;
 }
 
 #latest_articles li:after, #latest_blog_posts li:after {
   position: absolute;
-  bottom: 0;
+  bottom: 5px;
   left: 0;
   content: " ";
   width: 200px;

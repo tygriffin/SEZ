@@ -65,14 +65,18 @@
     li {
       position: relative;
       display: inline-block;
-      width: 200px;
     }
   }
 }
 
-#latest_articles img:first-child, #latest_blog_posts img:first-child {
-      height: 200px;
-      width: 200px;
+#latest_articles img:first-child {
+  height: 200px;
+  width: 200px;
+}
+
+#latest_blog_posts img:first-child {
+  height: 132px;
+  width: 132px;
 }
 
 #featured_article {
@@ -90,6 +94,7 @@
 #latest_blog_posts {
   clear: top;
   float: right;
-  width: 407px;
+  width: 408px;
   clear: left;
+  padding-top: 1px;
 }

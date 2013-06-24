@@ -5,14 +5,16 @@ class SezCoreController < ApplicationController
 
   def index
     @title = "Home"
-    @local_stylesheet = "home.css"
+    unless mobile_device?
+      @local_stylesheet = "home.css"
+    end
     @features = Article.where(:pubtype => "feature").order("pubdate DESC").limit(6)
     #Generate a feature in focus randomly
     random = rand(6)
     @in_focus = @features[random]
     @features.delete_at(random)
 
-    @posts = Article.where(:pubtype => ['blog', 'recipe']).order("pubdate DESC").limit(4)
+    @posts = Article.where(:pubtype => ['blog', 'recipe']).order("pubdate DESC").limit(9)
   end
 
   def about
