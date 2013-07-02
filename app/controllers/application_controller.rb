@@ -34,4 +34,5 @@ class ApplicationController < ActionController::Base
     bc = BlueCloth.new(str, options)
     bc.to_html
   end
+  helper_method :markdown_parse
 end

@@ -23,6 +23,18 @@
   font-style: normal;
 }
 
+h1 {
+    display: inline-block;
+    margin: 0;
+    font-size: 660%;
+
+    a {
+      text-decoration: none;
+      color: black;
+      font-family: 'Acknowledgement', sans-serif;
+    }
+  }
+
 h2, h3, h4, p, li, ol {
   color: black;
   font-family: 'Chivo', sans-serif;
@@ -41,18 +53,6 @@ div#container {
 #main_header {
   margin-bottom: 10px;
   position: relative;
-
-  h1 {
-    display: inline-block;
-    margin: 0;
-    font-size: 700%;
-
-    a {
-      text-decoration: none;
-      color: black;
-      font-family: 'Acknowledgement', sans-serif;
-    }
-  }
 
   nav {
     position: absolute;

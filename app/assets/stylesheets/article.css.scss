@@ -7,10 +7,78 @@
 *
 */
 
-#container {
-  padding: 0;
-  margin: 0 auto;
+#feature_top {
+
+  figure {
+    position: fixed;
+    top: 10px;
+    left: 330px;
+    height: 100%;
+    z-index: -1;
+
+    img {
+      max-width: 100%;
+      min-width: 500px;
+    }
+
+    figcaption {
+      font-size: 70%;
+      color: #444;
+    }
+  }
+
+  #intro {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #f5fcfa;
+    height: 100%;
+    width: 300px;
+    padding: 20px;
+
+    h1 {
+      font-size: 550%;
+    }
+
+    h2 {
+      font-size: 160%;
+    }
+
+    p {
+      font-size: 90%;
+      line-height: 180%;
+    }
+  }
+}
+
+#article_top {
   width: 1000px;
+  margin: 0 auto;
+  padding: 0;
+
+  figure, img {
+    width: 100%;
+  }
+
+  figcaption {
+    font-size: 70%;
+    color: #444;
+  }
+
+  h1, h2 {
+    margin: 25px 15px 0 0;
+    font-size: 200%;
+    display: inline-block;
+  }
+}
+
+#wrapper {
+  padding: 0;
+  margin: 0;
+  position: absolute;
+  top: 100%;
+  background-color: #fff;
+  width: 100%;
 }
 
 .feature, .blog {
@@ -73,40 +141,14 @@
 }
 
 article {
-  padding: 0 20px;
-  max-width: 1100px;
+  padding: 30px 20px;
+  max-width: 1000px;
+  margin: 0 auto;
 
   p {
     line-height: 160%;
     font-family: 'Chivo', sans-serif;
     padding-top: 0;
-  }
-
-  header {
-    margin-bottom: 10px;
-
-    h2 {
-      font-size: 200%;
-      padding: 40px 0;
-      margin: 0;
-    }
-
-    figure {
-
-      img {
-        width: 100%;
-        filter: grayscale(90%);
-        -webkit-filter: grayscale(90%);
-        -moz-filter: grayscale(90%);
-        -ms-filter: grayscale(90%);
-        -o-filter: grayscale(90%);
-      }
-
-      figcaption {
-        font-size: 70%;
-        color: #444;
-      }
-    }
   }
 
   section#vocab, section#audio, section#culture_notes {
@@ -156,5 +198,6 @@ article {
 
 #main_footer {
   padding: 0 0 20px 20px;
-
+  margin: 0 auto;
+  max-width: 1025px;
 }
