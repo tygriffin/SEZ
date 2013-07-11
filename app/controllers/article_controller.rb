@@ -45,11 +45,11 @@ class ArticleController < ApplicationController
       gon.culture_notes = @culture_notes
     end
 
-    #Facebook Open Graph
-    @og_title = @article.title
-    @og_url = "http://" + request.host_with_port + request.fullpath
-    @og_image = "http://" + request.host_with_port + @article.image_url(:main)
-    @og_description = @article.description
+    #Social Media Meta
+    @meta_title = @article.title
+    @meta_url = "http://" + request.host_with_port + request.fullpath
+    @meta_image = "http://" + request.host_with_port + @article.image_url(:main)
+    @meta_description = @article.description
 
   end
 
