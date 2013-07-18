@@ -11,12 +11,12 @@ SIL Open Font License 1.1.txt: SIL Open Font License 1.1-983911e6f3d34fcd88f6ca9
 SIL Open Font License 1/index.1.txt: SIL Open Font License 1.1-983911e6f3d34fcd88f6ca9864e96e57.txt
 demo.html: demo-500e3078e37150110fa170d055c6cbf4.html
 demo/index.html: demo-500e3078e37150110fa170d055c6cbf4.html
-application.js: application-fb96cb3ecc6a3c705d46075f492b288f.js
-application/index.js: application-fb96cb3ecc6a3c705d46075f492b288f.js
+application.js: application-2202f30e0203e96697ec8ef6f334a3e1.js
+application/index.js: application-2202f30e0203e96697ec8ef6f334a3e1.js
 application_mobile.js: application_mobile-37e855d36dc5af21fead3bb87e55eb12.js
 application_mobile/index.js: application_mobile-37e855d36dc5af21fead3bb87e55eb12.js
-popup_bubble.js: popup_bubble-7612e615251dcec2a15ca7ca580c47e7.js
-popup_bubble/index.js: popup_bubble-7612e615251dcec2a15ca7ca580c47e7.js
+popup_bubble.js: popup_bubble-4d866b192694417b9a84e7a9b00de55d.js
+popup_bubble/index.js: popup_bubble-4d866b192694417b9a84e7a9b00de55d.js
 popup_mobile.js: popup_mobile-4387f60cc95d67587b4fa0a3639a8925.js
 popup_mobile/index.js: popup_mobile-4387f60cc95d67587b4fa0a3639a8925.js
 application.css: application-c98687d2f5cf168402628237564e0d31.css
@@ -25,10 +25,10 @@ application_mobile.css: application_mobile-c4b13d1a8925dfdaa6a8d8d72eafc52d.css
 application_mobile/index.css: application_mobile-c4b13d1a8925dfdaa6a8d8d72eafc52d.css
 archive.css: archive-830a22a54e71580b3972ce48fcdc23ee.css
 archive/index.css: archive-830a22a54e71580b3972ce48fcdc23ee.css
-article.css: article-b6b114dcf0654f86804a17899d91dd68.css
-article/index.css: article-b6b114dcf0654f86804a17899d91dd68.css
-article_mobile.css: article_mobile-88e4a46d4415590234e5e734b170c8d3.css
-article_mobile/index.css: article_mobile-88e4a46d4415590234e5e734b170c8d3.css
+article.css: article-00c1d04ae9ea8712bd8b7db5cf3b4a6b.css
+article/index.css: article-00c1d04ae9ea8712bd8b7db5cf3b4a6b.css
+article_mobile.css: article_mobile-cb80845aa6ecdbb8d745500dabff3806.css
+article_mobile/index.css: article_mobile-cb80845aa6ecdbb8d745500dabff3806.css
 contact.css: contact-8553ba8deb96eef40398a5ef51aa881d.css
 contact/index.css: contact-8553ba8deb96eef40398a5ef51aa881d.css
 home.css: home-5c06ef9a999d50cbed2f8d0063670dae.css

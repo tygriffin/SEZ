@@ -7,11 +7,12 @@
 </head>
 <body>
 
+<%= render 'layouts/article_top_nav' unless mobile_device? %>
 
 <%= render 'article_header' unless mobile_device? %>
 
 
-<div id="<%= 'wrapper' if @article.pubtype == "feature" %>" >
+<div id="wrapper" >
 
 <%= yield %>
 

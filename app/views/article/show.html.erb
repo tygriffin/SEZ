@@ -9,7 +9,7 @@
       <ul>
         <% @vocabulary_words.each do | vocab | %>
           <%= content_tag :li, :id => vocab.word.tr(" ", "_")+'_detail' do %>
-            <strong><%= vocab.word %></strong> (<%= vocab.part_of_speech %>): <%= vocab.definition %> [<%= vocab.translation %>]
+            <strong><%= vocab.word %></strong> (<%= vocab.part_of_speech %>): <%= vocab.definition %> 【<%= vocab.translation %>】
           <% end %>
         <% end %>
       </ul>
@@ -34,16 +34,17 @@
     </section>
   <% end %>
   <footer>
-    <p>Posted on <%= @article.pubdate.strftime("%B %d, %Y") %> by <%= @author.name%></p>
-    <section id="author">
-      <h4>About the Author</h4>
-      <%= image_tag(@author.image_url(:profile)) unless @author.image.nil? %>
-      <ul>
-        <%= content_tag(:li, @author.name) %>
-        <%= content_tag(:li, @author.bio) unless @author.bio.nil? %>
-        <%= content_tag(:li, link_to(@author.website, "http://"+@author.website)) unless @author.website.nil? %>
-      </ul>
-    </section>
+    <% unless @author.bio.empty? %>
+      <section id="author">
+        <h4>About the Author</h4>
+        <%= image_tag(@author.image_url(:profile)) unless @author.image.nil? %>
+        <ul>
+          <%= content_tag(:li, @author.name) %>
+          <%= content_tag(:li, @author.bio) unless @author.bio.nil? %>
+          <%= content_tag(:li, link_to(@author.website, "http://"+@author.website)) unless @author.website.nil? %>
+        </ul>
+      </section>
+    <% end %>
     <%= render 'layouts/social_media_recommend' %>
     <div class="tags">
       <h4>Tags:</h4>

@@ -71,6 +71,9 @@ $(document).ready(function() {
         $(this).append('<p class="article_bubble">'+entry['body']+'</p>');
       }
     }
+    if ($(this).attr('id') == "help_bubble") {
+        $(this).append('<p class="article_bubble">Explanations will appear here!</p>');
+      }
     $('.article_bubble').css({
       position: 'fixed',
       bottom: '30px',
@@ -82,7 +85,7 @@ $(document).ready(function() {
       opacity: '0.95',
       backgroundColor: '#6f8500',
       color: '#fff',
-      zIndex: '200'
+      zIndex: '99999'
     });
     $('.article_bubble').hide();
     $('.article_bubble').show('fast');

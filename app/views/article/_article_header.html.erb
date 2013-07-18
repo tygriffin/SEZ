@@ -1,28 +1,15 @@
-<% if @article.pubtype == "feature" %>
-  <section id="feature_top">
-    <figure>
-      <%= image_tag(@article.image) %>
-      <% unless @article.image_attribution.empty? %>
-        <figcaption>Image by <%= @article.image_attribution %></figcaption>
-      <% end %>
-    </figure>
-    <div id="intro">
-      <h1><%= link_to "SEZ", root_path %></h1>
-      <h2><%= @article.title %></h2>
-      <p><%= @article.pubdate.strftime("%B %d, %Y") %></p>
-      <p><%= @article.author %></p>
-      <p><%= @article.description %></p>
-    </div>
-  </section>
-<% else %>
-  <section id="article_top">
-    <figure>
-      <%= image_tag(@article.image) %>
-      <% unless @article.image_attribution.empty? %>
-        <figcaption>Image by <%= @article.image_attribution %></figcaption>
-      <% end %>
-    </figure>
-      <h1><%= link_to "[ SEZ ]", root_path %></h1>
-      <h2><%= @article.title %></h2>
-  </section>
-<% end %>
+<div id="article_top">
+  <figure>
+    <%= image_tag(@article.image) %>
+  </figure>
+  <div id="intro">
+    <h2><%= @article.title %></h2>
+    <p>Posted on <%= @article.pubdate.strftime("%B %d, %Y") %> <br />
+      by <%= @author.name %></p>
+    <p><%= @article.description %></p>
+    <% unless @article.image_attribution.empty? %>
+      <p>Image by <%= @article.image_attribution %></p>
+    <% end %>
+    <%= render 'layouts/study_tools', :a => @article %>
+  </div>
+</div>
