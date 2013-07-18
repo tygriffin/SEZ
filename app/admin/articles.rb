@@ -8,7 +8,7 @@ ActiveAdmin.register Article do
     column :body do |a|
       truncate(a.body, :omission => "...", :length => 200)
     end
-    column :author
+    column :author_id, :collection => Author.all.map{|u| ["#{u.name}", u.id]}
     column :pubtype
     column :pubdate
     column :updated_at
@@ -19,7 +19,7 @@ ActiveAdmin.register Article do
       row :title
       row :description
       row :topic
-      row :author
+      row :author_id, :collection => Author.all.map{|u| ["#{u.name}", u.id]}
       row :pubdate
       row :pubtype
       row :body
@@ -41,7 +41,7 @@ ActiveAdmin.register Article do
       f.input :title
       f.input :description
       f.input :topic
-      f.input :author
+      f.input :author_id, :as => :select, :collection => Author.all.map{|u| ["#{u.name}", u.id]}
       f.input :pubdate
       f.input :pubtype
     end

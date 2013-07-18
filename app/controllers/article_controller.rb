@@ -11,6 +11,7 @@ class ArticleController < ApplicationController
     end
     @article = Article.find(params[:id])
     @title = @article.title
+    @author = Author.find(@article.author_id)
     @body = markdown_parse(@article.body, {:escape_html => false, :strict_mode => false,})
     @vocabulary_words = VocabularyWord.where(:article_id => @article.id).order("word")
     @culture_notes = CultureNote.where(:article_id => @article.id).order("title")

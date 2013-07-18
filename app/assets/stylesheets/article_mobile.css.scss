@@ -41,11 +41,10 @@ article {
   }
 
   header {
-    background-color: #eee;
-    min-height: 300px;
+
+    text-align: center;
 
     h1 {
-      display: inline-block;
       margin: 0;
       padding: 0;
       font-size: 400%;
@@ -59,20 +58,15 @@ article {
 
     h2 {
       margin: 0;
-      padding: 0;
-      width: 60%;
+      padding: 100px 0 0 0;
       font-size: 300%;
     }
 
     img {
-      float: right;
-      margin-right: 50px;
-      filter: grayscale(100%);
-      -webkit-filter: grayscale(100%);
-      -moz-filter: grayscale(100%);
-      -ms-filter: grayscale(100%);
-      -o-filter: grayscale(100%);
+      display: block;
+      width: 100%;
     }
+
   }
 
   section#vocab, section#audio, section#culture_notes {

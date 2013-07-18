@@ -1,9 +1,10 @@
 class Article < ActiveRecord::Base
-  attr_accessible :author, :body, :description, :title, :image, :image_attribution, :pubdate, :audio, :pubtype, :figure, :tags_attributes, :topic_id
+  attr_accessible :author, :body, :description, :title, :image, :image_attribution, :pubdate, :audio, :pubtype, :figure, :tags_attributes, :topic_id, :author_id
 
   mount_uploader :image, ImageUploader
 
   belongs_to :topic
+  belongs_to :author
   has_many :vocabulary_words
   has_many :culture_notes
   has_many :tags

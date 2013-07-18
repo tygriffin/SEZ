@@ -185,6 +185,23 @@ article {
       }
     }
 
+    #author {
+      ul {
+        margin-left: 100px;
+      }
+      li {
+        list-style: none;
+        padding: 0 0 5px 0;
+        font-size: 90%;
+        color: #555;
+      }
+      img {
+        width: 100px;
+        border-radius: 20px;
+        float: left;
+      }
+    }
+
     #social_media_recommend {
       margin-bottom: 30px;
 

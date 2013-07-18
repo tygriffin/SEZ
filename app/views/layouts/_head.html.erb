@@ -1,5 +1,6 @@
 <meta charset="utf-8">
 <title><%= title.html_safe %></title>
+<%= include_gon %>
 <% if mobile_device? %>
   <%= stylesheet_link_tag    "application_mobile" %>
   <%= stylesheet_link_tag    @local_stylesheet, :media => "all" unless @local_stylesheet.nil? %>
@@ -10,7 +11,6 @@
   <%= javascript_include_tag "application" %>
 <% end %>
 <%= csrf_meta_tags %>
-<%= include_gon %>
 <%= auto_discovery_link_tag :atom, "/feed" %>
 <%= auto_discovery_link_tag :rss, "/feed.rss" %>
 <!-- Google Analytics script -->
