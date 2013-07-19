@@ -3,6 +3,7 @@
     <h1><%= link_to "SEZ", root_path %></h1>
     <%= image_tag(@article.image_url) %>
     <h2><%= @article.title %></h2>
+    <p>Posted on <%= @article.pubdate.strftime("%B %d, %Y") %> by <%= @author.name %></p>
   </header>
   <section id="article_body">
     <%= raw @body %>
@@ -39,7 +40,17 @@
     </section>
   <% end %>
   <footer>
-    <p>Published on <%= @article.pubdate.strftime("%B %d, %Y") %> by <%= @article.author %></p>
+    <% unless @author.bio.empty? %>
+      <section id="author">
+        <h4>About the Author</h4>
+        <%= image_tag(@author.image_url(:profile)) unless @author.image.nil? %>
+        <ul>
+          <%= content_tag(:li, @author.name) %>
+          <%= content_tag(:li, @author.bio) unless @author.bio.nil? %>
+          <%= content_tag(:li, link_to(@author.website, "http://"+@author.website)) unless @author.website.nil? %>
+        </ul>
+      </section>
+    <% end %>
     <%= render 'layouts/social_media_recommend' %>
     <div class="tags">
       <h4>Tags:</h4>
