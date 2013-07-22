@@ -47,12 +47,9 @@
     bottom: 0;
     left: 0;
     background: rgba(0,0,0,0.8);
-    -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=50)"; /* IE transparency */ filter:alpha(opacity=50); /* More IE transparency */
+    -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=50)"; /* IE transparency */
+    filter:alpha(opacity=50); /* More IE transparency */
     z-index: 99998;
-    opacity: 0;
-    -webkit-transition: opacity 400ms ease-in;
-    -moz-transition: opacity 400ms ease-in;
-    transition: opacity 400ms ease-in;
   }
 
   a.article_bubble_trigger {

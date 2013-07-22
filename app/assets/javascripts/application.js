@@ -14,10 +14,10 @@
 //= require jquery_ujs
 //= require font_loader
 //= require modernizr-2.6.2
-//= require modal_box.js
 //= require jquery.easing.1.3
 //= reuqire jquery.easing.compatibility
 //= require popup_bubble
 //= require jquery.masonry.js
 //= require jquery.masonry.min.js
+//= require modal_box.js
 //= require_tree .
