@@ -1,0 +1,1 @@
+$(document).ready(function(){$("#help").click(function(){$("#help_modal").show("fast")}),$(".close").click(function(){$("#help_modal").hide("slow")})});

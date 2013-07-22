@@ -14,6 +14,7 @@
 //= require jquery_ujs
 //= require font_loader
 //= require modernizr-2.6.2
+//= require modal_box.js
 //= require jquery.easing.1.3
 //= reuqire jquery.easing.compatibility
 //= require popup_bubble
