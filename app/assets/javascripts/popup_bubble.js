@@ -72,7 +72,7 @@ $(document).ready(function() {
       }
     }
     if ($(this).attr('id') == "help_bubble") {
-        $(this).append('<p class="article_bubble">Explanations will appear here!</p>');
+        $(this).append('<p class="article_bubble">説明文がここに現れます！</p>');
       }
     $('.article_bubble').css({
       position: 'fixed',
