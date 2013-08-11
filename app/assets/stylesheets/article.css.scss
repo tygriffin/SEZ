@@ -108,7 +108,7 @@
     top: 26px;
     left: 330px;
     height: 710px;
-    z-index: -1;
+    z-index: -2;
 
     img {
       height: 100%;
@@ -121,10 +121,13 @@
   }
 
   #intro {
-    position: relative;
+    position: fixed;
+    top: 0;
+    left: 0;
     background-color: #f5fcfa;
     width: 300px;
     height: 650px;
+    z-index: -1;
     padding: 40px 20px;
 
     h2 {
@@ -165,6 +168,8 @@
 }
 
 #wrapper {
+  position: absolute;
+  top: 730px;
   border-top: 1px solid #999;
   padding: 0;
   margin: 0;
@@ -262,7 +267,7 @@ article {
     padding-top: 0;
   }
 
-  section#vocab, section#audio, section#culture_notes {
+  section#vocab, section#audio, section#culture_notes, section#study_notes {
     padding: 6px;
     border-top: 1px dashed gray;
     margin: 20px 0 20px 0;
@@ -279,6 +284,10 @@ article {
 
   #culture_notes {
     background-color: #fcfaff;
+  }
+
+  #study_notes {
+    background-color: #fafffc;
   }
 
   a.article_bubble_trigger {

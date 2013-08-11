@@ -5,7 +5,7 @@
   <div id="intro">
     <h2><%= @article.title %></h2>
     <p>Posted on <%= @article.pubdate.strftime("%B %d, %Y") %> <br />
-      by <%= @author.name %></p>
+      <%= "by "+@author.name unless @author.name == "SEZ" %></p>
     <p><%= @article.description %></p>
     <% unless @article.image_attribution.empty? %>
       <p>Image by <%= @article.image_attribution %></p>

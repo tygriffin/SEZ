@@ -7,6 +7,7 @@ class Article < ActiveRecord::Base
   belongs_to :author
   has_many :vocabulary_words
   has_many :culture_notes
+  has_many :study_notes
   has_many :tags
 
   validates_presence_of :author, :body, :description, :title, :pubdate, :pubtype

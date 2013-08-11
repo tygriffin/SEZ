@@ -80,7 +80,7 @@ article {
 
   }
 
-  section#vocab, section#audio, section#culture_notes {
+  section#vocab, section#audio, section#culture_notes, section#study_notes {
     padding: 70px 30px;
     border-top: 3px dashed gray;
     line-height: 200%;
@@ -102,6 +102,10 @@ article {
 
   #culture_notes {
     background-color: #fcfaff;
+  }
+
+  #study_notes {
+    background-color: #fafffc;
   }
 
   a.article_bubble_trigger {

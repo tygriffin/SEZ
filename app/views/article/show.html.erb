@@ -29,6 +29,18 @@
       </ul>
     </section>
   <% end %>
+  <% unless @study_notes.empty? %>
+    <section id="study_notes">
+      <h3>Study Notes</h3>
+      <ul>
+      <% @study_notes.each do | entry | %>
+        <%= content_tag :li, :id => entry.title.tr(" ", "_")+'_detail' do %>
+          <strong><%= entry.title %></strong>: <%= raw entry.body %>
+        <% end %>
+      <% end %>
+      </ul>
+    </section>
+  <% end %>
   <% unless @article.audio.empty? %>
     <section id="audio">
       <h3>Audio</h3>
@@ -36,7 +48,7 @@
     </section>
   <% end %>
   <footer>
-    <% unless @author.bio.empty? %>
+    <% unless @author.bio.empty? || @author.name == "SEZ" %>
       <section id="author">
         <h4>About the Author</h4>
         <%= image_tag(@author.image_url(:profile)) unless @author.image.nil? %>

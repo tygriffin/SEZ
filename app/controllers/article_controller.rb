@@ -15,6 +15,7 @@ class ArticleController < ApplicationController
     @body = markdown_parse(@article.body, {:escape_html => false, :strict_mode => false,})
     @vocabulary_words = VocabularyWord.where(:article_id => @article.id).order("word")
     @culture_notes = CultureNote.where(:article_id => @article.id).order("title")
+    @study_notes = StudyNote.where(:article_id => @article.id).order("title")
 
     if @vocabulary_words
       @vocabulary_words.each do |entry|
@@ -44,6 +45,21 @@ class ArticleController < ApplicationController
       end
 
       gon.culture_notes = @culture_notes
+    end
+
+    if @study_notes
+      @study_notes.each do |entry|
+        if @body.include? entry.instance
+          if mobile_device?
+            text = '<a class="article_bubble_trigger" id="' + entry.title + '">' + entry.instance + '</a>'
+          else
+            text = '<a href="#' + entry.title.tr(" ", "_") + '_detail"  class="article_bubble_trigger" id="' + entry.title + '">' + entry.instance + '</a>'
+          end
+          @body.gsub!(entry.instance, text)
+        end
+      end
+
+      gon.study_notes = @study_notes
     end
 
     #Social Media Meta

@@ -71,6 +71,13 @@ $(document).ready(function() {
         $(this).append('<p class="article_bubble">'+entry['body']+'</p>');
       }
     }
+    //Study note popup
+    for (var i=0; i<gon.study_notes.length; i++) {
+      var entry = gon.study_notes[i];
+      if ($(this).attr('id') == entry['title']) {
+        $(this).append('<p class="article_bubble">'+entry['body']+'</p>');
+      }
+    }
     if ($(this).attr('id') == "help_bubble") {
         $(this).append('<p class="article_bubble">説明文がここに現れます！</p>');
       }
