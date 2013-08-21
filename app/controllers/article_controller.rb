@@ -9,10 +9,16 @@ class ArticleController < ApplicationController
     else
       @local_stylesheet = "article.css"
     end
+
     @article = Article.find(params[:id])
+
+    if request.path != article_path(@article)
+      redirect_to @article, status: :moved_permanently
+    end
+
     @title = @article.title
     @author = Author.find(@article.author_id)
-    @body = markdown_parse(@article.body, {:escape_html => false, :strict_mode => false,})
+    @body = markdown_parse(@article.body, {:escape_html => false, :strict_mode => false})
     @vocabulary_words = VocabularyWord.where(:article_id => @article.id).order("word")
     @culture_notes = CultureNote.where(:article_id => @article.id).order("title")
     @study_notes = StudyNote.where(:article_id => @article.id).order("title")

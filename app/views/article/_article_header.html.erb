@@ -3,13 +3,14 @@
     <%= image_tag(@article.image) %>
   </figure>
   <div id="intro">
+    <p class="topic_marker"><%= @article.topic.name %></p>
     <h2><%= @article.title %></h2>
     <p>Posted on <%= @article.pubdate.strftime("%B %d, %Y") %> <br />
       <%= "by "+@author.name unless @author.name == "SEZ" %></p>
-    <p><%= @article.description %></p>
     <% unless @article.image_attribution.empty? %>
       <p>Image by <%= @article.image_attribution %></p>
     <% end %>
+    <p><%= @article.description %></p>
     <%= render 'layouts/study_tools', :a => @article %>
   </div>
 </div>

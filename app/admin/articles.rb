@@ -1,4 +1,5 @@
 ActiveAdmin.register Article do
+
   index do
     selectable_column
     column :title do |item| eval"link_to item.title, admin_#{item.class.name.to_s.underscore}_path(item)" rescue nil end rescue nil
@@ -12,6 +13,7 @@ ActiveAdmin.register Article do
     column :pubtype
     column :pubdate
     column :updated_at
+    default_actions
   end
 
   show do |a|
@@ -30,6 +32,7 @@ ActiveAdmin.register Article do
       row "Tags" do |t|
         a.tags.map(&:name).join(", ").html_safe
       end
+      row :slug
       row :created_at
       row :updated_at
     end

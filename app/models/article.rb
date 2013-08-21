@@ -1,5 +1,8 @@
 class Article < ActiveRecord::Base
-  attr_accessible :author, :body, :description, :title, :image, :image_attribution, :pubdate, :audio, :pubtype, :figure, :tags_attributes, :topic_id, :author_id
+  extend FriendlyId
+  friendly_id :title, use: [:slugged, :history]
+
+  attr_accessible :author, :body, :description, :title, :image, :image_attribution, :pubdate, :audio, :pubtype, :figure, :tags_attributes, :topic_id, :author_id, :slug
 
   mount_uploader :image, ImageUploader
 

@@ -81,6 +81,8 @@ GEM
     fastercsv (1.5.5)
     formtastic (2.2.1)
       actionpack (>= 3.0)
+    friendly_id (4.0.10.1)
+      activerecord (>= 3.0, < 4.0)
     gon (4.1.0)
       actionpack (>= 2.3.0)
       json
@@ -226,6 +228,7 @@ DEPENDENCIES
   coffee-rails (~> 3.2.1)
   factory_girl_rails (= 1.0)
   faker (= 0.3.1)
+  friendly_id (~> 4.0.9)
   gon
   heroku (~> 2.39.3)
   jquery-rails (~> 2.2.1)

@@ -4,51 +4,8 @@ $(document).ready(function() {
   // If JavaScript is turned off bubble info displays normally.
   //
   //
-
   $('head').append('<link href="/assets/popup_base.css" media="all" rel="stylesheet" type="text/css" />');
-  $('#latest_blog_posts div.bubble_info').append('<img class="bubble_close" src="/images/close_red.png">');
-  $('#latest_articles div.bubble_info, #featured_article div.bubble_info').append('<img class="bubble_close" src="/images/close_green.png">');
   $('#vocab').append('<img class="popup_placeholder" src="/images/plus_tab_green.png">');
-  $('.bubble_info').hide();
-
-  jQuery.easing.def = "easeInOutBack";
-
-
-  // Home page popups ////////////////////////////////
-
-  // Hack to compensate for lack of pointer-events in IE
-
-  function passThrough(e) {
-    $(".bubble_trigger").each(function() {
-     // check if clicked point (taken from event) is inside element
-     var mouseX = e.pageX;
-     var mouseY = e.pageY;
-     var offset = $(this).offset();
-     var width = $(this).width();
-     var height = $(this).height();
-
-     if (mouseX > offset.left && mouseX < offset.left+width && mouseY > offset.top && mouseY < offset.top+height)
-      $(this).click(); // force click event
-    });
-  }
-
-  $('html').click(passThrough);
-  // end hack
-
-
-
-  $('.bubble_trigger').click(function(e) {
-    e.stopPropagation();
-    $('.bubble_info').hide();
-    $(this).next().stop().show('fast');
-  });
-
-  $('.bubble_close').click(function(e) {
-    e.stopPropagation();
-    $('.bubble_info').hide('fast');
-  });
-
-
 
   // Article body popups /////////////////////////////
   var hide_delay = 0;
@@ -85,14 +42,15 @@ $(document).ready(function() {
       position: 'fixed',
       bottom: '30px',
       left: '10px',
-      fontSize: '130%',
+      fontSize: '22px',
       padding: '5px',
       margin: '0',
       maxWidth: '600px',
       opacity: '0.95',
       backgroundColor: '#6f8500',
       color: '#fff',
-      zIndex: '99999'
+      zIndex: '99999',
+      width: 'auto',
     });
     $('.article_bubble').hide();
     $('.article_bubble').show('fast');

@@ -1,5 +1,21 @@
-<h1><%= @topic.name %></h1>
+<h2><%= @topic.name %></h2>
 
-<p><%= raw @description %></p>
+<p id="intro"><%= @topic.description %></p>
+
+<ul id="latest_articles">
+  <% @articles.each do |article| %>
+    <%= link_to article do %>
+      <li>
+        <%= image_tag(article.image_url(:in_focus)) %>
+        <div class="article_info">
+          <h2><%= article.title %></h2>
+          <p><i>Posted on <%= article.pubdate %> by <%= article.author.name %></i></p>
+          <p><%= article.description %></p>
+          <%= render 'layouts/study_tools', :a => article %>
+        </div>
+      </li>
+    <% end %>
+  <% end %>
+</ul>
 
 

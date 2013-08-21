@@ -8,23 +8,11 @@ class SezCoreController < ApplicationController
     unless mobile_device?
       @local_stylesheet = "home.css"
     end
-    @features = Article.where(:pubtype => "feature").order("pubdate DESC").limit(6)
-    #Generate a feature in focus randomly
-    random = rand(6)
-    @in_focus = @features[random]
-    @features.delete_at(random)
-
-    @posts = Article.where(:pubtype => ['blog', 'recipe']).order("pubdate DESC").limit(9)
+    @articles = Article.find(:all, :order => "pubdate DESC", :limit => 6)
   end
 
   def about
     @title = "About"
-  end
-
-  def archive
-    @title = "Archive"
-    @local_stylesheet = "archive.css"
-    @articles = Article.all(:order => "pubdate DESC", :limit => 50)
   end
 
   def contribute

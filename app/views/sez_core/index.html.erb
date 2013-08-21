@@ -1,38 +1,18 @@
-<section id="latest_articles">
-  <ul>
-    <% @features.each do |f| %>
-      <li class="bubble_wrapper">
-        <%= image_tag(f.image_url(:main), :class => "bubble_trigger") %>
-        <div class="bubble_info">
-          <h2><%= link_to f.title, article_path(:id => f.id) %></h2>
-          <p><%= f.description %></p>
-          <%= render 'layouts/study_tools', :a => f %>
+<p id="intro">優しい英語で書いた記事。単語の意味も辞書要らずのポップアップで簡単チェック。ボキャブラリーがどんどん増えます！</p>
+
+<ul id="latest_articles">
+  <% @articles.each do |article| %>
+    <%= link_to article do %>
+      <li>
+        <%= image_tag(article.image_url(:in_focus)) %>
+        <div class="article_info">
+          <h2><span class="topic_marker"><%= article.topic.name %></span> <%= article.title %></h2>
+          <p><i>Posted on <%= article.pubdate %> by <%= article.author.name %></i></p>
+          <p><%= article.description %></p>
+          <%= render 'layouts/study_tools', :a => article %>
         </div>
       </li>
     <% end %>
-  </ul>
-</section>
+  <% end %>
+</ul>
 
-<section id="featured_article" class="bubble_wrapper">
-  <%= image_tag(@in_focus.image_url(:in_focus), :class => "bubble_trigger") %>
-  <div class="bubble_info">
-    <h2><%= link_to @in_focus.title, article_path(:id => @in_focus.id) %></h2>
-    <p><%= @in_focus.description %></p>
-    <%= render 'layouts/study_tools', :a => @in_focus %>
-  </div>
-</section>
-
-<section id="latest_blog_posts">
-  <ul>
-    <% @posts.each do |p| %>
-      <li class="bubble_wrapper">
-        <%= image_tag(p.image_url(:main), :class => "bubble_trigger") %>
-        <div class="bubble_info">
-          <h2><%= link_to p.title, article_path(:id => p.id) %></h2>
-          <p><%= p.description %></p>
-          <%= render 'layouts/study_tools', :a => p %>
-        </div>
-      </li>
-    <% end %>
-  </ul>
-</section>

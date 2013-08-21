@@ -1,3 +1,99 @@
 // Place all the styles related to the Topic controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+#intro {
+  border-top: 4px solid #000;
+  border-bottom: 1px solid #000;
+  padding: 25px 40px 25px 40px;
+  font-size: 160%;
+  text-align: center;
+}
+
+h2 {
+  font-size: 3em;
+  margin: 15px 0 0 0;
+}
+
+#latest_articles {
+  list-style: none;
+  padding: 0;
+
+  a {
+    text-decoration: none;
+    display: inline-block;
+    width: 100%;
+
+    :hover {
+      .article_info {
+        background-color: rgba(111, 133, 0, 1);
+
+        h2, p, li { color: #fff; }
+
+        .topic_marker {
+          background-color: #fff;
+          color: rgba(111, 133, 0, 1);
+        }
+
+        .includes_tool {
+          color: #fff;
+        }
+      }
+    }
+  }
+
+  li {
+    margin: 0 0 2em 0;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 2em;
+  }
+
+  .article_info {
+    width: 523px;
+    height: 294px;
+    padding: 10px 10px 0 10px;
+    background: #fff;
+
+
+    h2 {
+      font-size: 220%;
+      margin: 0;
+    }
+
+    h2, p {
+      color: #000;
+      font-weight: bold;
+      margin: 0;
+      padding: 0 0 8px 0;
+    }
+
+    .study_tools {
+      padding: 0;
+      margin: 0;
+
+      li {
+        display: inline-block;
+        width: auto;
+        height: auto;
+      }
+
+      .includes_tool {
+        margin: 0;
+        width: auto;
+        font-weight: bold;
+        color: #999;
+        border: 2px solid #ddd;
+        border-radius: 4px;
+        display: inline-block;
+        padding: 5px 7px 3px 5px;
+      }
+    }
+  }
+
+  img {
+    width: 450px;
+    float: right;
+    background-color: #DDF0F0;
+  }
+}

@@ -1,8 +1,6 @@
 SEZWebsite::Application.routes.draw do
 
 
-  get "topic/show"
-
   root :to => 'sez_core#index'
 
   match '/about', :to => 'sez_core#about'
@@ -11,16 +9,11 @@ SEZWebsite::Application.routes.draw do
 
   match '/contribute', :to => 'sez_core#contribute'
 
-  match '/blog', :to => 'sez_core#blog'
-
-  match '/article', :to => 'article#show', :as => :article
-
-  match '/topic', :to => 'topic#show', :as => :topic
-
   match '/contact' => 'contact#new', :as => 'contact', :via => :get
   match '/contact' => 'contact#create', :as => 'contact', :via => :post
 
-  # get "article/index"
+  get '/article?=:id', to: redirect('/article/:id')
+
   resources :article
   resources :vocabulary_word
   resources :culture_note

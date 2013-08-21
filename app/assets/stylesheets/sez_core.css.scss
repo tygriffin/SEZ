@@ -23,9 +23,12 @@
   font-style: normal;
 }
 
+@import url(http://fonts.googleapis.com/css?family=Chivo);
+
 h1 {
     display: inline-block;
     margin: 0;
+    pading: 0;
     font-size: 660%;
 
     a {
@@ -51,7 +54,6 @@ div#container {
 }
 
 #main_header {
-  margin-bottom: 10px;
   position: relative;
 
   nav {
@@ -81,12 +83,11 @@ div#container {
 }
 
 footer#main_footer {
-  clear: both;
   text-align: top;
 
   nav {
     display: table-cell;
-    padding: 5px;
+    padding: 5px 5px 20px 5px;
 
     ul {
       padding: 0;
