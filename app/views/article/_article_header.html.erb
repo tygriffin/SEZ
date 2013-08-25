@@ -5,10 +5,10 @@
   <div id="intro">
     <p class="topic_marker"><%= @article.topic.name %></p>
     <h2><%= @article.title %></h2>
-    <p>Posted on <%= @article.pubdate.strftime("%B %d, %Y") %> <br />
-      <%= "by "+@author.name unless @author.name == "SEZ" %></p>
+    <p><%= @article.pubdate.strftime("%Y年%m月%d日") %> 掲載<br />
+      <%= @author.name+" 著" unless @author.name == "SEZ" %></p>
     <% unless @article.image_attribution.empty? %>
-      <p>Image by <%= @article.image_attribution %></p>
+      <p>画像提供元：<%= @article.image_attribution %></p>
     <% end %>
     <p><%= @article.description %></p>
     <%= render 'layouts/study_tools', :a => @article %>

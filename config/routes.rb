@@ -1,6 +1,5 @@
 SEZWebsite::Application.routes.draw do
 
-
   root :to => 'sez_core#index'
 
   match '/about', :to => 'sez_core#about'
@@ -12,13 +11,15 @@ SEZWebsite::Application.routes.draw do
   match '/contact' => 'contact#new', :as => 'contact', :via => :get
   match '/contact' => 'contact#create', :as => 'contact', :via => :post
 
-  get '/article?=:id', to: redirect('/article/:id')
+  match '/game/:id', :to => 'sez_core#game', :as => :game
 
   resources :article
   resources :vocabulary_word
   resources :culture_note
   resources :tag
   resources :topic
+  resources :quizzes
+  resource :quiz
   match '/feed' => 'article#feed', :as => :feed, :defaults => { :format => 'atom' }
 
   devise_for :admin_users, ActiveAdmin::Devise.config

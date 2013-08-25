@@ -23,6 +23,15 @@ class ArticleController < ApplicationController
     @culture_notes = CultureNote.where(:article_id => @article.id).order("title")
     @study_notes = StudyNote.where(:article_id => @article.id).order("title")
 
+    @next_article = Article.where(['pubdate > ?', @article.pubdate]).order("pubdate").first
+    if @next_article.nil?
+      @next_article = Article.where(['pubdate < ?', @article.pubdate]).order("pubdate").first
+    end
+    @previous_article = Article.where(['pubdate < ?', @article.pubdate]).order("pubdate DESC").first
+    if @previous_article.nil?
+      @previous_article = Article.where(['pubdate > ?', @article.pubdate]).order("pubdate DESC").first
+    end
+
     if @vocabulary_words
       @vocabulary_words.each do |entry|
         if @body.include? entry.instance
@@ -67,6 +76,8 @@ class ArticleController < ApplicationController
 
       gon.study_notes = @study_notes
     end
+
+    @quiz = Quiz.where(:article_id => @article.id, :quiz_type => 'flashcard').first
 
     #Social Media Meta
     @meta_title = @article.title

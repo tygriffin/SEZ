@@ -9,11 +9,12 @@ class ContactController < ApplicationController
   end
 
   def create
+    @local_stylesheet = "contact.css"
     @message = Contact.new(params[:contact])
 
     if @message.valid?
       NotificationsMailer.new_message(@message).deliver
-      redirect_to(contact_path, :notice => "Thank you for your message!")
+      redirect_to(contact_path, :notice => "Thank you very much!")
     else
       render :action => 'new'
     end

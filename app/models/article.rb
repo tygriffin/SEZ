@@ -12,6 +12,7 @@ class Article < ActiveRecord::Base
   has_many :culture_notes
   has_many :study_notes
   has_many :tags
+  has_many :quizzes
 
   validates_presence_of :author, :body, :description, :title, :pubdate, :pubtype
   validates :pubtype, :inclusion => { :in => %w(feature blog recipe), :message => "%{value} is not a valid publication type. Please type 'article' or 'blog'." }

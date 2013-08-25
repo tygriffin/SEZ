@@ -1,9 +1,32 @@
 <article>
   <section id="article_body">
+    <% unless @quiz.nil? %>
+      <p class="preview_study">読む前に単語を<%= link_to("クイズゲーム", game_path(@quiz.id)) %>でチェック！</p>
+    <% end %>
     <%= raw @article.figure unless @article.figure.nil? %>
     <%= raw @body %>
 
     <%= render 'layouts/social_media_recommend' %>
+  </section>
+
+  <section id="next_reads">
+    <h3>次に読むのは．．．</h3>
+    <p>同じカテゴリーについてもっと読む： <%= link_to(@article.topic.name, @article.topic, :class => "topic_marker") %>
+    <p>それとも最近の記事を読む： </p>
+    <ul>
+      <%= link_to @previous_article do %>
+        <li>
+          <%= image_tag(@previous_article.image_url(:thumb)) %>
+          <p><em>前の記事：</em> <%= @previous_article.title %></p>
+        </li>
+      <% end %>
+      <%= link_to @next_article do %>
+        <li>
+          <%= image_tag(@next_article.image_url(:thumb)) %>
+          <p><em>次の記事：</em> <%= @next_article.title %></p>
+        </li>
+      <% end %>
+    </ul>
   </section>
   <% unless @vocabulary_words.empty? %>
     <section id="vocab">
@@ -50,7 +73,7 @@
   <footer>
     <% unless @author.bio.empty? || @author.name == "SEZ" %>
       <section id="author">
-        <h4>About the Author</h4>
+        <h4>著者紹介</h4>
         <%= image_tag(@author.image_url(:profile)) unless @author.image.nil? %>
         <ul>
           <%= content_tag(:li, @author.name) %>
@@ -60,7 +83,7 @@
       </section>
     <% end %>
     <div class="tags">
-      <h4>Tags:</h4>
+      <h4>タグ：</h4>
       <p><%= @article.tags.map { |t| t.name }.join(", ") %></p>
     </div>
   </footer>

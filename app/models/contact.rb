@@ -4,9 +4,9 @@ class Contact
   include ActiveModel::Conversion
   extend ActiveModel::Naming
 
-  attr_accessor :body, :email, :first_name, :last_name, :subject
+  attr_accessor :body, :email, :name, :subject
 
-  validates_presence_of :first_name, :last_name, :email, :subject, :body
+  validates_presence_of :name, :email, :subject, :body
   validates_format_of :email, :with => /^[-a-z0-9_+\.]+\@([-a-z0-9]+\.)+[a-z0-9]{2,4}$/i
   validates_length_of :body, :maximum => 500
 

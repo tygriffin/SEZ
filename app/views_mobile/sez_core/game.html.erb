@@ -1,0 +1,32 @@
+<section id="quiz_game">
+
+  <%= link_to "Start Quiz Game!", quiz_url(@quiz.id) %>
+
+  <div id="quiz_meta">
+    <section id="instructions">
+      <h3>Instructions</h3>
+      <p>Retro tote bag drinking vinegar you probably haven't heard of them, keffiyeh letterpress aliquip. Asymmetrical you probably haven't heard of them stumptown proident, Carles laborum Portland ethical.</p>
+    </section>
+
+    <section id="related_quizzes">
+      <h3>Related Quizzes</h3>
+      <ul>
+        <% @related_quizzes.each do |quiz| %>
+          <li><%= link_to(quiz.name, game_path(:id => quiz.id)) %><br />
+              <i>Quiz Type:</i> <%= quiz.quiz_type %></li>
+        <% end %>
+      </ul>
+    </section>
+
+    <section id="related_article">
+      <h3>Read the Article!</h3>
+      <div>
+        <%= image_tag(@article.image_url(:main)) %>
+        <%= link_to(content_tag(:h4, @article.title), @article) %>
+        <p><%= @article.description %></p>
+      </div>
+    </section>
+
+  </div>
+
+</section>

@@ -14,6 +14,7 @@
   z-index: 100;
   background-color: #000;
   text-align: center;
+  padding: 0;
 
   h1 {
     font-size: 140%;
@@ -29,8 +30,8 @@
     text-decoration: none;
     border: 1px solid #fff;
     border-radius: 2px;
-    margin: 2px 4px 0;
-    padding: 2px 2px 0 2px;
+    margin: 2px 20px 0 0;
+    padding: 2px 6px 0 5px;
     font-weight: bold;
     color: #fff;
   }
@@ -165,7 +166,7 @@
 
       .includes_tool {
         margin: 0;
-        font-size: 85%;
+        font-size: 12px;
         width: auto;
         color: #999;
         font-weight: bold;
@@ -199,8 +200,16 @@ article {
       line-height: 160%;
       font-family: 'Chivo', sans-serif;
       padding-top: 0;
-      width: 800px;
+      max-width: 800px;
       margin: 0 auto 20px auto;
+    }
+
+    .preview_study {
+      text-align: center;
+      padding: 30px;
+      font-size: 28px;
+      border-top: 3px solid black;
+      border-bottom: 1px solid black;
     }
 
     .highlight, .highlight a {
@@ -209,8 +218,7 @@ article {
 
     .highlight {
       padding: 40px;
-      font-size: 200%;
-      padding: 20px 0 20px 60px;
+      font-size: 32px;
       line-height: 140%;
       display: block;
     }
@@ -252,10 +260,72 @@ article {
     img {
       width: 100%;
     }
+  }
 
-    iframe {
-      margin: 0 0 20px 0;
+
+  section#next_reads {
+    border-top: 1px dashed gray;
+    background-color: #fafcfe;
+
+    h3 {
+      font-size: 26px;
+      margin: 20px 0 10px 0;
     }
+
+    p {
+      font-size: 22px;
+      padding: 0;
+      margin: 0;
+
+      .topic_marker {
+        background-color: #e01b5d;
+        padding: 0 6px 0 6px;
+        color: #fff;
+        font-size: 18px;
+        border-radius: 5px;
+        display: inline-block;
+        text-decoration: none;
+
+        &:hover {
+          background-color: #6f8500;
+        }
+    }
+    }
+
+    ul {
+      padding: 0;
+
+      a {
+        text-decoration: none;
+        display: inline-block;
+        width: 497px;
+
+        :hover {
+          text-decoration: underline;
+        }
+      }
+
+      li {
+        list_style: none;
+        display: inline-block;
+        width: 497px;
+        float: left;
+
+        img {
+          float: left;
+          background-color: #fff;
+        }
+
+        p {
+          font-size: 22px;
+          line-height: 150%;
+          font-weight: bold;
+          padding: 0;
+          margin: 0 0 0 110px;
+        }
+      }
+    }
+
   }
 
   section#vocab, section#audio, section#culture_notes, section#study_notes {

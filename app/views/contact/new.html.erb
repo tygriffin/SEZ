@@ -1,28 +1,30 @@
+<h2>お問合せ</h2>
+
+<p class="sub_header_lead">質問、批評、記事のアイディア、ご意見などご自由にお送りください！</p>
+
+
 <% flash.each do |name, msg| %>
-  <%= content_tag :div, msg, :id => "flash_#{name}" %>
+  <%= content_tag :div, msg, :id => "flash_#{name}", :class => "contact_flash" %>
 <% end %>
 
 <%= form_for @message, :url => contact_path do |f| %>
   <%= f.error_messages %>
   <fieldset>
     <dl>
-      <dt><%= f.label :first_name %></dt>
-      <dd><%= f.text_field :first_name %></dd>
+      <dt><%= f.label :name, "ご氏名" %>：</dt>
+      <dd><%= f.text_field :name %></dd>
 
-      <dt><%= f.label :last_name %></dt>
-      <dd><%= f.text_field :last_name %></dd>
-
-      <dt><%= f.label :email %></dt>
+      <dt><%= f.label :email, "メールアドレス" %>：</dt>
       <dd><%= f.email_field :email %></dd>
 
-      <dt><%= f.label :subject %></dt>
+      <dt><%= f.label :subject, "件名" %>：</dt>
       <dd><%= f.text_field :subject %></dd>
 
-      <dt><%= f.label :body %></dt>
+      <dt><%= f.label :body, "コメント" %>：</dt>
       <dd><%= f.text_area :body %></dd>
     </dl>
 
 
-  <%= f.submit "送る", :class => "submit" %>
+  <%= f.submit "送信", :class => "submit" %>
   </fieldset>
 <% end %>

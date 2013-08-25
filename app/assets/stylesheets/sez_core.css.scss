@@ -25,18 +25,21 @@
 
 @import url(http://fonts.googleapis.com/css?family=Chivo);
 
-h1 {
-    display: inline-block;
-    margin: 0;
-    pading: 0;
-    font-size: 660%;
 
-    a {
-      text-decoration: none;
-      color: black;
-      font-family: 'Acknowledgement', sans-serif;
-    }
+body { line-height: 1.25; }
+
+h1 {
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  font-size: 120px;
+
+  a {
+    text-decoration: none;
+    color: black;
+    font-family: 'Acknowledgement', sans-serif;
   }
+}
 
 h2, h3, h4, p, li, ol {
   color: black;
@@ -49,7 +52,7 @@ p {
 }
 
 div#container {
-  width: 1025px;
+  max-width: 1025px;
   margin: 0 auto;
 }
 
@@ -68,6 +71,7 @@ div#container {
         display: inline-block;
         list-style: none;
         margin-left: 13px;
+        font-size: 20px;
       }
 
       a {
@@ -84,45 +88,44 @@ div#container {
 
 footer#main_footer {
   text-align: top;
+  padding-top: 30px;
 
   nav {
     display: table-cell;
     padding: 5px 5px 20px 5px;
 
     ul {
-      padding: 0;
+      padding: 0 0 40px 0;
+      vertical-align: top;
+      display: inline-block;
+      list-style: none;
+      width: 198px;
 
-      #social_media {
-        img {
-          width: 30px;
+      li {
+        margin-bottom: 6px;
+        font-size: 20px;
+
+        a {
+          text-decoration: none;
+          color: black;
+        }
+
+        a:hover {
+          text-decoration: underline;
         }
       }
 
-      #license {
-        width: 380px;
-        font-size: 80%;
+    }
+
+    #social_media {
+      img {
+        width: 30px;
       }
+    }
 
-      ul {
-        vertical-align: top;
-        display: inline-block;
-        list-style: none;
-        width: 198px;
-
-        li {
-          margin-bottom: 6px;
-          font-size: 90%;
-
-          a {
-            text-decoration: none;
-            color: black;
-          }
-
-          a:hover {
-            text-decoration: underline;
-          }
-        }
-      }
+    #license li {
+      width: 380px;
+      font-size: 80%;
     }
   }
 }

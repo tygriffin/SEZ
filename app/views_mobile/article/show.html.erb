@@ -3,9 +3,13 @@
     <h1><%= link_to "SEZ", root_path %></h1>
     <%= image_tag(@article.image_url) %>
     <h2><%= @article.title %></h2>
-    <p>Posted on <%= @article.pubdate.strftime("%B %d, %Y") %> <%= "by "+@author.name unless @author.name == "SEZ" %></p>
+    <p><%= @article.pubdate.strftime("%Y年%m月%d日") %> 掲載<br />
+      <%= @author.name+" 著" unless @author.name == "SEZ" %></p>
   </header>
   <section id="article_body">
+    <% unless @quiz.nil? %>
+      <p class="preview_study">読む前に単語を<%= link_to("クイズゲーム", game_path(@quiz.id)) %>でチェック！</p>
+    <% end %>
     <%= raw @body %>
     <%= raw @article.figure unless @article.figure.nil? %>
     <%= render 'layouts/social_media_recommend' %>

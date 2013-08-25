@@ -53,7 +53,7 @@ $(function() {
       zIndex: '200'
     });
     $('.article_bubble p').css({
-      width: '90%'
+      width: '80%'
     });
     $('.article_bubble').hide();
     $('.article_bubble').show('fast');

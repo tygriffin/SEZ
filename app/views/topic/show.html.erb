@@ -1,21 +1,25 @@
 <h2><%= @topic.name %></h2>
 
-<p id="intro"><%= @topic.description %></p>
+<p class="sub_header_lead"><%= @topic.description %></p>
 
-<ul id="latest_articles">
-  <% @articles.each do |article| %>
-    <%= link_to article do %>
-      <li>
-        <%= image_tag(article.image_url(:in_focus)) %>
-        <div class="article_info">
-          <h2><%= article.title %></h2>
-          <p><i>Posted on <%= article.pubdate %> by <%= article.author.name %></i></p>
-          <p><%= article.description %></p>
-          <%= render 'layouts/study_tools', :a => article %>
-        </div>
-      </li>
+<section id="latest_articles">
+
+  <ul id="latest_articles">
+    <% @articles.each do |article| %>
+      <%= link_to article do %>
+        <li>
+          <%= image_tag(article.image_url(:in_focus)) %>
+          <div class="article_info">
+            <h2><%= article.title %></h2>
+            <p><i><%= article.pubdate.strftime("%Y年%m月%d日") %> 掲載　<%= article.author.name+" 著"  unless article.author.name == "SEZ"%></i></p>
+            <p><%= article.description %></p>
+            <%= render 'layouts/study_tools', :a => article %>
+          </div>
+        </li>
+      <% end %>
     <% end %>
-  <% end %>
-</ul>
+  </ul>
+
+</section>
 
 

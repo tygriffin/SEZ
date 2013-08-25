@@ -2,6 +2,19 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+h2 {
+  font-size: 42px;
+  margin: 15px 0 0 0;
+}
+
+.sub_header_lead {
+  border-top: 4px solid #000;
+  border-bottom: 1px solid #000;
+  padding: 25px 40px 25px 40px;
+  font-size: 24px;
+  text-align: center;
+}
+
 form {
   dt {
     margin: 20px 0 10px 0;
@@ -14,7 +27,7 @@ form {
   .submit {
     padding: 10px 20px 10px 20px;
     margin: 20px 0 20px 0;
-    background-color: #f5fcfa;
+    background-color: #fff;
   }
 
   .submit:hover {
@@ -26,5 +39,14 @@ form {
 .error_message h2, .error_message p, .error_message li {
   color: red;
   font-style: italic;
+}
+
+.contact_flash {
+  color: #6f8500;
+  font-size: 1.5em;
+  font-weight: bold;
+  padding: 30px 0 30px 0;
+  text-align: center;
+  width: 100%;
 }
 

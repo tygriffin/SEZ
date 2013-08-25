@@ -3,12 +3,13 @@
 *
 */
 
-#intro {
+#sub_header_lead {
   border-top: 4px solid #000;
   border-bottom: 1px solid #000;
   padding: 25px 40px 25px 40px;
-  font-size: 200%;
   text-align: center;
+  font-size: 28px;
+  margin: 0 0 40px 0;
 }
 
 #latest_articles {
@@ -22,7 +23,7 @@
 
     :hover {
       .article_info {
-        background-color: rgba(111, 133, 0, 1);
+        background-color: #6f8500;
 
         h2, p, li { color: #fff; }
 
@@ -52,31 +53,35 @@
 
 
     h2 {
-      font-size: 220%;
+      font-size: 32px;
       margin: 0;
+      font-weight: bold;
 
       .topic_marker {
-        font-size: 50%;
+        font-size: 24px;
         background-color: #e01b5d;
         padding: 3px;
         color: #fff;
         border-radius: 5px;
         display: inline-block;
-        position: relative;
-        top: -5px;
+        vertical-align: middle;
       }
+    }
+
+    p {
+      font-size: 18px;
+      line-height: 125%;
     }
 
     h2, p {
       color: #000;
-      font-weight: bold;
       margin: 0;
       padding: 0 0 8px 0;
     }
 
     .study_tools {
       padding: 0;
-      margin: 0;
+      margin: 15px 0;
 
       li {
         display: inline-block;
@@ -100,7 +105,7 @@
   img {
     width: 450px;
     float: right;
-    background-color: #DDF0F0;
+    background-color: #ddf0f0;
   }
 }
 
