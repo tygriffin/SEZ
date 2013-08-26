@@ -17,7 +17,11 @@ article {
     display: block;
   }
 
-  p, li {
+  .poetry {
+    font-style: italic;
+  }
+
+  p, li, pre {
     line-height: 200%;
     font-size: 38px;
     padding: 40px;
@@ -93,11 +97,8 @@ article {
     h4 { font-size: 40px; margin: 10px 0 0 40px; }
 
     .preview_study {
-      text-align: center;
-      padding: 50px;
-      font-size: 46px;
-      border-top: 5px solid black;
-      border-bottom: 2px solid black;
+      font-weight: bold;
+      font-style: italic;
     }
   }
 

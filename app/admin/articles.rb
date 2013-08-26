@@ -33,6 +33,7 @@ ActiveAdmin.register Article do
         a.tags.map(&:name).join(", ").html_safe
       end
       row :slug
+      row :flag_message
       row :created_at
       row :updated_at
     end
@@ -58,6 +59,7 @@ ActiveAdmin.register Article do
       f.input :audio
     end
     f.inputs "Meta" do
+      f.input :flag_message
       f.has_many :tags do |t|
         t.input :name
       end

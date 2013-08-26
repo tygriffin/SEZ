@@ -33,9 +33,9 @@ class SezCoreController < ApplicationController
 
     @quiz = Quiz.find(params[:id])
     if @quiz.article_id
-      @related_quizzes = Quiz.where(:article_id => @quiz.article_id)
+      @related_quizzes = Quiz.where(:article_id => @quiz.article_id).where('id != ?', @quiz.id)
     else
-      @related_quizzes = Quiz.where(:topic_id => @quiz.topic_id)
+      @related_quizzes = Quiz.where(:topic_id => @quiz.topic_id).where('id != ?', @quiz.id)
     end
 
     @article = Article.find(@quiz.article_id)

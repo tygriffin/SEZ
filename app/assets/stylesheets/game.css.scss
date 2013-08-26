@@ -10,7 +10,6 @@
     padding: 15px 25px 15px 15px;
     margin-right: 10px;
     max-width: 550px;
-    height: 683px;
 
     #instructions, #related_quizzes, #related_article {
       margin-bottom: 20px;
@@ -49,5 +48,26 @@
     border: 0px none transparent;
     padding: 0px;
   }
+
+}
+
+
+@media all and (max-width: 600px) {
+
+  #quiz_game {
+    min-height: auto;
+
+    #quiz_meta {
+      margin-right: 0;
+      max-width: 100%;
+      height: auto;
+    }
+
+    iframe {
+      float: none;
+    }
+
+  }
+
 
 }

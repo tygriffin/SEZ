@@ -1,7 +1,7 @@
 <article>
   <section id="article_body">
     <% unless @quiz.nil? %>
-      <p class="preview_study">読む前に単語を<%= link_to("クイズゲーム", game_path(@quiz.id)) %>でチェック！</p>
+      <p class="preview_study">読む前に単語を<%= link_to("クイズゲーム", game_path(@quiz.id), :class => "quiz_game_link") %>でチェック！</p>
     <% end %>
     <%= raw @article.figure unless @article.figure.nil? %>
     <%= raw @body %>
@@ -11,8 +11,7 @@
 
   <section id="next_reads">
     <h3>次に読むのは．．．</h3>
-    <p>同じカテゴリーについてもっと読む： <%= link_to(@article.topic.name, @article.topic, :class => "topic_marker") %>
-    <p>それとも最近の記事を読む： </p>
+    <p><%= link_to("同じカテゴリー"+@article.topic.name, @article.topic, :class => "topic_marker") %>についてもっと読む。それとも最近の記事を読む：</p>
     <ul>
       <%= link_to @previous_article do %>
         <li>

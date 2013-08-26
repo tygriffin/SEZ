@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130825065849) do
+ActiveRecord::Schema.define(:version => 20130826121156) do
 
   create_table "active_admin_comments", :force => true do |t|
     t.string   "resource_id",   :null => false
@@ -62,6 +62,7 @@ ActiveRecord::Schema.define(:version => 20130825065849) do
     t.string   "image_attribution"
     t.integer  "author_id"
     t.string   "slug"
+    t.string   "flag_message"
   end
 
   add_index "articles", ["slug"], :name => "index_articles_on_slug"

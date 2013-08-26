@@ -36,4 +36,18 @@ class ApplicationController < ActionController::Base
     bc.to_html
   end
   helper_method :markdown_parse
+
+  def add_flag(flag)
+    case flag
+    when 'easy to read'
+      flag_image = "/images/flag_easy-to-read.png"
+    when 'short read'
+      flag_image = "/images/flag_short.png"
+    when 'native language'
+      flag_image = ""
+    when 'learn slang'
+      flag_image = "/images/flag_slang.png"
+    end
+  end
+  helper_method :add_flag
 end

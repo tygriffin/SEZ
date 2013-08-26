@@ -6,10 +6,16 @@
 #sub_header_lead {
   border-top: 4px solid #000;
   border-bottom: 1px solid #000;
-  padding: 25px 40px 25px 40px;
+  padding: 25px 50px 25px 50px;
   text-align: center;
   font-size: 28px;
   margin: 0 0 40px 0;
+
+  .bird_logo {
+    float: right;
+    width: 140px;
+    margin-left: 60px;
+  }
 }
 
 #latest_articles {
@@ -43,6 +49,13 @@
     margin: 0 0 2em 0;
     border-bottom: 1px solid #ccc;
     padding-bottom: 2em;
+    position: relative;
+
+    .attention_flag {
+      position: absolute;
+      top: 10px;
+      right: -34px;
+    }
   }
 
   .article_info {
@@ -102,10 +115,25 @@
     }
   }
 
-  img {
+  img:first-child {
     width: 450px;
     float: right;
     background-color: #ddf0f0;
   }
+}
+
+
+@media all and (max-width: 700px) {
+
+  #latest_articles {
+
+    .article_info { width: 100%; }
+
+    img {
+      width: 100%;
+      float: none;
+    }
+  }
+
 }
 
