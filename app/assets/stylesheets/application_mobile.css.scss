@@ -191,7 +191,7 @@ footer#main_footer {
     #social_media li {
       display: inline-block;
       text-align: center;
-      width: 23%;
+      width: 20%;
 
       img {
         width: 160px;
@@ -226,7 +226,7 @@ form {
     width: 80%;
     height: 80px;
     line-height: 40px;
-    font-size: 300%;
+    font-size: 200%;
   }
 
   textarea {
@@ -236,7 +236,7 @@ form {
     margin: 0;
     width: 100%; height: 300px;
     line-height: 40px;
-    font-size: 300%;
+    font-size: 200%;
   }
 
   .submit {
@@ -253,6 +253,25 @@ form {
     border: 1px solid #bbb;
   }
 
+}
+
+.contact_flash {
+  font-size: 36px;
+  color: #6f8500;
+  font-weight: bold;
+  text-align: center;
+  width: 100%;
+  padding: 40px 0 40px 0;
+  font-family: 'Chivo', sans-serif;
+}
+
+.error_message h2, .error_message p, .error_message li {
+  color: red;
+  font-style: italic;
+}
+
+.error_message ul {
+  padding-left: 30px;
 }
 
 

@@ -16,4 +16,5 @@
 //= require jquery.easing.1.3
 //= reuqire jquery.easing.compatibility
 //= require popup_mobile
+//= require flashcard_quiz
 

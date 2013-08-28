@@ -4,7 +4,9 @@
     <%= image_tag(@article.image_url) %>
     <h2><%= @article.title %></h2>
     <p><%= @article.pubdate.strftime("%Y年%m月%d日") %> 掲載<br />
-      <%= @author.name+" 著" unless @author.name == "SEZ" %></p>
+      <%= @author.name+" 著" unless @author.name == "SEZ" %><br />
+      <%= '画像提供元：'+@article.image_attribution unless @article.image_attribution.empty? %>
+    </p>
   </header>
   <section id="article_body">
     <% unless @quiz.nil? %>
