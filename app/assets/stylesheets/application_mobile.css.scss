@@ -78,12 +78,21 @@ p, li {
 }
 
 .sub_header_lead {
-  font-size: 40px;
-  text-align: center;
-  padding: 40px 100px 40px 100px;
-  line-height: 200%;
   border-top: 5px solid #000;
   border-bottom: 2px solid #000;
+  text-align: center;
+
+  p {
+    font-size: 40px;
+    padding: 30px 60px 30px 60px;
+    line-height: 200%;
+    margin: 0;
+  }
+
+  img.bird_logo {
+    float: right;
+    padding: 80px 40px 60px 40px;
+  }
 }
 
 #latest_articles {
@@ -123,8 +132,8 @@ p, li {
           padding: 5px 5px 0 5px;
           border: 1px solid #6f8500;
           border-radius: 4px;
-          color: #6f8500;
-          font-size: 20px;
+          color: #777;
+          font-size: 30px;
           font-weight: bold;
         }
       }
@@ -139,7 +148,7 @@ p, li {
     .topic_marker {
       font-size: 32px;
       background-color: #e01b5d;
-      padding: 3px;
+      padding: 3px 5px 3px 5px;
       color: #fff;
       border-radius: 5px;
       display: inline-block;
@@ -226,7 +235,7 @@ form {
     width: 80%;
     height: 80px;
     line-height: 40px;
-    font-size: 200%;
+    font-size: 180%;
   }
 
   textarea {
@@ -236,7 +245,7 @@ form {
     margin: 0;
     width: 100%; height: 300px;
     line-height: 40px;
-    font-size: 200%;
+    font-size: 150%;
   }
 
   .submit {
