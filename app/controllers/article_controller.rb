@@ -24,13 +24,7 @@ class ArticleController < ApplicationController
     @study_notes = StudyNote.where(:article_id => @article.id).order("title")
 
     @next_article = Article.where(['pubdate > ?', @article.pubdate]).order("pubdate").first
-    if @next_article.nil?
-      @next_article = Article.where(['pubdate < ?', @article.pubdate]).order("pubdate").first
-    end
     @previous_article = Article.where(['pubdate < ?', @article.pubdate]).order("pubdate DESC").first
-    if @previous_article.nil?
-      @previous_article = Article.where(['pubdate > ?', @article.pubdate]).order("pubdate DESC").first
-    end
 
     if @vocabulary_words
       @vocabulary_words.each do |entry|

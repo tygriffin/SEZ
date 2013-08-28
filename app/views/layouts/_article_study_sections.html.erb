@@ -1,0 +1,42 @@
+<% unless @vocabulary_words.empty? %>
+  <section id="vocab">
+    <h3>Vocabulary</h3>
+    <ul>
+      <% @vocabulary_words.each do | vocab | %>
+        <%= content_tag :li, :id => vocab.word.tr(" ", "_")+'_detail' do %>
+          <strong><%= vocab.word %></strong> (<%= vocab.part_of_speech %>): <%= vocab.definition %> 【<%= vocab.translation %>】
+        <% end %>
+      <% end %>
+    </ul>
+  </section>
+<% end %>
+<% unless @culture_notes.empty? %>
+  <section id="culture_notes">
+    <h3>Culture Notes</h3>
+    <ul>
+    <% @culture_notes.each do | entry | %>
+      <%= content_tag :li, :id => entry.title.tr(" ", "_")+'_detail' do %>
+        <strong><%= entry.title %></strong>: <%= raw entry.body %>
+      <% end %>
+    <% end %>
+    </ul>
+  </section>
+<% end %>
+<% unless @study_notes.empty? %>
+  <section id="study_notes">
+    <h3>Study Notes</h3>
+    <ul>
+    <% @study_notes.each do | entry | %>
+      <%= content_tag :li, :id => entry.title.tr(" ", "_")+'_detail' do %>
+        <strong><%= entry.title %></strong>: <%= raw entry.body %>
+      <% end %>
+    <% end %>
+    </ul>
+  </section>
+<% end %>
+<% unless @article.audio.empty? %>
+  <section id="audio">
+    <h3>Audio</h3>
+    <%= raw @article.audio %>
+  </section>
+<% end %>

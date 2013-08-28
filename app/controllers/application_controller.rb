@@ -38,15 +38,28 @@ class ApplicationController < ActionController::Base
   helper_method :markdown_parse
 
   def add_flag(flag)
-    case flag
-    when 'easy to read'
-      flag_image = "/images/flag_easy-to-read.png"
-    when 'short read'
-      flag_image = "/images/flag_short.png"
-    when 'native language'
-      flag_image = ""
-    when 'learn slang'
-      flag_image = "/images/flag_slang.png"
+    if mobile_device?
+      case flag
+      when 'easy to read'
+        flag_image = "/images/flag_easy-to-read_mobile.png"
+      when 'short read'
+        flag_image = "/images/flag_short_mobile.png"
+      when 'challenge'
+        flag_image = "/images/flag_challenge_mobile.png"
+      when 'learn slang'
+        flag_image = "/images/flag_slang_mobile.png"
+      end
+    else
+      case flag
+      when 'easy to read'
+        flag_image = "/images/flag_easy-to-read.png"
+      when 'short read'
+        flag_image = "/images/flag_short.png"
+      when 'challenge'
+        flag_image = "/images/flag_challenge.png"
+      when 'learn slang'
+        flag_image = "/images/flag_slang.png"
+      end
     end
   end
   helper_method :add_flag

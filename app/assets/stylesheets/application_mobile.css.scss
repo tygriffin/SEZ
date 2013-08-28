@@ -100,9 +100,17 @@ p, li {
 
       padding: 40px 0 40px 0;
       border-bottom: 1px solid gray;
+      position: relative;
 
-      img {
+      img:first-child {
         width: 100%;
+      }
+
+      .attention_flag {
+        position: absolute;
+        top: 60px;
+        right: 0;
+        width: 240px;
       }
 
       .study_tools {
