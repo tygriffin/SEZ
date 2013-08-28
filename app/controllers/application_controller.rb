@@ -3,7 +3,6 @@ class ApplicationController < ActionController::Base
   before_filter :topics_menu
 
   def topics_menu
-    puts "hello"
     @topics_menu = Topic.find(:all, :order => "name")
   end
   helper_method :topics_menu
