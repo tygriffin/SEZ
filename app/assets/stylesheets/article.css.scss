@@ -255,15 +255,14 @@ article {
       float: none;
       width: 100%;
       padding: 0;
+      margin-bottom: 15px;
 
-      img {
-        width: 100%;
-      }
+      img { width: 100%; }
+
+      iframe, object, embed { width: 100%; height: 600px;}
     }
 
-    img {
-      width: 100%;
-    }
+    img { width: 100%; }
   }
 
 

@@ -134,16 +134,18 @@
 @media all and (max-width: 700px) {
 
   #latest_articles {
+    ul {
 
-    .article_info { width: 100%; }
+      .article_info { width: 100%; }
 
-    img:first-child {
-      width: 100%;
-      float: none;
-    }
+      img:first-child {
+        width: 100%;
+        float: none;
+      }
 
-    .attention_flag {
-      display: none;
+      .attention_flag {
+        display: none;
+      }
     }
   }
 
