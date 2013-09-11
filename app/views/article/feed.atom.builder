@@ -8,8 +8,10 @@ atom_feed :language => 'en-US' do |feed|
     feed.entry(item) do |entry|
       entry.url article_url(item)
       entry.title item.title
-      entry.author item.author
-      entry.content item.body
+      entry.author do |author|
+        author.name item.author
+      end
+      entry.content item.description
 
       #necessary for Google Reader
       entry.updated(item.updated_at.strftime("%Y-%m-%dT%H:%M:%SZ"))
