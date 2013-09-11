@@ -82,7 +82,11 @@ class ArticleController < ApplicationController
   end
 
   def feed
-    @articles = Article.order("pubdate DESC")
+    @articles = Article.order("pubdate DESC").limit(20)
+
+    respond_to do |format|
+      format.rss { render :layout => false }
+    end
   end
 
 

@@ -1,15 +1,18 @@
-xml.feed do |feed|
-  feed.title = "SEZ"
-  feed.updated @articles.maximum(:updated_at)
+xml.instruct! :xml, :version => "1.0"
+xml.rss :version => "2.0" do
+  xml.channel do
+    xml.title "SEZ"
+    xml.description "今注目の話題から普段目にしないようなおもしろトピック満載！単語の意味も辞書要らずのポップアップで簡単チェック。ボキャブラリーがどんどん増えます！"
+    xml.link articles_url
 
-  @articles.each do |post|
-    feed.entry post do |entry|
-      entry.title post.title
-      entry.content post.description
-      entry.url article_path(post)
-      entry.author do |author|
-        author.name post.author
+    for post in @articles
+      xml.item do
+        xml.title post.title
+        xml.description post.description
+        xml.pubDate post.pubdate.to_s(:rfc822)
+        xml.link article_url(post)
+        xml.guid article_url(post)
       end
-    end # end feed.entry
-  end # end @articles.each
+    end
+  end
 end
