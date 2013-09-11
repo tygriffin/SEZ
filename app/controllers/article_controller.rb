@@ -82,9 +82,7 @@ class ArticleController < ApplicationController
   end
 
   def feed
-    @title = "SEZ"
     @articles = Article.order("pubdate DESC")
-    @updated = @articles.first.updated_at unless @articles.empty?
 
     respond_to do |format|
       format.atom { render :layout => false }

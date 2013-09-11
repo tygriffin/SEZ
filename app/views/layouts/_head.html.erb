@@ -1,5 +1,6 @@
 <meta charset="utf-8">
 <title><%= title.html_safe %></title>
+<%= content_for :head %>
 <%= include_gon %>
 <% if mobile_device? %>
   <%= stylesheet_link_tag    "application_mobile" %>
