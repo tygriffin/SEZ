@@ -20,7 +20,7 @@ SEZWebsite::Application.routes.draw do
   resources :topic
   resources :quizzes
   resource :quiz
-  match '/feed' => 'article#feed', :as => :feed, :defaults => { :format => 'atom' }
+  match '/feed' => 'article#feed', :as => :feed, :defaults => { :format => 'rss' }
 
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
