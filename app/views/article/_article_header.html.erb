@@ -8,7 +8,7 @@
     <p><%= @article.pubdate.strftime("%Y年%m月%d日") %> 掲載<br />
       <%= @author.name+" 著" unless @author.name == "SEZ" %></p>
     <% unless @article.image_attribution.empty? %>
-      <p>画像提供元：<%= @article.image_attribution %></p>
+      <p>画像提供元：<%= raw @article.image_attribution %></p>
     <% end %>
     <p><%= @article.description %></p>
     <%= render 'layouts/study_tools', :a => @article %>
