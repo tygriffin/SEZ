@@ -1,4 +1,4 @@
-<% unless @vocabulary_words.empty? %>
+<% unless @vocabulary_words.blank? %>
   <section id="vocab">
     <h3>Vocabulary</h3>
     <ul>
@@ -10,7 +10,7 @@
     </ul>
   </section>
 <% end %>
-<% unless @culture_notes.empty? %>
+<% unless @culture_notes.blank? %>
   <section id="culture_notes">
     <h3>Culture Notes</h3>
     <ul>
@@ -22,7 +22,7 @@
     </ul>
   </section>
 <% end %>
-<% unless @study_notes.empty? %>
+<% unless @study_notes.blank? %>
   <section id="study_notes">
     <h3>Study Notes</h3>
     <ul>
@@ -34,7 +34,7 @@
     </ul>
   </section>
 <% end %>
-<% unless @article.audio.empty? %>
+<% unless @article.audio.blank? %>
   <section id="audio">
     <h3>Audio</h3>
     <%= raw @article.audio %>

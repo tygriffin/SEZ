@@ -7,7 +7,7 @@
     <h2><%= @article.title %></h2>
     <p><%= @article.pubdate.strftime("%Y年%m月%d日") %> 掲載<br />
       <%= @author.name+" 著" unless @author.name == "SEZ" %></p>
-    <% unless @article.image_attribution.empty? %>
+    <% unless @article.image_attribution.blank? %>
       <p>画像提供元：<%= raw @article.image_attribution %></p>
     <% end %>
     <p><%= @article.description %></p>

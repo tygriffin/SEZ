@@ -31,7 +31,14 @@ RSpec.configure do |config|
 
   config.include FactoryGirl::Syntax::Methods
 
-  config.before do
+  config.before(:each) do
     ActionMailer::Base.deliveries.clear
   end
+
+  config.after(:each) do
+    if Rails.env.test?
+      FileUtils.rm_rf(Dir["#{Rails.root}/spec/support/uploads"])
+    end
+  end
+
 end

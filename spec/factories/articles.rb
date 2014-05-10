@@ -3,6 +3,9 @@ FactoryGirl.define do
     body          'I am the very model of a major modern general.'
     pubdate       Time.zone.today - 1.day
     pubtype       'feature'
+
+    image Rack::Test::UploadedFile.new(File.open(File.join(Rails.root, '/spec/fixtures/images/test_image.jpg')))
+
     association   :author, :factory => :author
     association   :topic,  :factory => :topic
 
