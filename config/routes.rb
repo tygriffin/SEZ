@@ -2,16 +2,16 @@ SEZWebsite::Application.routes.draw do
 
   root :to => 'sez_core#index'
 
-  match '/about', :to => 'sez_core#about'
+  match '/about', :to => 'sez_core#about', :via => :get
 
-  match '/archive', :to => 'sez_core#archive'
+  match '/archive', :to => 'sez_core#archive', :via => :get
 
-  match '/contribute', :to => 'sez_core#contribute'
+  match '/contribute', :to => 'sez_core#contribute', :via => :get
 
   match '/contact' => 'contact#new', :as => 'contact', :via => :get
-  match '/contact' => 'contact#create', :as => 'contact', :via => :post
+  #match '/contact' => 'contact#create', :as => 'contact', :via => :post
 
-  match '/game/:id', :to => 'sez_core#game', :as => :game
+  match '/game/:id', :to => 'sez_core#game', :as => :game, :via => :get
 
   resources :article
   resources :vocabulary_word
@@ -20,7 +20,7 @@ SEZWebsite::Application.routes.draw do
   resources :topic
   resources :quizzes
   resource :quiz
-  match '/feed' => 'article#feed', :as => :feed, :defaults => { :format => 'rss' }
+  match '/feed' => 'article#feed', :as => :feed, :defaults => { :format => 'rss' }, :via => :get
 
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
