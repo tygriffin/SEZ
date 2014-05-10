@@ -1,7 +1,7 @@
 FactoryGirl.define do
   factory :article do
     body          'I am the very model of a major modern general.'
-    pubdate       Time.zone.today - 1.day
+    pubdate       Time.zone.today
     pubtype       'feature'
 
     image Rack::Test::UploadedFile.new(File.open(File.join(Rails.root, '/spec/fixtures/images/test_image.jpg')))
