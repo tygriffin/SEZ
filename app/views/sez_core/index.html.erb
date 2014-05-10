@@ -7,7 +7,7 @@
   <ul>
   <% @articles.each do |article| %>
     <%= link_to article do %>
-      <li>
+      <li class="article">
         <%= image_tag(article.image_url(:in_focus)) %>
         <div class="article_info">
           <h2><span class="topic_marker"><%= article.topic.name %></span> <%= article.title %></h2>
