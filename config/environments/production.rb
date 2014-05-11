@@ -11,7 +11,7 @@ SEZWebsite::Application.configure do
   config.action_controller.perform_caching = false
 
   # Disable Rails's static asset server (Apache or nginx will already do this)
-  config.serve_static_assets = true
+  config.serve_static_assets = false
 
   # Compress JavaScripts and CSS
   config.assets.compress = true
@@ -50,7 +50,7 @@ SEZWebsite::Application.configure do
   # config.action_controller.asset_host = "http://assets.example.com"
 
   # Precompile additional assets (application.js, application.css, and all non-JS/CSS are already added)
-  #config.assets.precompile += ['article.css', 'popup_base.css', 'home.css', 'archive.css', 'blog.css', 'contact.css', 'application_mobile.css', 'article_mobile.css', 'game.css', 'quizzes.css', 'static_page.css', 'topic.css', 'application_mobile.js', 'popup_mobile.js', 'popup_bubble.js', 'modal_box.js', 'flashcard_quiz.js']
+  # config.assets.precompile += []
 
   # Disable delivery errors, bad email addresses will be ignored
   # config.action_mailer.raise_delivery_errors = false
