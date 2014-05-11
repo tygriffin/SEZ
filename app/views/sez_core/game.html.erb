@@ -10,9 +10,9 @@
 
     <section id="related_quizzes">
       <h3>同じ単語を使った他のゲーム</h3>
-      <% unless @related_quizzes.empty? %>
+      <% unless @quiz.related.empty? %>
         <ul>
-          <% @related_quizzes.each do |quiz| %>
+          <% @quiz.related.each do |quiz| %>
             <%= content_tag :li do %>
               <%= link_to(quiz.name, game_path(:id => quiz.id)) %><br />
               <i>クイズの種類:</i> <%= quiz.quiz_type %>
@@ -27,9 +27,9 @@
     <section id="related_article">
       <h3>ゲームが終わったら、記事を読んでみて！</h3>
       <div>
-        <%= image_tag(@article.image_url(:main)) %>
-        <%= link_to(content_tag(:h4, @article.title), @article) %>
-        <p><%= @article.description %></p>
+        <%= image_tag(@quiz.article.image_url(:main)) %>
+        <%= link_to(content_tag(:h4, @quiz.article.title), @quiz.article) %>
+        <p><%= @quiz.article.description %></p>
       </div>
     </section>
 

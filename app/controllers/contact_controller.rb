@@ -1,6 +1,6 @@
 class ContactController < ApplicationController
 
-  before_filter :check_for_mobile
+  before_action :check_for_mobile
 
   def new
     @local_stylesheet = "contact.css"

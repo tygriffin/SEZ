@@ -1,44 +1,28 @@
 class SezCoreController < ApplicationController
 
-  #check for mobile
-  before_filter :check_for_mobile
+  before_action :check_for_mobile
 
   def index
     @title = "Home"
-    unless mobile_device?
-      @local_stylesheet = "home.css"
-    end
+    @local_stylesheet = "home.css" unless mobile_device?
     @articles = Article.order("pubdate DESC").limit(6)
   end
 
   def about
-    unless mobile_device?
-      @local_stylesheet = "static_page.css"
-    end
+    @local_stylesheet = "static_page.css" unless mobile_device?
     @title = "About"
   end
 
   def contribute
-    unless mobile_device?
-      @local_stylesheet = "static_page.css"
-    end
+    @local_stylesheet = "static_page.css" unless mobile_device?
     @title = "Contribute"
   end
 
   def game
-    unless mobile_device?
-      @local_stylesheet = "game.css"
-    end
+    @local_stylesheet = "game.css" unless mobile_device?
     @title = "Quiz Game"
 
-    @quiz = Quiz.find(params[:id])
-    if @quiz.article_id
-      @related_quizzes = Quiz.where(:article_id => @quiz.article_id).where('id != ?', @quiz.id)
-    else
-      @related_quizzes = Quiz.where(:topic_id => @quiz.topic_id).where('id != ?', @quiz.id)
-    end
-
-    @article = Article.find(@quiz.article_id)
+    @quiz = QuizPresenter.new(Quiz.find params[:id])
   end
 
 end

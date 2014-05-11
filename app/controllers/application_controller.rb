@@ -1,11 +1,10 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery
 
-  before_filter :topics_menu
+  before_action :topics_menu
 
   helper_method :topics_menu
   helper_method :mobile_device?
-  # helper_method :markdown_parse
   helper_method :add_flag
 
   def topics_menu
@@ -28,15 +27,6 @@ class ApplicationController < ActionController::Base
       request.user_agent =~ /Mobile|webOS/
     end
   end
-
-  # def markdown_parse(str, options={})
-  #   options = {
-  #     :escape_html => false,
-  #     :strict_mode => false,
-  #   }.update(options)
-  #   bc = BlueCloth.new str, options
-  #   bc.to_html
-  # end
 
   def add_flag(flag)
     if mobile_device?
