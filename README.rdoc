@@ -1,5 +1,0 @@
-Simple English Zine
-===================
-
-This project was a magazine written in simple language for Japanese learners of English, but now I use it primarily for my web development portfolio.
-
