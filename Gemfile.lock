@@ -47,10 +47,6 @@ GEM
       activemodel (= 4.1.0)
       activesupport (= 4.1.0)
       arel (~> 5.0.0)
-    activerecord-session_store (0.0.1)
-      actionpack (>= 4.0.0.beta, < 5)
-      activerecord (>= 4.0.0.beta, < 5)
-      railties (>= 4.0.0.beta, < 5)
     activeresource (4.0.0)
       activemodel (~> 4.0)
       activesupport (~> 4.0)
@@ -136,6 +132,8 @@ GEM
     inherited_resources (1.4.1)
       has_scope (~> 0.6.0.rc)
       responders (~> 1.0.0.rc)
+    jquery-easing-rails (0.0.1)
+      railties (>= 3.1.0)
     jquery-rails (2.2.2)
       railties (>= 3.0, < 5.0)
       thor (>= 0.14, < 2.0)
@@ -154,10 +152,12 @@ GEM
     mime-types (1.25.1)
     mini_portile (0.5.3)
     minitest (5.3.3)
+    modernizr-rails (2.7.1)
     multi_json (1.10.0)
     netrc (0.7.7)
     nokogiri (1.6.1)
       mini_portile (~> 0.5.0)
+    normalize-rails (3.0.1)
     orm_adapter (0.5.0)
     pg (0.17.1)
     polyamorous (1.0.0)
@@ -276,7 +276,6 @@ DEPENDENCIES
   actionpack-xml_parser (~> 1.0.0)
   actionview-encoded_mail_to (~> 1.0.4)
   activeadmin!
-  activerecord-session_store (~> 0.0.1)
   activeresource (~> 4.0.0.beta1)
   bluecloth (>= 2.0.0)
   byebug
@@ -288,11 +287,13 @@ DEPENDENCIES
   friendly_id (~> 5.0.3)
   gon
   heroku (~> 2.39.3)
+  jquery-easing-rails
   jquery-rails (~> 2.2.1)
+  modernizr-rails
+  normalize-rails
   pg
   protected_attributes (~> 1.0.1)
   rails (= 4.1.0)
-  rails-observers (~> 0.1.1)
   rails-perftest (~> 0.0.2)
   rails4_upgrade
   rmagick

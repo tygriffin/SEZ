@@ -8,7 +8,7 @@ class SezCoreController < ApplicationController
     unless mobile_device?
       @local_stylesheet = "home.css"
     end
-    @articles = Article.find(:all, :order => "pubdate DESC", :limit => 6)
+    @articles = Article.order("pubdate DESC").limit(6)
   end
 
   def about

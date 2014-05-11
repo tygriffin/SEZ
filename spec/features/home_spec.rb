@@ -1,8 +1,8 @@
 require 'spec_helper'
 
 feature 'Navigating home' do
-  let!(:dog_article) { create(:dog_article) }
-  let!(:cat_article) { create(:cat_article) }
+  let!(:dog_article)  { create(:dog_article) }
+  let!(:cat_article)  { create(:cat_article) }
   let!(:culture_note) { create(:culture_note, :article => dog_article) }
 
   before { visit '/' }

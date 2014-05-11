@@ -38,7 +38,7 @@ FriendlyId.defaults do |config|
   # performance because it will avoid Rails-internal code that makes runtime
   # calls to `Module.extend`.
   #
-  # config.use :finders
+  config.use :finders
   #
   # ## Slugs
   #
@@ -71,7 +71,7 @@ FriendlyId.defaults do |config|
   #
   # config.use Module.new {
   #   def should_generate_new_friendly_id?
-  #     slug.blank? || <your_column_name_here>_changed?
+  #     slug.blank? || title_changed?
   #   end
   # }
   #

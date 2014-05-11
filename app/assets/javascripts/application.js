@@ -12,9 +12,7 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require modernizr-2.6.2
-//= require jquery.easing.1.3
-//= reuqire jquery.easing.compatibility
+//= require jquery.easing
 //= require popup_bubble
 //= require modal_box.js
 //= require_tree .
