@@ -1,7 +1,7 @@
 <article>
   <section id="article_body">
-    <% unless @quiz.nil? %>
-      <p class="preview_study">読む前に単語を<%= link_to("クイズゲーム", game_path(@quiz.id), :class => "quiz_game_link") %>でチェック！</p>
+    <% unless @article.quiz.nil? %>
+      <p class="preview_study">読む前に単語を<%= link_to("クイズゲーム", game_path(@article.quiz.id), :class => "quiz_game_link") %>でチェック！</p>
     <% end %>
     <%= raw @article.figure unless @article.figure.nil? %>
     <%= raw @article.body %>
@@ -13,19 +13,19 @@
     <h3>次に読むのは．．．</h3>
     <p><%= link_to("同じカテゴリー"+@article.topic.name, @article.topic, :class => "topic_marker") %>についてもっと読む。それとも最近の記事を読む：</p>
     <ul>
-      <% unless @previous_article.nil? %>
-        <%= link_to @previous_article do %>
+      <% unless @article.previous.nil? %>
+        <%= link_to @article.previous do %>
           <li>
-            <%= image_tag(@previous_article.image_url(:thumb)) %>
-            <p><em>前の記事：</em> <%= @previous_article.title %></p>
+            <%= image_tag(@article.previous.image_url(:thumb)) %>
+            <p><em>前の記事：</em> <%= @article.previous.title %></p>
           </li>
         <% end %>
       <% end %>
-      <% unless @next_article.nil? %>
-        <%= link_to @next_article do %>
+      <% unless @article.next.nil? %>
+        <%= link_to @article.next do %>
           <li>
-            <%= image_tag(@next_article.image_url(:thumb)) %>
-            <p><em>次の記事：</em> <%= @next_article.title %></p>
+            <%= image_tag(@article.next.image_url(:thumb)) %>
+            <p><em>次の記事：</em> <%= @article.next.title %></p>
           </li>
         <% end %>
       <% end %>

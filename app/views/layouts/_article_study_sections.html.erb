@@ -10,11 +10,11 @@
     </ul>
   </section>
 <% end %>
-<% unless @culture_notes.blank? %>
+<% unless @article.culture_notes.blank? %>
   <section id="culture_notes">
     <h3>Culture Notes</h3>
     <ul>
-    <% @culture_notes.each do | entry | %>
+    <% @article.culture_notes.each do | entry | %>
       <%= content_tag :li, :id => entry.title.tr(" ", "_")+'_detail' do %>
         <strong><%= entry.title %></strong>: <%= raw entry.body %>
       <% end %>
@@ -22,11 +22,11 @@
     </ul>
   </section>
 <% end %>
-<% unless @study_notes.blank? %>
+<% unless @article.study_notes.blank? %>
   <section id="study_notes">
     <h3>Study Notes</h3>
     <ul>
-    <% @study_notes.each do | entry | %>
+    <% @article.study_notes.each do | entry | %>
       <%= content_tag :li, :id => entry.title.tr(" ", "_")+'_detail' do %>
         <strong><%= entry.title %></strong>: <%= raw entry.body %>
       <% end %>

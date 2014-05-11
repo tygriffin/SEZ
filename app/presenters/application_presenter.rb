@@ -2,9 +2,10 @@ class ApplicationPresenter
 
   attr_reader :object
 
-  def initialize(object)
+  def initialize(object, view_context=nil)
     @object = object
     @klass  = object.class
+    @view_context = view_context
   end
 
   def method_missing(name, *args, &block)
