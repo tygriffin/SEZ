@@ -80,22 +80,12 @@ class ArticleController < ApplicationController
 
   end
 
-  def create
-    @article = Article.create article_params
-  end
-
   def feed
     @articles = Article.order("pubdate DESC").limit(20)
 
     respond_to do |format|
       format.rss { render :layout => false }
     end
-  end
-
-  private
-
-  def article_params
-    params.require(:article).permit(:body, :description, :title, :image, :image_attribution, :pubdate, :audio, :pubtype, :figure, :tags_attributes, :topic_id, :author_id, :slug, :flag_message)
   end
 
 end

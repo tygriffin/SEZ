@@ -1,5 +1,4 @@
 class Quiz < ActiveRecord::Base
-  #attr_accessible :article_id, :description, :name, :quiz_type, :topic_id
 
   belongs_to :article
   belongs_to :topic
