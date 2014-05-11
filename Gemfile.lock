@@ -45,7 +45,6 @@ GEM
       minitest (~> 5.1)
       thread_safe (~> 0.1)
       tzinfo (~> 1.1)
-    addressable (2.3.6)
     arbre (1.0.1)
       activesupport (>= 3.0.0)
     arel (5.0.1.20140414130214)
@@ -89,7 +88,6 @@ GEM
     diff-lcs (1.2.5)
     erubis (2.7.0)
     eventmachine (1.0.3)
-    excon (0.33.0)
     execjs (2.0.2)
     factory_girl (4.0.0)
       activesupport (>= 3.0.0)
@@ -113,15 +111,6 @@ GEM
     has_scope (0.6.0.rc)
       actionpack (>= 3.2, < 5)
       activesupport (>= 3.2, < 5)
-    heroku (2.39.5)
-      heroku-api (~> 0.3.7)
-      launchy (>= 0.3.2)
-      netrc (~> 0.7.7)
-      rest-client (~> 1.6.1)
-      rubyzip
-    heroku-api (0.3.18)
-      excon (~> 0.27)
-      multi_json (~> 1.8)
     hike (1.2.3)
     i18n (0.6.9)
     inherited_resources (1.4.1)
@@ -138,9 +127,6 @@ GEM
     kaminari (0.15.1)
       actionpack (>= 3.0.0)
       activesupport (>= 3.0.0)
-    launchy (2.4.2)
-      addressable (~> 2.3)
-    libv8 (3.16.14.3)
     mail (2.5.4)
       mime-types (~> 1.16)
       treetop (~> 1.4.8)
@@ -149,7 +135,6 @@ GEM
     minitest (5.3.3)
     modernizr-rails (2.7.1)
     multi_json (1.10.0)
-    netrc (0.7.7)
     nokogiri (1.6.1)
       mini_portile (~> 0.5.0)
     normalize-rails (3.0.1)
@@ -171,6 +156,11 @@ GEM
       bundler (>= 1.3.0, < 2.0)
       railties (= 4.1.0)
       sprockets-rails (~> 2.0)
+    rails_12factor (0.0.2)
+      rails_serve_static_assets
+      rails_stdout_logging
+    rails_serve_static_assets (0.0.2)
+    rails_stdout_logging (0.0.3)
     railties (4.1.0)
       actionpack (= 4.1.0)
       activesupport (= 4.1.0)
@@ -183,11 +173,8 @@ GEM
       activesupport (>= 3.0)
       i18n
       polyamorous (~> 1.0.0)
-    ref (1.0.5)
     responders (1.0.0)
       railties (>= 3.2, < 5)
-    rest-client (1.6.7)
-      mime-types (>= 1.16)
     rmagick (2.13.2)
     rspec (2.14.1)
       rspec-core (~> 2.14.0)
@@ -205,16 +192,12 @@ GEM
       rspec-core (~> 2.14.0)
       rspec-expectations (~> 2.14.0)
       rspec-mocks (~> 2.14.0)
-    rubyzip (1.1.3)
     sass (3.2.19)
     sass-rails (4.0.3)
       railties (>= 4.0.0, < 5.0)
       sass (~> 3.2.0)
       sprockets (~> 2.8, <= 2.11.0)
       sprockets-rails (~> 2.0)
-    sequel (3.20.0)
-    sinatra (1.0)
-      rack (>= 1.0)
     sprockets (2.11.0)
       hike (~> 1.2)
       multi_json (~> 1.0)
@@ -225,14 +208,6 @@ GEM
       activesupport (>= 3.0)
       sprockets (~> 2.8)
     sqlite3 (1.3.9)
-    taps (0.3.24)
-      rack (>= 1.0.1)
-      rest-client (>= 1.4.0, < 1.7.0)
-      sequel (~> 3.20.0)
-      sinatra (~> 1.0.0)
-    therubyracer (0.12.1)
-      libv8 (~> 3.16.14.0)
-      ref
     thin (1.6.2)
       daemons (>= 1.0.9)
       eventmachine (>= 1.0.0)
@@ -268,19 +243,17 @@ DEPENDENCIES
   friendly_id (~> 5.0.3)
   gon
   haml-rails (~> 0.5.3)
-  heroku (~> 2.39.3)
   jquery-easing-rails
   jquery-rails (~> 2.2.1)
   modernizr-rails
   normalize-rails
   pg
   rails (= 4.1.0)
+  rails_12factor
   rmagick
   rspec (~> 2.14.1)
   rspec-rails
   sass-rails (~> 4.0.0)
   sqlite3
-  taps (~> 0.3.24)
-  therubyracer
   thin
   uglifier (>= 1.3.0)

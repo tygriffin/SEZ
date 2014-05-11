@@ -11,15 +11,12 @@ gem 'carrierwave'
 gem 'rmagick',                 :require => false
 gem 'gon'
 gem 'thin'
-gem 'heroku',                  '~> 2.39.3'
-gem 'taps',                    '~> 0.3.24'
+# gem 'heroku',                  '~> 2.39.3'
+# gem 'taps',                    '~> 0.3.24'
 gem 'friendly_id',             '~> 5.0.3'
-
 gem 'jquery-rails',            '~> 2.2.1'
 gem 'jquery-easing-rails'
-
-gem 'therubyracer'
-
+#gem 'therubyracer'
 gem 'modernizr-rails'
 gem 'normalize-rails'
 gem 'haml-rails',              '~> 0.5.3'
@@ -38,6 +35,7 @@ group :development, :test do
 end
 
 group :production do
+  gem 'rails_12factor'
   gem 'pg'
 end
 
