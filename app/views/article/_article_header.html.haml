@@ -1,0 +1,17 @@
+#article_top
+  %figure
+    = image_tag @article.image
+  #intro
+    %p.topic_marker
+      = @article.topic.name
+    %h2
+      = @article.title
+    %p
+      = "#{@article.pubdate.strftime '%Y年%m月%d日'} 掲載"
+      = "#{@article.author.name} 著" unless @article.author.name == "SEZ"
+    - unless @article.image_attribution.blank?
+      %p 画像提供元：#{raw @article.image_attribution}
+
+    %p #{@article.description}
+
+    = render 'layouts/study_tools', :article => @article

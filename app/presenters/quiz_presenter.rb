@@ -8,4 +8,12 @@ class QuizPresenter < ApplicationPresenter
     end
   end
 
+  def target_vocab
+    FlashcardVocab.where(:quiz_id => @object.id, :vocab_type => "target") if @object.quiz_type == "flashcard"
+  end
+
+  def option_vocab
+    FlashcardVocab.where(:quiz_id => @object.id) if @object.quiz_type == "flashcard"
+  end
+
 end
