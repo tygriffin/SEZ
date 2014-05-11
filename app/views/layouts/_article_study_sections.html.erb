@@ -1,8 +1,8 @@
-<% unless @vocabulary_words.blank? %>
+<% unless @article.vocab.blank? %>
   <section id="vocab">
     <h3>Vocabulary</h3>
     <ul>
-      <% @vocabulary_words.each do | vocab | %>
+      <% @article.vocab.each do | vocab | %>
         <%= content_tag :li, :id => vocab.word.tr(" ", "_")+'_detail' do %>
           <strong><%= vocab.word %></strong> (<%= vocab.part_of_speech %>): <%= vocab.definition %> 【<%= vocab.translation %>】
         <% end %>

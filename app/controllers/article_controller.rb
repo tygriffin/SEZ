@@ -3,22 +3,16 @@ class ArticleController < ApplicationController
   before_filter :check_for_mobile
 
   def show
-    if mobile_device?
-      @local_stylesheet = "article_mobile.css"
-    else
-      @local_stylesheet = "article.css"
-    end
+    @local_stylesheet = mobile_device? ? "article_mobile.css" : "article.css"
 
-    @article = Article.find(params[:id])
+    @article = ArticlePresenter.new(Article.find params[:id])
 
-    if request.path != article_path(@article)
-      redirect_to @article, status: :moved_permanently
-    end
+    #redirect_to(@article, status: :moved_permanently) if request.path != article_path(@article)
 
     @title = @article.title
-    @author = Author.find(@article.author_id)
-    @body = markdown_parse(@article.body, {:escape_html => false, :strict_mode => false})
-    @vocabulary_words = VocabularyWord.where(:article_id => @article.id).order("word")
+    #@author = Author.find(@article.author_id)
+    #@body = markdown_parse(@article.body, {:escape_html => false, :strict_mode => false})
+    #@vocabulary_words = VocabularyWord.where(:article_id => @article.id).order("word")
     @culture_notes = CultureNote.where(:article_id => @article.id).order("title")
     @study_notes = StudyNote.where(:article_id => @article.id).order("title")
 
@@ -27,13 +21,13 @@ class ArticleController < ApplicationController
 
     if @vocabulary_words
       @vocabulary_words.each do |entry|
-        if @body.include? entry.instance
+        if @article.body.include? entry.instance
           if mobile_device?
             text = '<a class="article_bubble_trigger" id="' + entry.word + '">' + entry.instance + '</a>'
           else
             text = '<a href="#' + entry.word.tr(" ", "_") + '_detail" class="article_bubble_trigger" id="' + entry.word + '">' + entry.instance + '</a>'
           end
-          @body.gsub!(entry.instance, text)
+          @article.body.gsub!(entry.instance, text)
         end
       end
 
@@ -42,13 +36,13 @@ class ArticleController < ApplicationController
 
     if @culture_notes
       @culture_notes.each do |entry|
-        if @body.include? entry.instance
+        if @article.body.include? entry.instance
           if mobile_device?
             text = '<a class="article_bubble_trigger" id="' + entry.title + '">' + entry.instance + '</a>'
           else
             text = '<a href="#' + entry.title.tr(" ", "_") + '_detail"  class="article_bubble_trigger" id="' + entry.title + '">' + entry.instance + '</a>'
           end
-          @body.gsub!(entry.instance, text)
+          @article.body.gsub!(entry.instance, text)
         end
       end
 
@@ -57,13 +51,13 @@ class ArticleController < ApplicationController
 
     if @study_notes
       @study_notes.each do |entry|
-        if @body.include? entry.instance
+        if @article.body.include? entry.instance
           if mobile_device?
             text = '<a class="article_bubble_trigger" id="' + entry.title + '">' + entry.instance + '</a>'
           else
             text = '<a href="#' + entry.title.tr(" ", "_") + '_detail"  class="article_bubble_trigger" id="' + entry.title + '">' + entry.instance + '</a>'
           end
-          @body.gsub!(entry.instance, text)
+          @article.body.gsub!(entry.instance, text)
         end
       end
 

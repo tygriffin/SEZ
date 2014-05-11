@@ -1,11 +1,11 @@
-<% unless @author.bio.blank? || @author.name == "SEZ" %>
+<% unless author.bio.blank? || author.name == "SEZ" %>
   <section id="author">
     <h4>著者紹介</h4>
-    <%= image_tag(@author.image_url(:profile)) unless @author.image.nil? %>
+    <%= image_tag(author.image_url(:profile)) unless author.image.nil? %>
     <ul>
-      <%= content_tag(:li, @author.name) %>
-      <%= content_tag(:li, @author.bio) unless @author.bio.nil? %>
-      <%= content_tag(:li, link_to(@author.website, "http://"+@author.website)) unless @author.website.nil? %>
+      <%= content_tag(:li, author.name) %>
+      <%= content_tag(:li, author.bio) unless author.bio.nil? %>
+      <%= content_tag(:li, link_to(author.website, "http://"+author.website)) unless author.website.nil? %>
     </ul>
   </section>
 <% end %>

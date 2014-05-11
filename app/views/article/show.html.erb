@@ -4,7 +4,7 @@
       <p class="preview_study">読む前に単語を<%= link_to("クイズゲーム", game_path(@quiz.id), :class => "quiz_game_link") %>でチェック！</p>
     <% end %>
     <%= raw @article.figure unless @article.figure.nil? %>
-    <%= raw @body %>
+    <%= raw @article.body %>
 
     <%= render 'layouts/social_media_recommend' %>
   </section>
@@ -35,7 +35,7 @@
   <%= render 'layouts/article_study_sections' %>
 
   <footer>
-    <%= render 'layouts/author_bio' %>
+    <%= render 'layouts/author_bio', :author => @article.author %>
     <%= render 'layouts/article_tags' %>
   </footer>
 </article>

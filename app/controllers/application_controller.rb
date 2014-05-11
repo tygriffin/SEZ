@@ -3,10 +3,14 @@ class ApplicationController < ActionController::Base
 
   before_filter :topics_menu
 
+  helper_method :topics_menu
+  helper_method :mobile_device?
+  # helper_method :markdown_parse
+  helper_method :add_flag
+
   def topics_menu
     @topics_menu = Topic.order :name
   end
-  helper_method :topics_menu
 
   def check_for_mobile
     session[:mobile_override] = params[:mobile] if params[:mobile]
@@ -24,18 +28,15 @@ class ApplicationController < ActionController::Base
       request.user_agent =~ /Mobile|webOS/
     end
   end
-  helper_method :mobile_device?
 
-
-  def markdown_parse(str, options={})
-    options = {
-      :escape_html => false,
-      :strict_mode => false,
-    }.update(options)
-    bc = BlueCloth.new(str, options)
-    bc.to_html
-  end
-  helper_method :markdown_parse
+  # def markdown_parse(str, options={})
+  #   options = {
+  #     :escape_html => false,
+  #     :strict_mode => false,
+  #   }.update(options)
+  #   bc = BlueCloth.new str, options
+  #   bc.to_html
+  # end
 
   def add_flag(flag)
     if mobile_device?
@@ -62,5 +63,5 @@ class ApplicationController < ActionController::Base
       end
     end
   end
-  helper_method :add_flag
+
 end
