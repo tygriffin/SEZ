@@ -1,6 +1,5 @@
 class ContactController < ApplicationController
 
-  #check for mobile device
   before_filter :check_for_mobile
 
   def new
@@ -10,7 +9,7 @@ class ContactController < ApplicationController
 
   def create
     @local_stylesheet = "contact.css"
-    @message = Contact.new(params[:contact])
+    @message = Contact.new params[:contact]
 
     if @message.valid?
       NotificationsMailer.new_message(@message).deliver

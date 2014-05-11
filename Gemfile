@@ -33,7 +33,6 @@ gem 'actionpack-page_caching', '~>1.0.0'
 gem 'actionpack-xml_parser', '~>1.0.0'
 gem 'actionview-encoded_mail_to', '~>1.0.4'
 gem 'activeresource', '~>4.0.0.beta1'
-gem 'protected_attributes', '~>1.0.1'
 gem 'rails-perftest', '~>0.0.2'
 
 

@@ -1,1 +1,0 @@
-$(document).ready(function(){$("#help").click(function(){$("#help_modal").fadeIn(600)}),$(".close").click(function(){$("#help_modal").fadeOut("slow")})});

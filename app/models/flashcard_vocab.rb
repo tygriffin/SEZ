@@ -1,5 +1,5 @@
 class FlashcardVocab < ActiveRecord::Base
-  attr_accessible :example_sentence, :quiz_id, :translation, :vocab_type, :word
+  #attr_accessible :example_sentence, :quiz_id, :translation, :vocab_type, :word
 
   belongs_to :quiz
 

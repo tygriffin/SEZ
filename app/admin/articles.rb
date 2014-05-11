@@ -1,5 +1,7 @@
 ActiveAdmin.register Article do
 
+  permit_params :author_id, :body, :description, :title, :image, :image_attribution, :pubdate, :audio, :pubtype, :figure, :tags_attributes, :topic_id, :slug, :flag_message
+
   index do
     selectable_column
     column :title do |item| eval"link_to item.title, admin_#{item.class.name.to_s.underscore}_path(item)" rescue nil end rescue nil

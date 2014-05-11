@@ -1,5 +1,6 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery
+
   before_filter :topics_menu
 
   def topics_menu
