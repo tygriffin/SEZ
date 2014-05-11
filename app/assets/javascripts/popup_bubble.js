@@ -1,4 +1,3 @@
-
 $(document).ready(function() {
   // Set up bubble CSS when page is loaded so bubble info is hidden unless user acts.
   // If JavaScript is turned off bubble info displays normally.
