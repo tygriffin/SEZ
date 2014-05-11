@@ -1,6 +1,7 @@
 class Article < ActiveRecord::Base
+
   extend FriendlyId
-  friendly_id :title, use: [:slugged, :history]
+  friendly_id :title, :use => [:slugged, :history]
 
   mount_uploader :image, ImageUploader
 
@@ -13,9 +14,20 @@ class Article < ActiveRecord::Base
   has_many   :quizzes
 
   validates :author, :body, :description, :title, :pubdate, :pubtype, :presence => true
-  validates :pubtype,      :inclusion => { :in => %w(feature blog recipe), :message => "%{value} is not a valid publication type. Please type 'article' or 'blog'." }
-  validates :flag_message, :inclusion => { :in => ['easy to read', 'short read', 'challenge', 'learn slang'], :allow_blank => true, :message => "%{value} is not a valid flag message." }
+  validates :pubtype,
+            :inclusion => {
+                            :in => ['feature', 'blog', 'recipe'],
+                            :message => "%{value} is not a valid publication type. Please use 'article', 'recipe' or 'blog'."
+                          }
+  validates :flag_message,
+            :inclusion => {
+                            :in => ['easy to read', 'short read', 'challenge', 'learn slang'],
+                            :message => "%{value} is not a valid flag message.",
+                            :allow_blank => true
+                          }
 
-  accepts_nested_attributes_for :tags, :allow_destroy => true, :reject_if => proc { |attrs| attrs.all? { |k, v| v.blank? } }
+  accepts_nested_attributes_for :tags,
+                                :allow_destroy => true,
+                                :reject_if => proc { |attrs| attrs.all? { |k, v| v.blank? } }
 
 end

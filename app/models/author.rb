@@ -2,7 +2,8 @@ class Author < ActiveRecord::Base
 
   mount_uploader :image, AuthorImageUploader
 
-  validates_presence_of :name
+  validates :name, :presence => true
 
   has_many :articles
+
 end
