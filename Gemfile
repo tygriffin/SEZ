@@ -27,16 +27,6 @@ gem 'sass-rails',              '~> 4.0.0'
 gem 'coffee-rails',            '~> 4.0.0'
 gem 'uglifier',                '>= 1.3.0'
 
-gem 'rails4_upgrade'
-
-gem 'actionpack-action_caching', '~>1.0.0'
-gem 'actionpack-page_caching', '~>1.0.0'
-gem 'actionpack-xml_parser', '~>1.0.0'
-gem 'actionview-encoded_mail_to', '~>1.0.4'
-gem 'activeresource', '~>4.0.0.beta1'
-gem 'rails-perftest', '~>0.0.2'
-
-
 group :development, :test do
   gem 'sqlite3'
   gem 'rspec',              '~> 2.14.1'
