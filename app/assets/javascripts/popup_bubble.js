@@ -3,7 +3,6 @@ $(document).ready(function() {
   // If JavaScript is turned off bubble info displays normally.
   //
   //
-  $('head').append('<link href="/assets/popup_base.css" media="all" rel="stylesheet" type="text/css" />');
   $('#vocab').append('<img class="popup_placeholder" src="/images/plus_tab_green.png">');
 
   // Article body popups /////////////////////////////
