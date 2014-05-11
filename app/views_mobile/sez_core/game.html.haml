@@ -1,0 +1,28 @@
+%section#quiz_game
+
+  %p#quiz_start
+    = link_to "Start Quiz Game!", quiz_url(@quiz.id)
+
+  #quiz_meta
+    %section#instructions
+      %h3 効果的な使い方
+      %p スタートボタンをクリックしてから数秒後に単語の選択肢がいくつか現れます。現れるまでの数秒間に正解となりそうな単語を推測してみてください。選択肢から一つ選んでクリックすると、答えが例文とともに現れます。例文を声に出して読んでみてください。きっと覚えるのに役立つはずです！
+
+    %section#related_quizzes
+      %h3 同じ単語を使った他のゲーム
+      - unless @related_quizzes.empty?
+        %ul
+          - @related_quizzes.each do |quiz|
+            = content_tag :li do
+              = link_to quiz.name, game_path(:id => quiz.id)
+              <br />
+              <i>クイズの種類:</i> #{quiz.quiz_type}
+      - else
+        %p なし
+
+    %section#related_article
+      %h3 ゲームが終わったら、記事を読んでみて！
+      %div
+        = image_tag @article.image_url(:in_focus)
+        = link_to content_tag(:h4, @article.title), @article
+        %p #{@article.description}

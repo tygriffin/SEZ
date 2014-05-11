@@ -1,0 +1,25 @@
+%article
+  %header
+    %h1 #{link_to "SEZ", root_path}
+    = image_tag @article.image_url
+    %h2 #{@article.title}
+    %p
+      = "#{@article.pubdate.strftime('%Y年%m月%d日')} 掲載"
+      <br />
+      = "#{@author.name} 著" unless @author.name == "SEZ"
+      <br />
+      = "画像提供元：#{@article.image_attribution}" unless @article.image_attribution.empty?
+
+  %section#article_body
+    - unless @quiz.nil?
+      %p.preview_study 読む前に単語を#{link_to "クイズゲーム", game_path(@quiz.id)}でチェック！
+    = raw @body
+    = raw @article.figure unless @article.figure.nil?
+    = render 'layouts/social_media_recommend'
+
+  = render 'layouts/article_study_sections'
+
+  %footer
+    = render 'layouts/author_bio'
+    = render 'layouts/article_tags'
+

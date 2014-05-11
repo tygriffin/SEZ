@@ -1,7 +1,0 @@
-<ul class="study_tools">
-  <%= content_tag(:li, "音声付き", :class => "includes_tool") unless article.audio.blank? %>
-  <%= content_tag(:li, "文化説明", :class => "includes_tool") unless article.culture_notes.blank? %>
-  <%= content_tag(:li, "単語付き", :class => "includes_tool") unless article.vocabulary_words.blank? %>
-  <%= content_tag(:li, "クイズゲーム", :class => "includes_tool") unless article.quizzes.blank? %>
-  <%= content_tag(:li, "学習ツールは準備中", :class => "includes_tool") if article.audio.blank? && article.culture_notes.blank? && article.vocabulary_words.blank? %>
-</ul>

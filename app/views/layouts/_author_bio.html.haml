@@ -1,0 +1,8 @@
+- unless author.bio.blank? || author.name == "SEZ"
+  %section#author
+    %h4著者紹介
+    = image_tag author.image_url(:profile) unless author.image.nil?
+    %ul
+      = content_tag(:li, author.name)
+      = content_tag(:li, author.bio) unless author.bio.nil?
+      = content_tag(:li, link_to(author.website, "http://#{author.website}")) unless author.website.nil?

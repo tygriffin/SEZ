@@ -1,0 +1,28 @@
+- unless @article.vocab.blank?
+  %section#vocab
+    %h3 Vocabulary
+    %ul
+      - @article.vocab.each do | vocab |
+        = content_tag :li, :id => vocab.word.tr(" ", "_")+'_detail' do
+          <strong>#{vocab.word}</strong> (#{vocab.part_of_speech}): #{vocab.definition} 【#{vocab.translation}】
+
+- unless @article.culture_notes.blank?
+  %section#culture_notes
+    %h3 Culture Notes
+    %ul
+      - @article.culture_notes.each do | entry |
+        = content_tag :li, :id => entry.title.tr(" ", "_")+'_detail' do
+          <strong>#{entry.title}</strong>: #{raw entry.body}
+
+- unless @article.study_notes.blank?
+  %section#study_notes
+    %h3 Study Notes
+    %ul
+      - @article.study_notes.each do | entry |
+        = content_tag :li, :id => entry.title.tr(" ", "_")+'_detail' do
+          <strong>#{entry.title}</strong>: #{raw entry.body}
+
+- unless @article.audio.blank?
+  %section#audio
+    %h3 Audio
+    = raw @article.audio
