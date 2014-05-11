@@ -40,14 +40,14 @@ class ArticlePresenter < ApplicationPresenter
 
   def add_bubble(study_resource, content)
     study_resource.each do |item|
-      selector = item.word ? item.word : item.title
+      selector = item.has_attribute?(:word) ? item.word : item.title
       if @object.body.include? item.instance
         if @view_context.mobile_device?
           text = '<a class="article_bubble_trigger" id="' + selector + '">' + item.instance + '</a>'
         else
           text = '<a href="#' + selector.tr(" ", "_") + '_detail" class="article_bubble_trigger" id="' + selector + '">' + item.instance + '</a>'
         end
-        content.gsub!(item.instance, text)
+        content.gsub! item.instance, text
       end
     end
   end

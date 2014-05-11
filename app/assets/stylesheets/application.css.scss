@@ -8,7 +8,14 @@
  * You're free to add application-wide styles to this file and they'll appear at the top of the
  * compiled file, but it's generally better to create a new file per style scope.
  *
- *= require_self
- *= require normalize-rails
- *= require sez_core
  */
+
+ @import 'normalize-rails';
+ @import 'sez_core';
+ @import 'article';
+ @import 'contact';
+ @import 'game';
+ @import 'home';
+ @import 'popup_base';
+ @import 'static_page';
+ @import 'topic';

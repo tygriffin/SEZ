@@ -3,8 +3,6 @@ class ArticleController < ApplicationController
   before_action :check_for_mobile
 
   def show
-    @local_stylesheet = mobile_device? ? "article_mobile.css" : "article.css"
-
     @article = ArticlePresenter.new Article.find(params[:id]), view_context
 
     gon.vocab         = @article.vocab          if @article.vocab

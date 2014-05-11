@@ -3,12 +3,10 @@ class ContactController < ApplicationController
   before_action :check_for_mobile
 
   def new
-    @local_stylesheet = "contact.css"
     @message = Contact.new
   end
 
   def create
-    @local_stylesheet = "contact.css"
     @message = Contact.new params[:contact]
 
     if @message.valid?
