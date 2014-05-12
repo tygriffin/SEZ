@@ -6,13 +6,16 @@
   = render 'layouts/social_media_meta'
 
 %body
-  = render 'layouts/article_top_nav' unless mobile_device?
-  = render 'article_header'          unless mobile_device?
 
-  #wrapper
+  #article-show
 
-    = yield
+    = render 'article/top_nav' unless mobile_device?
+    = render 'article/header'  unless mobile_device?
 
-    = render 'layouts/footer'
+    #wrapper
+
+      = yield
+
+      = render 'layouts/footer'
 
 </html>

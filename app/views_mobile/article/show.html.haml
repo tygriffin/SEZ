@@ -17,9 +17,9 @@
     = raw @article.figure unless @article.figure.nil?
     = render 'layouts/social_media_recommend'
 
-  = render 'layouts/article_study_sections'
+  = render 'article/study_sections'
 
   %footer
-    = render 'layouts/author_bio'
-    = render 'layouts/article_tags'
+    = render 'article/author_bio'
+    = render 'article/tags'
 

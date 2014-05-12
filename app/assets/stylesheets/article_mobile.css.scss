@@ -1,187 +1,191 @@
-article {
-  width: 100%;
+#article-show {
 
-  .highlight, .hightlight a {
-    font-family: 'Acknowledgement', 'Georgia';
-  }
+  article {
+    width: 100%;
 
-  .highlight {
-    font-size: 55px;
-    padding: 0 60px 0 60px;
-    display: block;
-  }
-
-  .poetry {
-    font-style: italic;
-    font-weignt: bold;
-    font-size: 30px;
-  }
-
-  p, li, pre {
-    line-height: 200%;
-    font-size: 38px;
-    padding: 40px;
-    line-height: 220%;
-  }
-
-
-
-  h3 {
-    font-size: 250%;
-    font-weight: bold;
-    margin: 0;
-    padding: 0 0 0 40px;
-  }
-
-  figure {
-    width: 88%;
-
-    img {
-      width: 100%;
-      height: auto;
+    .highlight, .hightlight a {
+      font-family: 'Acknowledgement', 'Georgia';
     }
 
-    iframe, embed, object {
-      width: 100%;
-      height: 500px;
-    }
-
-    figcaption {
-      font-size: 28px;
-      padding: 10px;
-      background-color: #eee;
-    }
-  }
-
-  header {
-
-    text-align: center;
-
-    h1 {
-      margin: 0 0 15px 0;
-      padding: 0;
-      font-size: 400%;
-      font-family: Acknowledgement;
-      background-color: #000;
-
-      a {
-        text-decoration: none;
-        color: #fff;
-      }
-    }
-
-    h2 {
-      margin: 0;
-      padding: 100px 0 0 0;
-      font-size: 400%;
-      text-shadow: #999 -2px 5px 4px;
-    }
-
-    img {
+    .highlight {
+      font-size: 55px;
+      padding: 0 60px 0 60px;
       display: block;
-      width: 100%;
     }
 
-  }
-
-  #article_body {
-    ol, ul {
-      margin: 0 40px 0 40px;
-    }
-
-    h3 { font-size: 46px; margin: 10px 0 0 40px; }
-    h4 { font-size: 40px; margin: 10px 0 0 40px; }
-
-    .preview_study {
-      font-weight: bold;
+    .poetry {
       font-style: italic;
+      font-weignt: bold;
+      font-size: 30px;
     }
-  }
 
-  section#vocab, section#audio, section#culture_notes, section#study_notes {
-    padding: 70px 30px;
-    border-top: 3px dashed gray;
-    line-height: 200%;
+    p, li, pre {
+      line-height: 200%;
+      font-size: 38px;
+      padding: 40px;
+      line-height: 220%;
+    }
+
+
 
     h3 {
-      padding: 0 0 30px 0;
+      font-size: 250%;
+      font-weight: bold;
+      margin: 0;
+      padding: 0 0 0 40px;
     }
 
-    li {
-      margin: 30px 0 30px;
-      padding: 0;
+    figure {
+      width: 88%;
+
+      img {
+        width: 100%;
+        height: auto;
+      }
+
+      iframe, embed, object {
+        width: 100%;
+        height: 500px;
+      }
+
+      figcaption {
+        font-size: 28px;
+        padding: 10px;
+        background-color: #eee;
+      }
     }
-  }
 
-  #vocab {
-    background-color: #fffcfa;
-  }
+    header {
 
-  #culture_notes {
-    background-color: #fcfaff;
-  }
+      text-align: center;
 
-  #study_notes {
-    background-color: #fafffc;
-  }
-
-  a.article_bubble_trigger {
-    text-decoration: none;
-    color: black;
-    border-bottom: 2px dotted red;
-  }
-
-  footer {
-    border-top: 3px dashed gray;
-
-    .tags {
-      background-color: #dedede;
-      padding: 20px;
-
-      h4, p {
-        display: inline;
+      h1 {
+        margin: 0 0 15px 0;
         padding: 0;
+        font-size: 400%;
+        font-family: Acknowledgement;
+        background-color: #000;
+
+        a {
+          text-decoration: none;
+          color: #fff;
+        }
+      }
+
+      h2 {
         margin: 0;
-        font-size: 150%;
+        padding: 100px 0 0 0;
+        font-size: 400%;
+        text-shadow: #999 -2px 5px 4px;
+      }
+
+      img {
+        display: block;
+        width: 100%;
+      }
+
+    }
+
+    #article_body {
+      ol, ul {
+        margin: 0 40px 0 40px;
+      }
+
+      h3 { font-size: 46px; margin: 10px 0 0 40px; }
+      h4 { font-size: 40px; margin: 10px 0 0 40px; }
+
+      .preview_study {
+        font-weight: bold;
+        font-style: italic;
       }
     }
 
-    #author {
+    section#vocab, section#audio, section#culture_notes, section#study_notes {
+      padding: 70px 30px;
+      border-top: 3px dashed gray;
+      line-height: 200%;
 
-      min-height: 500px;
-
-      h4 {
-        font-size: 300%;
-        font-weight: bold;
-        margin-left: 20px;
-      }
-
-      ul {
-        margin-left: 340px;
+      h3 {
+        padding: 0 0 30px 0;
       }
 
       li {
-        list-style: none;
-        color: #555;
-        margin-bottom: 30px;
+        margin: 30px 0 30px;
         padding: 0;
-        font-size: 36px;
-        line-height: 140%;
       }
-      img {
-        border-radius: 60px;
-        float: left;
-        margin-left: 20px;
+    }
+
+    #vocab {
+      background-color: #fffcfa;
+    }
+
+    #culture_notes {
+      background-color: #fcfaff;
+    }
+
+    #study_notes {
+      background-color: #fafffc;
+    }
+
+    a.article_bubble_trigger {
+      text-decoration: none;
+      color: black;
+      border-bottom: 2px dotted red;
+    }
+
+    footer {
+      border-top: 3px dashed gray;
+
+      .tags {
+        background-color: #dedede;
+        padding: 20px;
+
+        h4, p {
+          display: inline;
+          padding: 0;
+          margin: 0;
+          font-size: 150%;
+        }
+      }
+
+      #author {
+
+        min-height: 500px;
+
+        h4 {
+          font-size: 300%;
+          font-weight: bold;
+          margin-left: 20px;
+        }
+
+        ul {
+          margin-left: 340px;
+        }
+
+        li {
+          list-style: none;
+          color: #555;
+          margin-bottom: 30px;
+          padding: 0;
+          font-size: 36px;
+          line-height: 140%;
+        }
+        img {
+          border-radius: 60px;
+          float: left;
+          margin-left: 20px;
+        }
+      }
+    }
+
+    #social_media_recommend {
+      margin-bottom: 20px;
+
+      a {
+        display: inline-block;
+        margin-left: 10px;
       }
     }
   }
 
-  #social_media_recommend {
-    margin-bottom: 20px;
-
-    a {
-      display: inline-block;
-      margin-left: 10px;
-    }
-  }
 }

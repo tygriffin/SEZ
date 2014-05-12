@@ -1,25 +1,27 @@
-%h2 お問合せ
+#contact-new
 
-%p.sub_header_lead 質問、批評、記事のアイディア、ご意見などご自由にお送りください！
+  %h2 お問合せ
+
+  %p.sub_header_lead 質問、批評、記事のアイディア、ご意見などご自由にお送りください！
 
 
-- flash.each do |name, msg|
-  = content_tag :div, msg, :id => "flash_#{name}", :class => "contact_flash"
+  - flash.each do |name, msg|
+    = content_tag :div, msg, :id => "flash_#{name}", :class => "contact_flash"
 
-= form_for @message, :url => contact_create_path do |f|
-  = f.error_messages
-  %fieldset
-    %dl
-      %dt #{f.label :name, "ご氏名"}：
-      %dd #{f.text_field :name}
+  = form_for @message, :url => contact_create_path do |f|
+    = f.error_messages
+    %fieldset
+      %dl
+        %dt #{f.label :name, "ご氏名"}：
+        %dd #{f.text_field :name}
 
-      %dt #{f.label :email, "メールアドレス"}
-      %dd #{f.email_field :email}
+        %dt #{f.label :email, "メールアドレス"}
+        %dd #{f.email_field :email}
 
-      %dt #{f.label :subject, "件名"}
-      %dd #{f.text_field :subject}
+        %dt #{f.label :subject, "件名"}
+        %dd #{f.text_field :subject}
 
-      %dt #{f.label :body, "コメント"}
-      %dd #{f.text_area :body}
+        %dt #{f.label :body, "コメント"}
+        %dd #{f.text_area :body}
 
-  = f.submit "送信", :class => "submit"
+    = f.submit "送信", :class => "submit"
