@@ -1,4 +1,4 @@
-class ApplicationPresenter
+class Decorator
 
   attr_reader :object
 

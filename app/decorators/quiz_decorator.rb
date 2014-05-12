@@ -1,4 +1,4 @@
-class QuizPresenter < ApplicationPresenter
+class QuizDecorator < Decorator
 
   def related
     if @object.article_id

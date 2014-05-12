@@ -1,4 +1,4 @@
-class ArticlePresenter < ApplicationPresenter
+class ArticleDecorator < Decorator
 
   def author
     @object.author

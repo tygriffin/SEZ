@@ -3,7 +3,7 @@ class ArticleController < ApplicationController
   before_action :check_for_mobile
 
   def show
-    @article = ArticlePresenter.new Article.find(params[:id]), view_context
+    @article = ArticleDecorator.new Article.find(params[:id]), view_context
 
     gon.vocab         = @article.vocab          if @article.vocab
     gon.culture_notes = @article.culture_notes  if @article.culture_notes

@@ -14,5 +14,6 @@
 //= require jquery_ujs
 //= require jquery.easing
 //= require popup_bubble
-//= require modal_box.js
-//= require_tree .
+//= require modal_box
+//= require flashcard_quiz
+

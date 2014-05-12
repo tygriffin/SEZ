@@ -18,7 +18,7 @@ class SezCoreController < ApplicationController
   def game
     @title = "Quiz Game"
 
-    @quiz = QuizPresenter.new(Quiz.find params[:id])
+    @quiz = QuizDecorator.new Quiz.find(params[:id])
   end
 
 end
