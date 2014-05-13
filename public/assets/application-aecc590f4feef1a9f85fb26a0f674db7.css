@@ -1,0 +1,1241 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the top of the
+ * compiled file, but it's generally better to create a new file per style scope.
+ *
+ */
+/*! normalize.css v3.0.1 | MIT License | git.io/normalize */
+/**
+ * 1. Set default font family to sans-serif.
+ * 2. Prevent iOS text size adjust after orientation change, without disabling
+ *    user zoom.
+ */
+@import url(http://fonts.googleapis.com/css?family=Chivo);
+/* line 10, /usr/local/rvm/gems/ruby-2.0.0-p451@sez/gems/normalize-rails-3.0.1/vendor/assets/stylesheets/normalize-rails/normalize.css */
+html {
+  font-family: sans-serif;
+  /* 1 */
+  -ms-text-size-adjust: 100%;
+  /* 2 */
+  -webkit-text-size-adjust: 100%;
+  /* 2 */
+}
+
+/**
+ * Remove default margin.
+ */
+/* line 20, /usr/local/rvm/gems/ruby-2.0.0-p451@sez/gems/normalize-rails-3.0.1/vendor/assets/stylesheets/normalize-rails/normalize.css */
+body {
+  margin: 0;
+}
+
+/* HTML5 display definitions
+   ========================================================================== */
+/**
+ * Correct `block` display not defined for any HTML5 element in IE 8/9.
+ * Correct `block` display not defined for `details` or `summary` in IE 10/11 and Firefox.
+ * Correct `block` display not defined for `main` in IE 11.
+ */
+/* line 44, /usr/local/rvm/gems/ruby-2.0.0-p451@sez/gems/normalize-rails-3.0.1/vendor/assets/stylesheets/normalize-rails/normalize.css */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+nav,
+section,
+summary {
+  display: block;
+}
+
+/**
+ * 1. Correct `inline-block` display not defined in IE 8/9.
+ * 2. Normalize vertical alignment of `progress` in Chrome, Firefox, and Opera.
+ */
+/* line 56, /usr/local/rvm/gems/ruby-2.0.0-p451@sez/gems/normalize-rails-3.0.1/vendor/assets/stylesheets/normalize-rails/normalize.css */
+audio,
+canvas,
+progress,
+video {
+  display: inline-block;
+  /* 1 */
+  vertical-align: baseline;
+  /* 2 */
+}
+
+/**
+ * Prevent modern browsers from displaying `audio` without controls.
+ * Remove excess height in iOS 5 devices.
+ */
+/* line 66, /usr/local/rvm/gems/ruby-2.0.0-p451@sez/gems/normalize-rails-3.0.1/vendor/assets/stylesheets/normalize-rails/normalize.css */
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+
+/**
+ * Address `[hidden]` styling not present in IE 8/9/10.
+ * Hide the `template` element in IE 8/9/11, Safari, and Firefox < 22.
+ */
+/* line 77, /usr/local/rvm/gems/ruby-2.0.0-p451@sez/gems/normalize-rails-3.0.1/vendor/assets/stylesheets/normalize-rails/normalize.css */
+[hidden],
+template {
+  display: none;
+}
+
+/* Links
+   ========================================================================== */
+/**
+ * Remove the gray background color from active links in IE 10.
+ */
+/* line 88, /usr/local/rvm/gems/ruby-2.0.0-p451@sez/gems/normalize-rails-3.0.1/vendor/assets/stylesheets/normalize-rails/normalize.css */
+a {
+  background: transparent;
+}
+
+/**
+ * Improve readability when focused and also mouse hovered in all browsers.
+ */
+/* line 97, /usr/local/rvm/gems/ruby-2.0.0-p451@sez/gems/normalize-rails-3.0.1/vendor/assets/stylesheets/normalize-rails/normalize.css */
+a:active,
+a:hover {
+  outline: 0;
+}
+
+/* Text-level semantics
+   ========================================================================== */
+/**
+ * Address styling not present in IE 8/9/10/11, Safari, and Chrome.
+ */
+/* line 108, /usr/local/rvm/gems/ruby-2.0.0-p451@sez/gems/normalize-rails-3.0.1/vendor/assets/stylesheets/normalize-rails/normalize.css */
+abbr[title] {
+  border-bottom: 1px dotted;
+}
+
+/**
+ * Address style set to `bolder` in Firefox 4+, Safari, and Chrome.
+ */
+/* line 117, /usr/local/rvm/gems/ruby-2.0.0-p451@sez/gems/normalize-rails-3.0.1/vendor/assets/stylesheets/normalize-rails/normalize.css */
+b,
+strong {
+  font-weight: bold;
+}
+
+/**
+ * Address styling not present in Safari and Chrome.
+ */
+/* line 125, /usr/local/rvm/gems/ruby-2.0.0-p451@sez/gems/normalize-rails-3.0.1/vendor/assets/stylesheets/normalize-rails/normalize.css */
+dfn {
+  font-style: italic;
+}
+
+/**
+ * Address variable `h1` font-size and margin within `section` and `article`
+ * contexts in Firefox 4+, Safari, and Chrome.
+ */
+/* line 134, /usr/local/rvm/gems/ruby-2.0.0-p451@sez/gems/normalize-rails-3.0.1/vendor/assets/stylesheets/normalize-rails/normalize.css */
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+/**
+ * Address styling not present in IE 8/9.
+ */
+/* line 143, /usr/local/rvm/gems/ruby-2.0.0-p451@sez/gems/normalize-rails-3.0.1/vendor/assets/stylesheets/normalize-rails/normalize.css */
+mark {
+  background: #ff0;
+  color: #000;
+}
+
+/**
+ * Address inconsistent and variable font size in all browsers.
+ */
+/* line 152, /usr/local/rvm/gems/ruby-2.0.0-p451@sez/gems/normalize-rails-3.0.1/vendor/assets/stylesheets/normalize-rails/normalize.css */
+small {
+  font-size: 80%;
+}
+
+/**
+ * Prevent `sub` and `sup` affecting `line-height` in all browsers.
+ */
+/* line 161, /usr/local/rvm/gems/ruby-2.0.0-p451@sez/gems/normalize-rails-3.0.1/vendor/assets/stylesheets/normalize-rails/normalize.css */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+/* line 168, /usr/local/rvm/gems/ruby-2.0.0-p451@sez/gems/normalize-rails-3.0.1/vendor/assets/stylesheets/normalize-rails/normalize.css */
+sup {
+  top: -0.5em;
+}
+
+/* line 172, /usr/local/rvm/gems/ruby-2.0.0-p451@sez/gems/normalize-rails-3.0.1/vendor/assets/stylesheets/normalize-rails/normalize.css */
+sub {
+  bottom: -0.25em;
+}
+
+/* Embedded content
+   ========================================================================== */
+/**
+ * Remove border when inside `a` element in IE 8/9/10.
+ */
+/* line 183, /usr/local/rvm/gems/ruby-2.0.0-p451@sez/gems/normalize-rails-3.0.1/vendor/assets/stylesheets/normalize-rails/normalize.css */
+img {
+  border: 0;
+}
+
+/**
+ * Correct overflow not hidden in IE 9/10/11.
+ */
+/* line 191, /usr/local/rvm/gems/ruby-2.0.0-p451@sez/gems/normalize-rails-3.0.1/vendor/assets/stylesheets/normalize-rails/normalize.css */
+svg:not(:root) {
+  overflow: hidden;
+}
+
+/* Grouping content
+   ========================================================================== */
+/**
+ * Address margin not present in IE 8/9 and Safari.
+ */
+/* line 202, /usr/local/rvm/gems/ruby-2.0.0-p451@sez/gems/normalize-rails-3.0.1/vendor/assets/stylesheets/normalize-rails/normalize.css */
+figure {
+  margin: 1em 40px;
+}
+
+/**
+ * Address differences between Firefox and other browsers.
+ */
+/* line 210, /usr/local/rvm/gems/ruby-2.0.0-p451@sez/gems/normalize-rails-3.0.1/vendor/assets/stylesheets/normalize-rails/normalize.css */
+hr {
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  height: 0;
+}
+
+/**
+ * Contain overflow in all browsers.
+ */
+/* line 220, /usr/local/rvm/gems/ruby-2.0.0-p451@sez/gems/normalize-rails-3.0.1/vendor/assets/stylesheets/normalize-rails/normalize.css */
+pre {
+  overflow: auto;
+}
+
+/**
+ * Address odd `em`-unit font size rendering in all browsers.
+ */
+/* line 231, /usr/local/rvm/gems/ruby-2.0.0-p451@sez/gems/normalize-rails-3.0.1/vendor/assets/stylesheets/normalize-rails/normalize.css */
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace, monospace;
+  font-size: 1em;
+}
+
+/* Forms
+   ========================================================================== */
+/**
+ * Known limitation: by default, Chrome and Safari on OS X allow very limited
+ * styling of `select`, unless a `border` property is set.
+ */
+/**
+ * 1. Correct color not being inherited.
+ *    Known issue: affects color of disabled elements.
+ * 2. Correct font properties not being inherited.
+ * 3. Address margins set differently in Firefox 4+, Safari, and Chrome.
+ */
+/* line 255, /usr/local/rvm/gems/ruby-2.0.0-p451@sez/gems/normalize-rails-3.0.1/vendor/assets/stylesheets/normalize-rails/normalize.css */
+button,
+input,
+optgroup,
+select,
+textarea {
+  color: inherit;
+  /* 1 */
+  font: inherit;
+  /* 2 */
+  margin: 0;
+  /* 3 */
+}
+
+/**
+ * Address `overflow` set to `hidden` in IE 8/9/10/11.
+ */
+/* line 265, /usr/local/rvm/gems/ruby-2.0.0-p451@sez/gems/normalize-rails-3.0.1/vendor/assets/stylesheets/normalize-rails/normalize.css */
+button {
+  overflow: visible;
+}
+
+/**
+ * Address inconsistent `text-transform` inheritance for `button` and `select`.
+ * All other form control elements do not inherit `text-transform` values.
+ * Correct `button` style inheritance in Firefox, IE 8/9/10/11, and Opera.
+ * Correct `select` style inheritance in Firefox.
+ */
+/* line 277, /usr/local/rvm/gems/ruby-2.0.0-p451@sez/gems/normalize-rails-3.0.1/vendor/assets/stylesheets/normalize-rails/normalize.css */
+button,
+select {
+  text-transform: none;
+}
+
+/**
+ * 1. Avoid the WebKit bug in Android 4.0.* where (2) destroys native `audio`
+ *    and `video` controls.
+ * 2. Correct inability to style clickable `input` types in iOS.
+ * 3. Improve usability and consistency of cursor style between image-type
+ *    `input` and others.
+ */
+/* line 292, /usr/local/rvm/gems/ruby-2.0.0-p451@sez/gems/normalize-rails-3.0.1/vendor/assets/stylesheets/normalize-rails/normalize.css */
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  -webkit-appearance: button;
+  /* 2 */
+  cursor: pointer;
+  /* 3 */
+}
+
+/**
+ * Re-set default cursor for disabled elements.
+ */
+/* line 302, /usr/local/rvm/gems/ruby-2.0.0-p451@sez/gems/normalize-rails-3.0.1/vendor/assets/stylesheets/normalize-rails/normalize.css */
+button[disabled],
+html input[disabled] {
+  cursor: default;
+}
+
+/**
+ * Remove inner padding and border in Firefox 4+.
+ */
+/* line 311, /usr/local/rvm/gems/ruby-2.0.0-p451@sez/gems/normalize-rails-3.0.1/vendor/assets/stylesheets/normalize-rails/normalize.css */
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+/**
+ * Address Firefox 4+ setting `line-height` on `input` using `!important` in
+ * the UA stylesheet.
+ */
+/* line 321, /usr/local/rvm/gems/ruby-2.0.0-p451@sez/gems/normalize-rails-3.0.1/vendor/assets/stylesheets/normalize-rails/normalize.css */
+input {
+  line-height: normal;
+}
+
+/**
+ * It's recommended that you don't attempt to style these elements.
+ * Firefox's implementation doesn't respect box-sizing, padding, or width.
+ *
+ * 1. Address box sizing set to `content-box` in IE 8/9/10.
+ * 2. Remove excess padding in IE 8/9/10.
+ */
+/* line 334, /usr/local/rvm/gems/ruby-2.0.0-p451@sez/gems/normalize-rails-3.0.1/vendor/assets/stylesheets/normalize-rails/normalize.css */
+input[type="checkbox"],
+input[type="radio"] {
+  box-sizing: border-box;
+  /* 1 */
+  padding: 0;
+  /* 2 */
+}
+
+/**
+ * Fix the cursor style for Chrome's increment/decrement buttons. For certain
+ * `font-size` values of the `input`, it causes the cursor style of the
+ * decrement button to change from `default` to `text`.
+ */
+/* line 346, /usr/local/rvm/gems/ruby-2.0.0-p451@sez/gems/normalize-rails-3.0.1/vendor/assets/stylesheets/normalize-rails/normalize.css */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+/**
+ * 1. Address `appearance` set to `searchfield` in Safari and Chrome.
+ * 2. Address `box-sizing` set to `border-box` in Safari and Chrome
+ *    (include `-moz` to future-proof).
+ */
+/* line 356, /usr/local/rvm/gems/ruby-2.0.0-p451@sez/gems/normalize-rails-3.0.1/vendor/assets/stylesheets/normalize-rails/normalize.css */
+input[type="search"] {
+  -webkit-appearance: textfield;
+  /* 1 */
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+  /* 2 */
+  box-sizing: content-box;
+}
+
+/**
+ * Remove inner padding and search cancel button in Safari and Chrome on OS X.
+ * Safari (but not Chrome) clips the cancel button when the search input has
+ * padding (and `textfield` appearance).
+ */
+/* line 370, /usr/local/rvm/gems/ruby-2.0.0-p451@sez/gems/normalize-rails-3.0.1/vendor/assets/stylesheets/normalize-rails/normalize.css */
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/**
+ * Define consistent border, margin, and padding.
+ */
+/* line 378, /usr/local/rvm/gems/ruby-2.0.0-p451@sez/gems/normalize-rails-3.0.1/vendor/assets/stylesheets/normalize-rails/normalize.css */
+fieldset {
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em;
+}
+
+/**
+ * 1. Correct `color` not being inherited in IE 8/9/10/11.
+ * 2. Remove padding so people aren't caught out if they zero out fieldsets.
+ */
+/* line 389, /usr/local/rvm/gems/ruby-2.0.0-p451@sez/gems/normalize-rails-3.0.1/vendor/assets/stylesheets/normalize-rails/normalize.css */
+legend {
+  border: 0;
+  /* 1 */
+  padding: 0;
+  /* 2 */
+}
+
+/**
+ * Remove default vertical scrollbar in IE 8/9/10/11.
+ */
+/* line 398, /usr/local/rvm/gems/ruby-2.0.0-p451@sez/gems/normalize-rails-3.0.1/vendor/assets/stylesheets/normalize-rails/normalize.css */
+textarea {
+  overflow: auto;
+}
+
+/**
+ * Don't inherit the `font-weight` (applied by a rule above).
+ * NOTE: the default cannot safely be changed in Chrome and Safari on OS X.
+ */
+/* line 407, /usr/local/rvm/gems/ruby-2.0.0-p451@sez/gems/normalize-rails-3.0.1/vendor/assets/stylesheets/normalize-rails/normalize.css */
+optgroup {
+  font-weight: bold;
+}
+
+/* Tables
+   ========================================================================== */
+/**
+ * Remove most spacing between table cells.
+ */
+/* line 418, /usr/local/rvm/gems/ruby-2.0.0-p451@sez/gems/normalize-rails-3.0.1/vendor/assets/stylesheets/normalize-rails/normalize.css */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 424, /usr/local/rvm/gems/ruby-2.0.0-p451@sez/gems/normalize-rails-3.0.1/vendor/assets/stylesheets/normalize-rails/normalize.css */
+td,
+th {
+  padding: 0;
+}
+
+/* line 1, /Users/tygriffin/Desktop/SEZ/Simple English Zine/SEZ_Website/app/assets/stylesheets/desktop/base/fonts.css.scss */
+.wf-loading * {
+  opacity: 0;
+}
+
+@font-face {
+  font-family: 'Acknowledgement';
+  src: url(/assets/Acknowledgement-webfont.eot);
+  src: url(/assets/Acknowledgement-webfont.eot?#iefix) format("embedded-opentype"), url(/assets/Acknowledgement-webfont.woff) format("woff"), url(/assets/Acknowledgement-webfont.ttf) format("truetype"), url(/assets/Acknowledgement-webfont.svg#Acknowledgement-webfont) format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* line 1, /Users/tygriffin/Desktop/SEZ/Simple English Zine/SEZ_Website/app/assets/stylesheets/desktop/base/elements.css.scss */
+h1, h2, h3, h4, p, ul, ol, li, dl, dt, dd, pre, blockquote {
+  padding: 0;
+  margin: 0;
+  color: black;
+}
+
+/* line 3, /Users/tygriffin/Desktop/SEZ/Simple English Zine/SEZ_Website/app/assets/stylesheets/desktop/base/elements.css.scss */
+h2, h3, h4, p, ul, ol, li, dl, dt, dd, pre, blockquote {
+  font-family: 'Chivo', sans-serif;
+}
+
+/* line 5, /Users/tygriffin/Desktop/SEZ/Simple English Zine/SEZ_Website/app/assets/stylesheets/desktop/base/elements.css.scss */
+h1 {
+  font-family: Acknowledgement, serif;
+}
+
+/* line 7, /Users/tygriffin/Desktop/SEZ/Simple English Zine/SEZ_Website/app/assets/stylesheets/desktop/base/elements.css.scss */
+h2, h3, h4 {
+  line-height: 120%;
+}
+
+/* line 9, /Users/tygriffin/Desktop/SEZ/Simple English Zine/SEZ_Website/app/assets/stylesheets/desktop/base/elements.css.scss */
+h2 {
+  font-size: 32px;
+}
+
+/* line 11, /Users/tygriffin/Desktop/SEZ/Simple English Zine/SEZ_Website/app/assets/stylesheets/desktop/base/elements.css.scss */
+p, ul, ol, li, pre, blockquote {
+  line-height: 160%;
+  font-size: 16px;
+}
+
+/* line 13, /Users/tygriffin/Desktop/SEZ/Simple English Zine/SEZ_Website/app/assets/stylesheets/desktop/base/elements.css.scss */
+p {
+  text-align: left;
+}
+
+/* line 15, /Users/tygriffin/Desktop/SEZ/Simple English Zine/SEZ_Website/app/assets/stylesheets/desktop/base/elements.css.scss */
+ul {
+  list-style: none;
+}
+
+/* line 17, /Users/tygriffin/Desktop/SEZ/Simple English Zine/SEZ_Website/app/assets/stylesheets/desktop/base/elements.css.scss */
+a {
+  text-decoration: none;
+  color: black;
+}
+/* line 19, /Users/tygriffin/Desktop/SEZ/Simple English Zine/SEZ_Website/app/assets/stylesheets/desktop/base/elements.css.scss */
+a:hover {
+  text-decoration: underline;
+}
+
+/* line 22, /Users/tygriffin/Desktop/SEZ/Simple English Zine/SEZ_Website/app/assets/stylesheets/desktop/base/elements.css.scss */
+#container {
+  max-width: 1025px;
+  margin: 0 auto;
+  padding-bottom: 40px;
+}
+
+/* line 24, /Users/tygriffin/Desktop/SEZ/Simple English Zine/SEZ_Website/app/assets/stylesheets/desktop/base/elements.css.scss */
+.emphatic {
+  font-weight: bold;
+  font-style: italic;
+}
+
+/* line 25, /Users/tygriffin/Desktop/SEZ/Simple English Zine/SEZ_Website/app/assets/stylesheets/desktop/base/elements.css.scss */
+.poetry {
+  font-style: italic;
+  border-left: 6px solid #ccc;
+  padding-left: 20px;
+}
+
+/* line 26, /Users/tygriffin/Desktop/SEZ/Simple English Zine/SEZ_Website/app/assets/stylesheets/desktop/base/elements.css.scss */
+blockquote {
+  padding-left: 20px;
+  border-left: 6px solid #ccc;
+}
+
+/* line 1, /Users/tygriffin/Desktop/SEZ/Simple English Zine/SEZ_Website/app/assets/stylesheets/desktop/components/author.css.scss */
+.author {
+  padding: 20px;
+  min-height: 170px;
+  border-top: 1px dashed gray;
+}
+/* line 3, /Users/tygriffin/Desktop/SEZ/Simple English Zine/SEZ_Website/app/assets/stylesheets/desktop/components/author.css.scss */
+.author h4 {
+  margin-bottom: 16px;
+}
+/* line 4, /Users/tygriffin/Desktop/SEZ/Simple English Zine/SEZ_Website/app/assets/stylesheets/desktop/components/author.css.scss */
+.author ul {
+  margin-left: 160px;
+}
+/* line 5, /Users/tygriffin/Desktop/SEZ/Simple English Zine/SEZ_Website/app/assets/stylesheets/desktop/components/author.css.scss */
+.author li {
+  margin-bottom: 6px;
+  font-size: 16px;
+  color: #555555;
+}
+/* line 6, /Users/tygriffin/Desktop/SEZ/Simple English Zine/SEZ_Website/app/assets/stylesheets/desktop/components/author.css.scss */
+.author img {
+  width: 100px;
+  border-radius: 20px;
+  float: left;
+}
+
+/* line 1, /Users/tygriffin/Desktop/SEZ/Simple English Zine/SEZ_Website/app/assets/stylesheets/desktop/components/bubble.css.scss */
+.bubble-trigger {
+  border-bottom: 2px dotted red;
+}
+/* line 3, /Users/tygriffin/Desktop/SEZ/Simple English Zine/SEZ_Website/app/assets/stylesheets/desktop/components/bubble.css.scss */
+.bubble-trigger:hover {
+  text-decoration: none;
+}
+
+/* line 1, /Users/tygriffin/Desktop/SEZ/Simple English Zine/SEZ_Website/app/assets/stylesheets/desktop/components/catalog.css.scss */
+.topic-marker {
+  background-color: #e01b5d;
+  color: white;
+  padding: 3px 6px 3px 6px;
+  border-radius: 5px;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+/* line 6, /Users/tygriffin/Desktop/SEZ/Simple English Zine/SEZ_Website/app/assets/stylesheets/desktop/components/catalog.css.scss */
+.catalog a {
+  display: inline-block;
+  width: 100%;
+}
+/* line 8, /Users/tygriffin/Desktop/SEZ/Simple English Zine/SEZ_Website/app/assets/stylesheets/desktop/components/catalog.css.scss */
+.catalog a:hover {
+  text-decoration: none;
+}
+/* line 10, /Users/tygriffin/Desktop/SEZ/Simple English Zine/SEZ_Website/app/assets/stylesheets/desktop/components/catalog.css.scss */
+.catalog a:hover .catalog-entry-info {
+  background-color: #6f8500;
+}
+/* line 12, /Users/tygriffin/Desktop/SEZ/Simple English Zine/SEZ_Website/app/assets/stylesheets/desktop/components/catalog.css.scss */
+.catalog a:hover .catalog-entry-info h2, .catalog a:hover .catalog-entry-info p, .catalog a:hover .catalog-entry-info li, .catalog a:hover .catalog-entry-info .includes-tool {
+  color: white;
+}
+
+/* line 17, /Users/tygriffin/Desktop/SEZ/Simple English Zine/SEZ_Website/app/assets/stylesheets/desktop/components/catalog.css.scss */
+.catalog-entry {
+  margin: 0 0 2em 0;
+  border-bottom: 1px solid #eeeeee;
+  padding-bottom: 2em;
+  position: relative;
+}
+/* line 19, /Users/tygriffin/Desktop/SEZ/Simple English Zine/SEZ_Website/app/assets/stylesheets/desktop/components/catalog.css.scss */
+.catalog-entry img:first-child {
+  width: 450px;
+  float: right;
+  margin-right: 32px;
+  background-color: #ddf0f0;
+}
+
+/* line 22, /Users/tygriffin/Desktop/SEZ/Simple English Zine/SEZ_Website/app/assets/stylesheets/desktop/components/catalog.css.scss */
+.catalog-entry-info {
+  width: 500px;
+  padding: 10px 10px 0 10px;
+  background-color: white;
+}
+/* line 24, /Users/tygriffin/Desktop/SEZ/Simple English Zine/SEZ_Website/app/assets/stylesheets/desktop/components/catalog.css.scss */
+.catalog-entry-info h2 {
+  margin-bottom: 15px;
+}
+
+/* line 27, /Users/tygriffin/Desktop/SEZ/Simple English Zine/SEZ_Website/app/assets/stylesheets/desktop/components/catalog.css.scss */
+.attention-flag {
+  background-color: rgba(0, 0, 0, 0);
+  width: 110px;
+  position: absolute;
+  top: 10px;
+  right: -2px;
+}
+
+@media all and (min-width: 900px) {
+  /* line 32, /Users/tygriffin/Desktop/SEZ/Simple English Zine/SEZ_Website/app/assets/stylesheets/desktop/components/catalog.css.scss */
+  .catalog-entry-info {
+    height: 294px;
+  }
+}
+@media all and (max-width: 900px) {
+  /* line 39, /Users/tygriffin/Desktop/SEZ/Simple English Zine/SEZ_Website/app/assets/stylesheets/desktop/components/catalog.css.scss */
+  .catalog-entry {
+    width: 100%;
+  }
+  /* line 41, /Users/tygriffin/Desktop/SEZ/Simple English Zine/SEZ_Website/app/assets/stylesheets/desktop/components/catalog.css.scss */
+  .catalog-entry img:first-child {
+    width: 100%;
+    float: none;
+  }
+
+  /* line 44, /Users/tygriffin/Desktop/SEZ/Simple English Zine/SEZ_Website/app/assets/stylesheets/desktop/components/catalog.css.scss */
+  .catalog-entry-info {
+    width: 100%;
+    padding: 15px 0 15px 0;
+  }
+
+  /* line 46, /Users/tygriffin/Desktop/SEZ/Simple English Zine/SEZ_Website/app/assets/stylesheets/desktop/components/catalog.css.scss */
+  .attention-flag {
+    display: none;
+  }
+}
+/* line 1, /Users/tygriffin/Desktop/SEZ/Simple English Zine/SEZ_Website/app/assets/stylesheets/desktop/components/form.css.scss */
+form dt {
+  margin: 20px 0 10px 0;
+}
+
+/* line 2, /Users/tygriffin/Desktop/SEZ/Simple English Zine/SEZ_Website/app/assets/stylesheets/desktop/components/form.css.scss */
+form dd {
+  margin: 0;
+}
+
+/* line 4, /Users/tygriffin/Desktop/SEZ/Simple English Zine/SEZ_Website/app/assets/stylesheets/desktop/components/form.css.scss */
+textarea {
+  width: 95%;
+  min-height: 200px;
+}
+
+/* line 6, /Users/tygriffin/Desktop/SEZ/Simple English Zine/SEZ_Website/app/assets/stylesheets/desktop/components/form.css.scss */
+.submit {
+  padding: 10px 20px 10px 20px;
+  margin: 20px 0 20px 0;
+  background-color: #ddf0f0;
+  width: 100%;
+}
+/* line 8, /Users/tygriffin/Desktop/SEZ/Simple English Zine/SEZ_Website/app/assets/stylesheets/desktop/components/form.css.scss */
+.submit:hover {
+  background-color: #6f8500;
+  color: #fff;
+}
+
+/* line 12, /Users/tygriffin/Desktop/SEZ/Simple English Zine/SEZ_Website/app/assets/stylesheets/desktop/components/form.css.scss */
+.error-message h2, .error-message p, .error-message li {
+  color: red;
+  font-style: italic;
+}
+
+/* line 15, /Users/tygriffin/Desktop/SEZ/Simple English Zine/SEZ_Website/app/assets/stylesheets/desktop/components/form.css.scss */
+.form-flash {
+  color: #6f8500;
+  font-weight: bold;
+  padding: 30px 0 30px 0;
+  text-align: center;
+  width: 100%;
+}
+
+/* line 1, /Users/tygriffin/Desktop/SEZ/Simple English Zine/SEZ_Website/app/assets/stylesheets/desktop/components/header_lead.css.scss */
+.header-lead {
+  border-top: 4px solid #000;
+  border-bottom: 1px solid #000;
+  padding: 25px 40px 25px 40px;
+  margin-bottom: 1em;
+}
+
+/* line 8, /Users/tygriffin/Desktop/SEZ/Simple English Zine/SEZ_Website/app/assets/stylesheets/desktop/components/header_lead.css.scss */
+.header-lead p {
+  text-align: center;
+  font-size: 24px;
+}
+
+/* line 10, /Users/tygriffin/Desktop/SEZ/Simple English Zine/SEZ_Website/app/assets/stylesheets/desktop/components/header_lead.css.scss */
+.bird-logo {
+  float: right;
+  width: 140px;
+  margin: 0 30px 0 60px;
+}
+
+/* line 1, /Users/tygriffin/Desktop/SEZ/Simple English Zine/SEZ_Website/app/assets/stylesheets/desktop/components/modal.css.scss */
+.modal-dialog {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: none;
+  background: rgba(0, 0, 0, 0.8);
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
+  /* IE transparency */
+  filter: alpha(opacity=50);
+  /* More IE transparency */
+  z-index: 99998;
+}
+
+/* line 10, /Users/tygriffin/Desktop/SEZ/Simple English Zine/SEZ_Website/app/assets/stylesheets/desktop/components/modal.css.scss */
+.modal-dialog > div {
+  width: 600px;
+  position: relative;
+  margin: 10% auto;
+  padding: 30px;
+  border-radius: 10px;
+  background: white;
+  background: -webkit-linear-gradient(white, #999999);
+  background: -ms-linear-gradient(white, #999999);
+  background: -moz-linear-gradient(white, #999999);
+  background: -o-linear-gradient(white, #999999);
+  background: linear-gradient(white, #999999);
+}
+
+/* line 16, /Users/tygriffin/Desktop/SEZ/Simple English Zine/SEZ_Website/app/assets/stylesheets/desktop/components/modal.css.scss */
+.modal-dialog h2 {
+  margin-bottom: 20px;
+}
+
+/* line 17, /Users/tygriffin/Desktop/SEZ/Simple English Zine/SEZ_Website/app/assets/stylesheets/desktop/components/modal.css.scss */
+.modal-dialog p {
+  line-height: 180%;
+}
+
+/* line 19, /Users/tygriffin/Desktop/SEZ/Simple English Zine/SEZ_Website/app/assets/stylesheets/desktop/components/modal.css.scss */
+.close {
+  line-height: 25px;
+  text-align: center;
+  width: 24px;
+  position: absolute;
+  right: -12px;
+  top: -10px;
+  text-decoration: none;
+  font-weight: bold;
+  background: #555555;
+  color: white;
+  -webkit-border-radius: 12px;
+  -ms-border-radius: 12px;
+  -moz-border-radius: 12px;
+  -o-border-radius: 12px;
+  border-radius: 12px;
+  -webkit-box-shadow: 1px 1px 3px black;
+  -ms-box-shadow: 1px 1px 3px black;
+  -moz-box-shadow: 1px 1px 3px black;
+  -o-box-shadow: 1px 1px 3px black;
+  box-shadow: 1px 1px 3px black;
+}
+/* line 25, /Users/tygriffin/Desktop/SEZ/Simple English Zine/SEZ_Website/app/assets/stylesheets/desktop/components/modal.css.scss */
+.close:hover {
+  background: #00d9ff;
+  text-decoration: none;
+}
+
+/* line 28, /Users/tygriffin/Desktop/SEZ/Simple English Zine/SEZ_Website/app/assets/stylesheets/desktop/components/modal.css.scss */
+.example-popup {
+  background-color: #eee;
+  padding: 6px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+/* line 29, /Users/tygriffin/Desktop/SEZ/Simple English Zine/SEZ_Website/app/assets/stylesheets/desktop/components/modal.css.scss */
+.example-popup .bubble-trigger {
+  color: black;
+}
+
+/* line 1, /Users/tygriffin/Desktop/SEZ/Simple English Zine/SEZ_Website/app/assets/stylesheets/desktop/components/popup_base.css.scss */
+.popup-placeholder {
+  position: fixed;
+  bottom: 15px;
+  left: 10px;
+  width: 50px;
+  height: 50px;
+}
+
+/* line 1, /Users/tygriffin/Desktop/SEZ/Simple English Zine/SEZ_Website/app/assets/stylesheets/desktop/components/social_media.css.scss */
+#social-media-recommend {
+  margin: 60px 0 30px 0;
+}
+/* line 3, /Users/tygriffin/Desktop/SEZ/Simple English Zine/SEZ_Website/app/assets/stylesheets/desktop/components/social_media.css.scss */
+#social-media-recommend a {
+  display: inline-block;
+  margin-left: 15px;
+}
+
+/* line 1, /Users/tygriffin/Desktop/SEZ/Simple English Zine/SEZ_Website/app/assets/stylesheets/desktop/components/study_section.css.scss */
+.study-section {
+  padding: 20px;
+  border-top: 1px dashed gray;
+  margin: 20px 0 20px 0;
+}
+/* line 3, /Users/tygriffin/Desktop/SEZ/Simple English Zine/SEZ_Website/app/assets/stylesheets/desktop/components/study_section.css.scss */
+.study-section li {
+  margin: 15px;
+}
+
+/* line 5, /Users/tygriffin/Desktop/SEZ/Simple English Zine/SEZ_Website/app/assets/stylesheets/desktop/components/study_section.css.scss */
+.vocab {
+  background-color: #fffcfa;
+}
+
+/* line 6, /Users/tygriffin/Desktop/SEZ/Simple English Zine/SEZ_Website/app/assets/stylesheets/desktop/components/study_section.css.scss */
+.culture-notes {
+  background-color: #fcfaff;
+}
+
+/* line 7, /Users/tygriffin/Desktop/SEZ/Simple English Zine/SEZ_Website/app/assets/stylesheets/desktop/components/study_section.css.scss */
+.study-notes {
+  background-color: #fafffc;
+}
+
+/* line 1, /Users/tygriffin/Desktop/SEZ/Simple English Zine/SEZ_Website/app/assets/stylesheets/desktop/components/study_tools.css.scss */
+.study-tools {
+  padding: 0;
+  margin: 15px 0;
+}
+/* line 3, /Users/tygriffin/Desktop/SEZ/Simple English Zine/SEZ_Website/app/assets/stylesheets/desktop/components/study_tools.css.scss */
+.study-tools li {
+  display: inline-block;
+}
+
+/* line 5, /Users/tygriffin/Desktop/SEZ/Simple English Zine/SEZ_Website/app/assets/stylesheets/desktop/components/study_tools.css.scss */
+.includes-tool {
+  margin: 0;
+  width: auto;
+  font-weight: bold;
+  color: #777;
+  border: 2px solid #ddd;
+  border-radius: 4px;
+  display: inline-block;
+  padding: 5px 7px 3px 5px;
+}
+
+/* line 1, /Users/tygriffin/Desktop/SEZ/Simple English Zine/SEZ_Website/app/assets/stylesheets/desktop/components/tags.css.scss */
+.tags {
+  background-color: #dedede;
+  padding: 1px;
+}
+/* line 4, /Users/tygriffin/Desktop/SEZ/Simple English Zine/SEZ_Website/app/assets/stylesheets/desktop/components/tags.css.scss */
+.tags h4, .tags p {
+  display: inline;
+}
+
+/* line 1, /Users/tygriffin/Desktop/SEZ/Simple English Zine/SEZ_Website/app/assets/stylesheets/desktop/components/top_nav.css.scss */
+.top-nav {
+  background-color: black;
+  text-align: center;
+  padding: 2px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 100;
+}
+
+/* line 5, /Users/tygriffin/Desktop/SEZ/Simple English Zine/SEZ_Website/app/assets/stylesheets/desktop/components/top_nav.css.scss */
+.top-nav h1 {
+  font-size: 24px;
+}
+
+/* line 6, /Users/tygriffin/Desktop/SEZ/Simple English Zine/SEZ_Website/app/assets/stylesheets/desktop/components/top_nav.css.scss */
+.top-nav a {
+  color: white;
+}
+
+/* line 7, /Users/tygriffin/Desktop/SEZ/Simple English Zine/SEZ_Website/app/assets/stylesheets/desktop/components/top_nav.css.scss */
+.top_nav a:hover {
+  text-decoration: none;
+}
+
+/* line 9, /Users/tygriffin/Desktop/SEZ/Simple English Zine/SEZ_Website/app/assets/stylesheets/desktop/components/top_nav.css.scss */
+#help {
+  float: right;
+  margin: 2px 20px 0 0;
+  padding: 2px 6px 0 5px;
+  text-decoration: none;
+  border: 1px solid white;
+  border-radius: 2px;
+  font-weight: bold;
+}
+/* line 13, /Users/tygriffin/Desktop/SEZ/Simple English Zine/SEZ_Website/app/assets/stylesheets/desktop/components/top_nav.css.scss */
+#help:hover {
+  background-color: white;
+  color: black;
+}
+
+/* line 1, /Users/tygriffin/Desktop/SEZ/Simple English Zine/SEZ_Website/app/assets/stylesheets/desktop/sections/article.css.scss */
+.article-top figure {
+  position: fixed;
+  top: 16px;
+  left: 330px;
+  height: 710px;
+  z-index: -2;
+}
+
+/* line 2, /Users/tygriffin/Desktop/SEZ/Simple English Zine/SEZ_Website/app/assets/stylesheets/desktop/sections/article.css.scss */
+.article-top img {
+  height: 100%;
+}
+
+/* line 3, /Users/tygriffin/Desktop/SEZ/Simple English Zine/SEZ_Website/app/assets/stylesheets/desktop/sections/article.css.scss */
+.article-top figcaption {
+  font-size: 12px;
+  color: #555555;
+}
+
+/* line 5, /Users/tygriffin/Desktop/SEZ/Simple English Zine/SEZ_Website/app/assets/stylesheets/desktop/sections/article.css.scss */
+.intro {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: white;
+  width: 300px;
+  height: 650px;
+  z-index: -1;
+  padding: 50px 20px;
+}
+
+/* line 10, /Users/tygriffin/Desktop/SEZ/Simple English Zine/SEZ_Website/app/assets/stylesheets/desktop/sections/article.css.scss */
+.intro h2 {
+  font-size: 40px;
+  text-shadow: #999 -2px 5px 4px;
+  margin-bottom: 20px;
+}
+
+/* line 11, /Users/tygriffin/Desktop/SEZ/Simple English Zine/SEZ_Website/app/assets/stylesheets/desktop/sections/article.css.scss */
+.intro p {
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+/* line 13, /Users/tygriffin/Desktop/SEZ/Simple English Zine/SEZ_Website/app/assets/stylesheets/desktop/sections/article.css.scss */
+#wrapper {
+  position: absolute;
+  top: 730px;
+  border-top: 1px solid #999;
+  background-color: white;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+}
+
+/* line 19, /Users/tygriffin/Desktop/SEZ/Simple English Zine/SEZ_Website/app/assets/stylesheets/desktop/sections/article.css.scss */
+article {
+  padding: 30px 20px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+/* line 21, /Users/tygriffin/Desktop/SEZ/Simple English Zine/SEZ_Website/app/assets/stylesheets/desktop/sections/article.css.scss */
+.article-body {
+  max-width: 800px;
+  margin: 0 auto 20px auto;
+}
+
+/* line 22, /Users/tygriffin/Desktop/SEZ/Simple English Zine/SEZ_Website/app/assets/stylesheets/desktop/sections/article.css.scss */
+.article-body p {
+  margin-bottom: 20px;
+  line-height: 180%;
+}
+
+/* line 23, /Users/tygriffin/Desktop/SEZ/Simple English Zine/SEZ_Website/app/assets/stylesheets/desktop/sections/article.css.scss */
+.article-body h3, h4 {
+  margin: 20px 0 10px 0;
+}
+
+/* line 25, /Users/tygriffin/Desktop/SEZ/Simple English Zine/SEZ_Website/app/assets/stylesheets/desktop/sections/article.css.scss */
+.highlight {
+  font-family: 'Acknowledgement', 'Georgia', serif;
+  padding: 40px;
+  font-size: 32px;
+  line-height: 140%;
+  display: block;
+}
+
+/* line 26, /Users/tygriffin/Desktop/SEZ/Simple English Zine/SEZ_Website/app/assets/stylesheets/desktop/sections/article.css.scss */
+.highlight a {
+  font-family: 'Acknowledgement', 'Georgia', serif;
+}
+
+/* line 28, /Users/tygriffin/Desktop/SEZ/Simple English Zine/SEZ_Website/app/assets/stylesheets/desktop/sections/article.css.scss */
+.top-figure figure {
+  float: left;
+  width: 400px;
+  margin: 0 14px 6px 0;
+}
+/* line 30, /Users/tygriffin/Desktop/SEZ/Simple English Zine/SEZ_Website/app/assets/stylesheets/desktop/sections/article.css.scss */
+.top-figure figure img {
+  padding-top: 9px;
+  height: auto;
+}
+/* line 31, /Users/tygriffin/Desktop/SEZ/Simple English Zine/SEZ_Website/app/assets/stylesheets/desktop/sections/article.css.scss */
+.top-figure figure iframe, .top-figure figure object, .top-figure figure embed {
+  padding-top: 9px;
+  width: 400px;
+  height: 250px;
+}
+
+/* line 33, /Users/tygriffin/Desktop/SEZ/Simple English Zine/SEZ_Website/app/assets/stylesheets/desktop/sections/article.css.scss */
+.article-body figcaption {
+  background-color: #eeeeee;
+  padding: 5px;
+  font-size: 16px;
+}
+
+/* line 34, /Users/tygriffin/Desktop/SEZ/Simple English Zine/SEZ_Website/app/assets/stylesheets/desktop/sections/article.css.scss */
+.article-body .inline_figure {
+  float: none;
+  width: 100%;
+  margin: 0 0 15px 0;
+}
+/* line 36, /Users/tygriffin/Desktop/SEZ/Simple English Zine/SEZ_Website/app/assets/stylesheets/desktop/sections/article.css.scss */
+.article-body .inline_figure iframe, .article-body .inline_figure object, .article-body .inline_figure embed {
+  width: 100%;
+  height: 600px;
+}
+
+/* line 38, /Users/tygriffin/Desktop/SEZ/Simple English Zine/SEZ_Website/app/assets/stylesheets/desktop/sections/article.css.scss */
+.article-body img {
+  width: 100%;
+}
+
+/* line 40, /Users/tygriffin/Desktop/SEZ/Simple English Zine/SEZ_Website/app/assets/stylesheets/desktop/sections/article.css.scss */
+.next-reads {
+  border-top: 1px dashed gray;
+  background-color: #fafcfe;
+}
+/* line 42, /Users/tygriffin/Desktop/SEZ/Simple English Zine/SEZ_Website/app/assets/stylesheets/desktop/sections/article.css.scss */
+.next-reads h3 {
+  font-size: 24px;
+  margin: 20px 0 10px 0;
+}
+/* line 43, /Users/tygriffin/Desktop/SEZ/Simple English Zine/SEZ_Website/app/assets/stylesheets/desktop/sections/article.css.scss */
+.next-reads .neighbor-article {
+  display: inline-block;
+  width: 497px;
+  vertical-align: top;
+  margin-top: 10px;
+}
+/* line 44, /Users/tygriffin/Desktop/SEZ/Simple English Zine/SEZ_Website/app/assets/stylesheets/desktop/sections/article.css.scss */
+.next-reads img {
+  float: left;
+  background-color: white;
+  margin-right: 10px;
+}
+/* line 45, /Users/tygriffin/Desktop/SEZ/Simple English Zine/SEZ_Website/app/assets/stylesheets/desktop/sections/article.css.scss */
+.next-reads p {
+  font-weight: bold;
+}
+
+/* line 1, /Users/tygriffin/Desktop/SEZ/Simple English Zine/SEZ_Website/app/assets/stylesheets/desktop/sections/footer.css.scss */
+#main-footer {
+  padding: 45px 0 20px 20px;
+}
+
+/* line 2, /Users/tygriffin/Desktop/SEZ/Simple English Zine/SEZ_Website/app/assets/stylesheets/desktop/sections/footer.css.scss */
+#main-footer ul {
+  vertical-align: top;
+  display: inline-block;
+  width: 198px;
+}
+
+/* line 3, /Users/tygriffin/Desktop/SEZ/Simple English Zine/SEZ_Website/app/assets/stylesheets/desktop/sections/footer.css.scss */
+#main-footer li {
+  margin-bottom: 6px;
+  font-size: 16px;
+}
+
+/* line 4, /Users/tygriffin/Desktop/SEZ/Simple English Zine/SEZ_Website/app/assets/stylesheets/desktop/sections/footer.css.scss */
+#social-media img {
+  width: 30px;
+}
+
+/* line 5, /Users/tygriffin/Desktop/SEZ/Simple English Zine/SEZ_Website/app/assets/stylesheets/desktop/sections/footer.css.scss */
+#license li {
+  width: 380px;
+  font-size: 12px;
+}
+
+/* line 1, /Users/tygriffin/Desktop/SEZ/Simple English Zine/SEZ_Website/app/assets/stylesheets/desktop/sections/game.css.scss */
+#quiz-game {
+  border-top: 4px solid black;
+  border-bottom: 1px solid black;
+  padding: 30px 0 30px 0;
+  min-height: 720px;
+}
+/* line 5, /Users/tygriffin/Desktop/SEZ/Simple English Zine/SEZ_Website/app/assets/stylesheets/desktop/sections/game.css.scss */
+#quiz-game #quiz-meta {
+  background-color: white;
+  padding: 15px 25px 15px 15px;
+  margin-right: 10px;
+  max-width: 520px;
+}
+/* line 11, /Users/tygriffin/Desktop/SEZ/Simple English Zine/SEZ_Website/app/assets/stylesheets/desktop/sections/game.css.scss */
+#quiz-game #quiz-meta #instructions, #quiz-game #quiz-meta #related-quizzes, #quiz-game #quiz-meta #related-article {
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+}
+/* line 17, /Users/tygriffin/Desktop/SEZ/Simple English Zine/SEZ_Website/app/assets/stylesheets/desktop/sections/game.css.scss */
+#quiz-game #quiz-meta #related-article {
+  min-height: 285px;
+}
+/* line 19, /Users/tygriffin/Desktop/SEZ/Simple English Zine/SEZ_Website/app/assets/stylesheets/desktop/sections/game.css.scss */
+#quiz-game #quiz-meta h3 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+/* line 22, /Users/tygriffin/Desktop/SEZ/Simple English Zine/SEZ_Website/app/assets/stylesheets/desktop/sections/game.css.scss */
+#quiz-game #quiz-meta #related-article img {
+  border-radius: 5px;
+  float: left;
+  width: 180px;
+}
+/* line 24, /Users/tygriffin/Desktop/SEZ/Simple English Zine/SEZ_Website/app/assets/stylesheets/desktop/sections/game.css.scss */
+#quiz-game #quiz-meta #related-article h4, #quiz-game #quiz-meta #related-article p {
+  margin-left: 215px;
+}
+/* line 28, /Users/tygriffin/Desktop/SEZ/Simple English Zine/SEZ_Website/app/assets/stylesheets/desktop/sections/game.css.scss */
+#quiz-game iframe {
+  float: right;
+  height: 720px;
+  width: 432px;
+  overflow: hidden;
+  background-color: transparent;
+  frameborder: none;
+  border: 0px none transparent;
+  padding: 0px;
+}
+
+@media all and (max-width: 600px) {
+  /* line 44, /Users/tygriffin/Desktop/SEZ/Simple English Zine/SEZ_Website/app/assets/stylesheets/desktop/sections/game.css.scss */
+  #quiz-game {
+    min-height: auto;
+  }
+  /* line 47, /Users/tygriffin/Desktop/SEZ/Simple English Zine/SEZ_Website/app/assets/stylesheets/desktop/sections/game.css.scss */
+  #quiz-game #quiz-meta {
+    margin-right: 0;
+    max-width: 100%;
+    height: auto;
+  }
+  /* line 49, /Users/tygriffin/Desktop/SEZ/Simple English Zine/SEZ_Website/app/assets/stylesheets/desktop/sections/game.css.scss */
+  #quiz-game iframe {
+    float: none;
+  }
+}
+/* line 1, /Users/tygriffin/Desktop/SEZ/Simple English Zine/SEZ_Website/app/assets/stylesheets/desktop/sections/headers.css.scss */
+h1 {
+  display: inline-block;
+  font-size: 120px;
+}
+/* line 3, /Users/tygriffin/Desktop/SEZ/Simple English Zine/SEZ_Website/app/assets/stylesheets/desktop/sections/headers.css.scss */
+h1 a {
+  font-family: 'Acknowledgement', sans-serif;
+}
+/* line 5, /Users/tygriffin/Desktop/SEZ/Simple English Zine/SEZ_Website/app/assets/stylesheets/desktop/sections/headers.css.scss */
+h1 a:hover {
+  text-decoration: none;
+}
+
+/* line 9, /Users/tygriffin/Desktop/SEZ/Simple English Zine/SEZ_Website/app/assets/stylesheets/desktop/sections/headers.css.scss */
+#main-header {
+  position: relative;
+}
+/* line 11, /Users/tygriffin/Desktop/SEZ/Simple English Zine/SEZ_Website/app/assets/stylesheets/desktop/sections/headers.css.scss */
+#main-header nav {
+  position: absolute;
+  bottom: 20px;
+  right: 5px;
+}
+/* line 12, /Users/tygriffin/Desktop/SEZ/Simple English Zine/SEZ_Website/app/assets/stylesheets/desktop/sections/headers.css.scss */
+#main-header li {
+  display: inline-block;
+  margin-left: 13px;
+  font-size: 16px;
+}
+
+@media all and (max-width: 500px) {
+  /* line 18, /Users/tygriffin/Desktop/SEZ/Simple English Zine/SEZ_Website/app/assets/stylesheets/desktop/sections/headers.css.scss */
+  #main-header nav {
+    bottom: 0;
+  }
+}
+/* line 2, /Users/tygriffin/Desktop/SEZ/Simple English Zine/SEZ_Website/app/assets/stylesheets/desktop/sections/static.css.scss */
+#about p:not(:first-of-type), #about h3, #contribute p:not(:first-of-type), #contribute h3 {
+  margin-bottom: 20px;
+  line-height: 180%;
+  padding: 0 100px 0 100px;
+}
+/* line 3, /Users/tygriffin/Desktop/SEZ/Simple English Zine/SEZ_Website/app/assets/stylesheets/desktop/sections/static.css.scss */
+#about .english, #contribute .english {
+  background: #eeeeee;
+  padding: 10px;
+}
