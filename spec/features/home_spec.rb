@@ -12,25 +12,25 @@ feature 'Navigating home' do
   end
 
   it "has a top nav" do
-    within "#main_header" do
+    within "#main-header" do
       expect(page).to have_content("SEZとは", "Contribute")
     end
   end
 
   it "has a top level lead" do
-    within ".sub_header_lead" do
+    within ".header-lead" do
       expect(page).to have_content("優しい英語で書いたウェブマガジン。単語の意味も辞書要らずのポップアップで簡単チェック。ボキャブラリーがどんどん増えます！")
     end
   end
 
   it "displays two articles" do
-    within "#latest_articles" do
-      expect(page).to have_css("li.article", :count => 2)
+    within ".catalog" do
+      expect(page).to have_css("li.catalog-entry", :count => 2)
     end
   end
 
   it "displays details about the articles" do
-    within "#latest_articles" do
+    within ".catalog" do
       expect(page).to have_selector("h2", :text => "Entertainment Dogs!")
       expect(page).to have_content("This article is all about dogs.")
       expect(page).to have_selector("h2", :text => "Entertainment Cats!")
@@ -39,20 +39,20 @@ feature 'Navigating home' do
   end
 
   it "displays study tools for respective articles" do
-    within "#latest_articles" do
-      expect(page).to have_css(".includes_tool", :text => "文化説明")
+    within ".catalog" do
+      expect(page).to have_css(".includes-tool", :text => "文化説明")
     end
   end
 
   it "has a footer" do
-    within "#main_footer" do
+    within "#main-footer" do
       within "#topics" do
         expect(page).to have_content("Entertainment")
       end
       within "#about" do
         expect(page).to have_content("ホーム", "SEZとは", "Contribute", "お問合せ")
       end
-      within "#social_media" do
+      within "#social-media" do
         expect(page).to have_selector("li", :count => 3)
       end
       within "#license" do

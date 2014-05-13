@@ -9,9 +9,9 @@ feature 'Navigating to an article' do
   before { visit '/article/dogs' }
 
   it "has a navigation header" do
-    within "#article_top_nav" do
+    within ".top-nav" do
       expect(page).to have_selector('h1', :text => "SEZ")
-      expect(page).to have_css('a#help', :text => "?")
+      expect(page).to have_css('#help', :text => "?")
     end
   end
 
@@ -21,19 +21,19 @@ feature 'Navigating to an article' do
   end
 
   it "displays a top level image" do
-    within "#article_top" do
+    within ".article-top" do
       expect(page).to have_css("img[src*='test_image.jpg']")
     end
   end
 
   it "displays the article title" do
-    within "#article_top" do
+    within ".article-top" do
       expect(page).to have_selector('h2', :text => "Dogs!")
     end
   end
 
   it "displays article meta info" do
-    within "#intro" do
+    within ".intro" do
       expect(page).to have_content("Entertainment")
       expect(page).to have_content(Time.zone.today.strftime("%Y年%m月%d日 掲載　James Baldwin 著"))
       expect(page).to have_content("This article is all about dogs.")
@@ -42,19 +42,19 @@ feature 'Navigating to an article' do
   end
 
   it "displays the article content" do
-    within "#article_body" do
+    within ".article-body" do
       expect(page).to have_content("I am the very model of a major modern general.")
     end
   end
 
   it "displays a link to the previous article" do
-    within "#next_reads" do
+    within ".next-reads" do
       expect(page).to have_content("前の記事：　Cats!")
     end
   end
 
   it "displays vocabulary" do
-    within "#vocab" do
+    within ".vocab" do
       expect(page).to have_content("general")
       expect(page).to have_content("relating to the main or major parts of something rather than the details")
       expect(page).to have_content("一般的")
