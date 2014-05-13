@@ -6,20 +6,18 @@
     %p
       = "#{@article.pubdate.strftime('%Y年%m月%d日')} 掲載"
       <br />
-      = "#{@author.name} 著" unless @author.name == "SEZ"
+      = "#{@article.author.name} 著" unless @article.author.name == "SEZ"
       <br />
       = "画像提供元：#{@article.image_attribution}" unless @article.image_attribution.empty?
 
   %section#article-body
     - unless @quiz.nil?
       %p.preview_study 読む前に単語を#{link_to "クイズゲーム", game_path(@quiz.id)}でチェック！
-    = raw @body
+    = raw @article.body
     = raw @article.figure unless @article.figure.nil?
-    = render 'layouts/social_media_recommend'
 
+  = render 'layouts/social_media_recommend'
   = render 'article/study_sections'
-
-  %footer
-    = render 'article/author_bio'
-    = render 'article/tags'
+  = render 'article/author', :author => @article.author
+  = render 'article/tags'
 

@@ -12,10 +12,11 @@
 
  @import "normalize-rails";
 
- @import "base/colors";
- @import "base/fonts";
- @import "base/elements";
- @import "base/mixins";
+ @import "shared/colors";
+ @import "shared/mixins";
+
+ @import "desktop/base/fonts";
+ @import "desktop/base/elements";
 
  @import "desktop/components/author";
  @import "desktop/components/bubble";

@@ -2,7 +2,7 @@
   text-align: center;
 
   h1 {
-    a { text-decoration: none; color: black; font-family: 'Acknowledgement', sans-serif; font-size: 800%; }
+    a { text-decoration: none; color: black; font-family: 'Acknowledgement', sans-serif; font-size: $font-massive; }
   }
 
   nav {
@@ -10,9 +10,9 @@
     ul {
       background-color: black; margin: 0 0 30px 0; text-align: right;
 
-      li { display: inline-block; font-size: 180%; margin-right: 40px; }
+      li { display: inline-block; font-size: $font-medium; margin-right: 40px; }
 
-      a { text-decoration: none; color: white; font-weight: bold; font-size: 150%; }
+      a { text-decoration: none; color: white; font-weight: bold; font-size: $font-regular; }
     }
   }
 }

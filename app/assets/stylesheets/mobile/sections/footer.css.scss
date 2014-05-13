@@ -1,4 +1,4 @@
-#main_footer {
+#main-footer {
 
   nav {
     a, a:visited, a:hover { color: black; }
@@ -11,10 +11,10 @@
     ul {
       padding: 50px 0 50px 0;
 
-      li { border-radius: 4px; font-size: 46px; margin: 20px auto 20px auto; padding: 40px; }
+      li { border-radius: 4px; font-size: $font-medium; margin: 20px auto 20px auto; padding: 40px; }
     }
 
-    #social_media li {
+    #social-media li {
       display: inline-block; text-align: center; width: 20%;
 
       img { width: 160px; }

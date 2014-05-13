@@ -1,19 +1,19 @@
 .catalog {
 
-  ul {
-    li {
-      padding: 40px 0 40px 0; border-bottom: 1px solid gray; position: relative;
-      img:first-child { width: 100%; }
-    }
+  .catalog-entry {
+    padding: 40px 0 40px 0; border-bottom: 1px solid gray; position: relative;
+    img:first-child { width: 100%; background: $calm-backdrop; }
   }
 
-  h2 a { text-decoration: underline; font-size: 42px; }
-  p    { font-size: 28px; line-height: 180%; }
+  .catalog-entry-info { padding: 15px; }
+
+  h2 { font-size: $font-large; font-weight: bold }
+  p  { font-size: $font-regular; line-height: 180%; }
 
 }
 
-.topic_marker {
-  font-size:        32px;
+.topic-marker {
+  font-size:        $font-medium;
   background-color: $hot-highlight;
   padding:          3px 5px 3px 5px;
   color:            white;
@@ -22,7 +22,7 @@
   vertical-align:   middle;
 }
 
-.attention_flag {
+.attention-flag {
   position: absolute;
   top:      60px;
   right:    0;

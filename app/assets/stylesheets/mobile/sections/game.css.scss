@@ -1,6 +1,6 @@
 #quiz-game {
 
-  #quiz-start { font-size: 80px; text-align: center; }
+  #quiz-start { font-size: $font-extra-large; text-align: center; }
 
   #instructions, #related-quizzes, #related-article { border-bottom: 1px solid gray; }
 
@@ -9,7 +9,7 @@
 
   #related-article {
     img { width: 100%; }
-    h4  { font-size: 40px; padding: 20px 0 0 30px; }
+    h4  { font-size: $font-medium; padding: 20px 0 0 30px; }
   }
 
 }

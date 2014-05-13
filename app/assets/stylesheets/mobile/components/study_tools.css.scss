@@ -1,5 +1,4 @@
 .study-tools {
-
   .includes-tool {
     width:         auto;
     display:       inline-block;
@@ -7,7 +6,7 @@
     border:        1px solid $dark-muted;
     border-radius: 4px;
     color:         #777;
-    font-size:     30px;
+    font-size:     $font-regular;
     font-weight:   bold;
   }
 }

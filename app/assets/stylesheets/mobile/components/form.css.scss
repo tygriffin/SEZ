@@ -1,34 +1,34 @@
 form {
-  dt, dd { margin: 0 0 30px 0; font-size: 300%; }
+  dt, dd { margin: 0 0 30px 0; font-size: $font-medium; }
 
   input[type=text], input[type=url], input[type=email], input[type=password], input[type=tel] {
-    @include vendor-prefex(appearance, none)
-    display: block; margin: 0; width: 80%; height: 80px; line-height: 40px; font-size: 180%;
+    @include vendor-prefix(appearance, none);
+    display: block; margin: 0; width: 80%; height: 80px; line-height: 40px; font-size: $font-regular;
   }
 
   textarea {
-    @include vendor-prefex(appearance, none)
-    display: block; margin: 0; width: 100%; height: 300px; line-height: 40px; font-size: 150%;
+    @include vendor-prefix(appearance, none);
+    display: block; margin: 0; width: 100%; height: 300px; line-height: 40px; font-size: $font-regular;
   }
 
   .submit {
-    @include vendor-prefex(appearance, none)
+    @include vendor-prefix(appearance, none);
     display:     block;
     margin:      1.5em 0;
-    font-size:   50px;
+    font-size:   $font-large;
     line-height: 2.5em;
     font-weight: bold;
     height:      2.5em;
     width:       100%;
     background:  #f5fcfa;
     border:      1px solid #bbb;
-    @include background-gradient(top, #f5fcfa 0%, #c5ccca 100%)
+    @include background-gradient(top, #f5fcfa 0%, #c5ccca 100%);
   }
 
 }
 
 .contact_flash {
-  font-size:   36px;
+  font-size:   $font-regular;
   color:       $medium-highlight;
   font-weight: bold;
   text-align:  center;

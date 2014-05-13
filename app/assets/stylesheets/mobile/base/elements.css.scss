@@ -4,11 +4,11 @@ h2, h3, h4, p, ul, ol, li, dl, dt, dd, pre, blockquote { font-family: 'Chivo', s
 
 h1 { font-family: Acknowledgement, serif; }
 
-h1, h2, h3, h4 { line-height: 120%; }
+h2, h3, h4 { line-height: 120%; }
 
 h2 { font-size: $font-large; }
 
-p, ul, ol, li, pre, blockquote { line-height: 160%; font-size: $font-regular }
+p, ul, ol, li, pre, blockquote { line-height: 200%; font-size: $font-regular }
 
 p { text-align: left; }
 

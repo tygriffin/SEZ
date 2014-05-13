@@ -1,0 +1,25 @@
+.wf-loading * {
+    // Hides flash of unstyled text
+    opacity: 0;
+}
+
+@font-face {
+  font-family: 'Acknowledgement';
+  src: font-url('Acknowledgement-webfont.eot');
+  src: font-url('Acknowledgement-webfont.eot?#iefix') format('embedded-opentype'),
+       font-url('Acknowledgement-webfont.woff') format('woff'),
+       font-url('Acknowledgement-webfont.ttf') format('truetype'),
+       font-url('Acknowledgement-webfont.svg#Acknowledgement-webfont') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@import url(http://fonts.googleapis.com/css?family=Chivo);
+
+$font-extra-small:  20px;
+$font-small:        22px;
+$font-regular:      26px;
+$font-medium:       40px;
+$font-large:        60px;
+$font-extra-large:  70px;
+$font-massive:     200px;

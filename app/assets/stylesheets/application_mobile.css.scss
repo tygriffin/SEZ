@@ -12,10 +12,11 @@
 
  @import "normalize-rails";
 
- @import "base/colors";
- @import "base/elements";
- @import "base/fonts";
- @import "base/mixins";
+ @import "shared/colors";
+ @import "shared/mixins";
+
+ @import "mobile/base/fonts";
+ @import "mobile/base/elements";
 
  @import "mobile/components/author";
  @import "mobile/components/catalog";
@@ -30,3 +31,4 @@
  @import "mobile/sections/footer";
  @import "mobile/sections/game";
  @import "mobile/sections/header";
+ @import "mobile/sections/static";
