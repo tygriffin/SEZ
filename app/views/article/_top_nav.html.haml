@@ -1,8 +1,8 @@
-%nav#article_top_nav
+%nav.top-nav
   %h1 #{link_to "SEZ", root_path}
   = link_to "?", "#help_modal", :id => "help"
-  #help_modal.modal_dialog
-    #inner_modal
+  #help-modal.modal-dialog
+    #inner-modal
       = link_to "X", "#close", :title => "Close", :class => "close"
       %h2 SEZの使い方
 
@@ -12,5 +12,5 @@
 
       %p 赤点線が引かれている単語にマウスポインターを合わせると、説明文が画面左下に表示されます。
 
-      %p.example_popup
-        = link_to "このリンクにマウスポインターを合わせてみて！", "", :id => "help_bubble", :class => "article_bubble_trigger"
+      %p.example-popup
+        = link_to "このリンクにマウスポインターを合わせてみて！", "", :id => "help-bubble", :class => "bubble-trigger"

@@ -1,0 +1,14 @@
+.top-nav {
+  background-color: black; text-align: center; padding: 2px;
+  position: fixed; top: 0; width: 100%; z-index: 100;
+}
+.top-nav h1      { font-size: $font-medium; }
+.top-nav a       { color: white; }
+.top_nav a:hover { text-decoration: none; }
+
+#help {
+  float: right; margin: 2px 20px 0 0; padding: 2px 6px 0 5px;
+  text-decoration: none; border: 1px solid white; border-radius: 2px;
+  font-weight: bold;
+  &:hover { background-color: white; color: black; }
+}

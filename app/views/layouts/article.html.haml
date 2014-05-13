@@ -7,12 +7,12 @@
 
 %body
 
-  #article-show
+  = render 'article/top_nav' unless mobile_device?
+  = render 'article/header'  unless mobile_device?
 
-    = render 'article/top_nav' unless mobile_device?
-    = render 'article/header'  unless mobile_device?
+  #wrapper
 
-    #wrapper
+    %article
 
       = yield
 

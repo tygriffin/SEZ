@@ -10,7 +10,7 @@
       <br />
       = "画像提供元：#{@article.image_attribution}" unless @article.image_attribution.empty?
 
-  %section#article_body
+  %section#article-body
     - unless @quiz.nil?
       %p.preview_study 読む前に単語を#{link_to "クイズゲーム", game_path(@quiz.id)}でチェック！
     = raw @body

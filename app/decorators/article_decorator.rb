@@ -43,9 +43,9 @@ class ArticleDecorator < Decorator
       selector = item.has_attribute?(:word) ? item.word : item.title
       if @object.body.include? item.instance
         if @view_context.mobile_device?
-          text = '<a class="article_bubble_trigger" id="' + selector + '">' + item.instance + '</a>'
+          text = '<a class="bubble-trigger" id="' + selector + '">' + item.instance + '</a>'
         else
-          text = '<a href="#' + selector.tr(" ", "_") + '_detail" class="article_bubble_trigger" id="' + selector + '">' + item.instance + '</a>'
+          text = '<a href="#' + selector.tr(" ", "_") + '_detail" class="bubble-trigger" id="' + selector + '">' + item.instance + '</a>'
         end
         content.gsub! item.instance, text
       end

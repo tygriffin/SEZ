@@ -1,0 +1,29 @@
+.modal-dialog {
+  position: fixed; top: 0; right: 0; bottom: 0; left: 0;
+  display: none;
+  background: rgba(0, 0, 0, 0.8);
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)"; /* IE transparency */
+  filter: alpha(opacity=50); /* More IE transparency */
+  z-index: 99998;
+}
+
+.modal-dialog > div {
+  width: 600px; position: relative; margin: 10% auto; padding: 30px; border-radius: 10px;
+  background: white;
+  @include background-gradient(white, #999);
+}
+
+.modal-dialog h2 { margin-bottom: 20px }
+.modal-dialog p  { line-height: 180% }
+
+.close {
+  line-height: 25px; text-align: center; width: 24px;
+  position: absolute; right: -12px; top: -10px;
+  text-decoration: none; font-weight: bold; background: $dark-muted; color: white;
+  @include vendor-prefix(border-radius, 12px);
+  @include vendor-prefix(box-shadow, 1px 1px 3px black);
+  &:hover { background: $bright-highlight; text-decoration: none; }
+}
+
+.example-popup                 { background-color: #eee; padding: 6px; border-radius: 10px; text-align: center; }
+.example-popup .bubble-trigger { color: black; }

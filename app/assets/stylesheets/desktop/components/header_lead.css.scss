@@ -1,0 +1,10 @@
+.header-lead {
+  border-top:    4px solid #000;
+  border-bottom: 1px solid #000;
+  padding:       25px 40px 25px 40px;
+  margin-bottom: 1em;
+}
+
+.header-lead p { text-align: center; font-size: $font-medium }
+
+.bird-logo { float: right; width: 140px; margin: 0 30px 0 60px; }

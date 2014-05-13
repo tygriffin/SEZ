@@ -1,6 +1,6 @@
 - unless author.bio.blank? || author.name == "SEZ"
-  %section#author
-    %h4著者紹介
+  %section.author
+    %h4 著者紹介
     = image_tag author.image_url(:profile) unless author.image.nil?
     %ul
       = content_tag(:li, author.name)

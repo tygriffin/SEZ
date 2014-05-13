@@ -1,23 +1,21 @@
-#topic-show
+%h2 #{@topic.name}
 
-  %h2 #{@topic.name}
+%p.header-lead #{@topic.description}
 
-  %p.sub_header_lead #{@topic.description}
+%section.catalog
 
-  %section#latest_articles
-
-    %ul#latest_articles
-      - @articles.each do |article|
-        = link_to article do
-          %li
-            = image_tag article.image_url(:in_focus)
-            .article_info
-              %h2 #{article.title}
-              %p
-                %i
-                  = "#{article.pubdate.strftime('%Y年%m月%d日')} 掲載　#{article.author.name}著" unless article.author.name == "SEZ"
-              %p #{article.description}
-              = render 'layouts/study_tools', :article => article
+  %ul
+    - @articles.each do |article|
+      = link_to article do
+        %li.catalog-entry
+          = image_tag article.image_url(:in_focus)
+          .catalog-entry-info
+            %h2 #{article.title}
+            %p
+              %i
+                = "#{article.pubdate.strftime('%Y年%m月%d日')} 掲載　#{article.author.name}著" unless article.author.name == "SEZ"
+            %p #{article.description}
+            = render 'layouts/study_tools', :article => article
 
 
 

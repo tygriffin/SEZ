@@ -1,0 +1,13 @@
+.author {
+  min-height: 500px;
+
+  h4  { font-size: 300%; font-weight: bold; margin-left: 20px; }
+  ul  { margin-left: 340px; }
+
+  li  { color: $dark-muted; margin-bottom: 30px; font-size: 36px; line-height: 140%; }
+  img {
+    @include vendor-prefix(border-radius, 60px);
+    float: left;
+    margin-left: 20px;
+  }
+}

@@ -11,5 +11,22 @@
  */
 
  @import "normalize-rails";
- @import "mobile_base";
- @import "article_mobile";
+
+ @import "base/colors";
+ @import "base/elements";
+ @import "base/fonts";
+ @import "base/mixins";
+
+ @import "mobile/components/author";
+ @import "mobile/components/catalog";
+ @import "mobile/components/form";
+ @import "mobile/components/header_lead";
+ @import "mobile/components/social_media";
+ @import "mobile/components/study_section";
+ @import "mobile/components/study_tools";
+ @import "mobile/components/tags";
+
+ @import "mobile/sections/article";
+ @import "mobile/sections/footer";
+ @import "mobile/sections/game";
+ @import "mobile/sections/header";

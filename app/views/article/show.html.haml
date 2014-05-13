@@ -1,31 +1,28 @@
-%article
-  %section#article_body
-    - unless @article.quiz.nil?
-      %p.preview_study 読む前に単語を #{link_to("クイズゲーム", game_path(@article.quiz.id), :class => "quiz_game_link")}でチェック！
-    = raw @article.figure unless @article.figure.nil?
-    = raw @article.body
+%section.article-body
+  - unless @article.quiz.nil?
+    %p.emphatic 読む前に単語を #{link_to("クイズゲーム", game_path(@article.quiz.id), :class => "quiz_game_link")}でチェック！
+  = content_tag(:div, (raw @article.figure), :class => "top-figure") unless @article.figure.nil?
+  = raw @article.body
 
-    = render 'layouts/social_media_recommend'
+= render 'layouts/social_media_recommend'
 
-  %section#next_reads
-    %h3 次に読むのは．．．
-    %p #{link_to("同じカテゴリー #{@article.topic.name}", @article.topic, :class => "topic_marker")}についてもっと読む。それとも最近の記事を読む：
-    %ul
-      - unless @article.previous.nil?
-        = link_to @article.previous do
-          %li
-            = image_tag @article.previous.image_url(:thumb)
-            %p <em>前の記事：</em> #{@article.previous.title}
-      - unless @article.next.nil?
-        = link_to @article.next do
-          %li
-            = image_tag @article.next.image_url(:thumb)
-            %p <em>次の記事：</em> #{@article.next.title}
+%section.next-reads
+  %h3 次に読むのは．．．
+  %p #{link_to("同じカテゴリー #{@article.topic.name}", @article.topic, :class => "topic_marker")}についてもっと読む。それとも最近の記事を読む：
+  %ul
+    - unless @article.previous.nil?
+      = link_to @article.previous, :class => "neighbor-article" do
+        %li
+          = image_tag @article.previous.image_url(:thumb)
+          %p <em>前の記事：</em> #{@article.previous.title}
+    - unless @article.next.nil?
+      = link_to @article.next, :class => "neighbor-article" do
+        %li
+          = image_tag @article.next.image_url(:thumb)
+          %p <em>次の記事：</em> #{@article.next.title}
 
-  = render 'article/study_sections'
-
-  %footer
-    = render 'article/author_bio', :author => @article.author
-    = render 'article/tags'
+= render 'article/study_sections'
+= render 'article/author', :author => @article.author
+= render 'article/tags'
 
 

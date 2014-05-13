@@ -1,7 +1,7 @@
 $( document ).ready ->
 
   #show modal
-  $( '#help' ).click -> $( '#help_modal' ).fadeIn 600
+  $( '#help' ).click -> $( '#help-modal' ).fadeIn 600
 
   #hide modal
-  $( '.close' ).click -> $( '#help_modal' ).fadeOut 'slow'
+  $( '.close' ).click -> $( '#help-modal' ).fadeOut 'slow'

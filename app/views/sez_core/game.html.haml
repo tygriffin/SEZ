@@ -1,13 +1,13 @@
-%section#quiz_game
+%section#quiz-game
 
   %iframe{:src => "/quizzes/#{@quiz.id}"}
 
-  #quiz_meta
+  #quiz-meta
     %section#instructions
       %h3 効果的な使い方
       %p スタートボタンをクリックしてから数秒後に単語の選択肢がいくつか現れます。現れるまでの数秒間に正解となりそうな単語を推測してみてください。選択肢から一つ選んでクリックすると、答えが例文とともに現れます。例文を声に出して読んでみてください。きっと覚えるのに役立つはずです！
 
-    %section#related_quizzes
+    %section#related-quizzes
       %h3 同じ単語を使った他のゲーム
       - unless @quiz.related.empty?
         %ul
@@ -19,7 +19,7 @@
       - else
         %p なし
 
-    %section#related_article
+    %section#related-article
       %h3 ゲームが終わったら、記事を読んでみて！
       %div
         = image_tag @quiz.article.image_url(:main)

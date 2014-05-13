@@ -1,28 +1,28 @@
 - unless @article.vocab.blank?
-  %section#vocab
+  %section.study-section.vocab
     %h3 Vocabulary
-    %ul
+    %ol
       - @article.vocab.each do | vocab |
         = content_tag :li, :id => vocab.word.tr(" ", "_")+'_detail' do
           <strong>#{vocab.word}</strong> (#{vocab.part_of_speech}): #{vocab.definition} 【#{vocab.translation}】
 
 - unless @article.culture_notes.blank?
-  %section#culture_notes
+  %section.study-section.culture-notes
     %h3 Culture Notes
-    %ul
+    %ol
       - @article.culture_notes.each do | entry |
         = content_tag :li, :id => entry.title.tr(" ", "_")+'_detail' do
           <strong>#{entry.title}</strong>: #{raw entry.body}
 
 - unless @article.study_notes.blank?
-  %section#study_notes
+  %section.study-section.study-notes
     %h3 Study Notes
-    %ul
+    %ol
       - @article.study_notes.each do | entry |
         = content_tag :li, :id => entry.title.tr(" ", "_")+'_detail' do
           <strong>#{entry.title}</strong>: #{raw entry.body}
 
 - unless @article.audio.blank?
-  %section#audio
+  %section.audio
     %h3 Audio
     = raw @article.audio

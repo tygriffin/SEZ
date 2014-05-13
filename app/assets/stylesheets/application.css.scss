@@ -11,11 +11,28 @@
  */
 
  @import "normalize-rails";
- @import "base";
- @import "article";
- @import "contact";
- @import "home";
- @import "popup_base";
- @import "static_page";
- @import "topic";
- @import "game";
+
+ @import "base/colors";
+ @import "base/fonts";
+ @import "base/elements";
+ @import "base/mixins";
+
+ @import "desktop/components/author";
+ @import "desktop/components/bubble";
+ @import "desktop/components/catalog";
+ @import "desktop/components/form";
+ @import "desktop/components/header_lead";
+ @import "desktop/components/modal";
+ @import "desktop/components/popup_base";
+ @import "desktop/components/social_media";
+ @import "desktop/components/study_section";
+ @import "desktop/components/study_tools";
+ @import "desktop/components/tags";
+ @import "desktop/components/top_nav";
+
+ @import "desktop/sections/article";
+ @import "desktop/sections/footer";
+ @import "desktop/sections/game";
+ @import "desktop/sections/headers";
+ @import "desktop/sections/static";
+

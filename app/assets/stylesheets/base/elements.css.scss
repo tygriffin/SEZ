@@ -1,0 +1,28 @@
+h1, h2, h3, h4, p, ul, ol, li, dl, dt, dd, pre, blockquote { padding: 0; margin: 0; color: black }
+
+h2, h3, h4, p, ul, ol, li, dl, dt, dd, pre, blockquote { font-family: 'Chivo', sans-serif; }
+
+h1 { font-family: Acknowledgement, serif; }
+
+h1, h2, h3, h4 { line-height: 120%; }
+
+h2 { font-size: $font-large; }
+
+p, ul, ol, li, pre, blockquote { line-height: 160%; font-size: $font-regular }
+
+p { text-align: left; }
+
+ul { list-style: none; }
+
+a {
+  text-decoration: none; color: black;
+  &:hover { text-decoration: underline; }
+}
+
+#container { max-width: 1025px; margin: 0 auto; padding-bottom: 40px; }
+
+.emphatic  { font-weight: bold; font-style: italic; }
+.poetry    { font-style: italic; border-left: 6px solid #ccc; padding-left: 20px; }
+blockquote { padding-left: 20px; border-left: 6px solid #ccc; }
+
+

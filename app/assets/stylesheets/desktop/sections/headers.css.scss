@@ -1,0 +1,21 @@
+h1 {
+  display: inline-block; font-size: 120px;
+  a {
+    font-family: 'Acknowledgement', sans-serif;
+    &:hover { text-decoration: none; }
+  }
+}
+
+#main-header {
+  position: relative;
+  nav { position: absolute; bottom: 20px; right: 5px; }
+  li  { display: inline-block; margin-left: 13px; font-size: $font-regular; }
+}
+
+@media all and (max-width: 500px) {
+
+  #main-header {
+    nav { bottom: 0 }
+  }
+
+}
