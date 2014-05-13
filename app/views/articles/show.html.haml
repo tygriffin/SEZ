@@ -21,8 +21,8 @@
           = image_tag @article.next.image_url(:thumb)
           %p <em>次の記事：</em> #{@article.next.title}
 
-= render 'article/study_sections'
-= render 'article/author', :author => @article.author
-= render 'article/tags'
+= render 'articles/study_sections'
+= render 'articles/author', :author => @article.author
+= render 'articles/tags'
 
 

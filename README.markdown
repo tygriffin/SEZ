@@ -3,6 +3,15 @@ Simple English Zine
 
 This project was a magazine written in simple language for Japanese learners of English, but now I use it primarily for my web development portfolio. I made it using Rails. And by the way, I did all the illustrations!
 
+Skills I'm showing off:
+-----------------------
+
++ Ruby on Rails!
++ Coffeescript! [peek the code!](https://github.com/tygriffin/SEZ/blob/master/app/assets/javascripts/popup_bubble.js.coffee)
++ From scratch sassy styling! [peek the code](https://github.com/tygriffin/SEZ/blob/master/app/assets/stylesheets/desktop/components/catalog.css.scss)
++ Decorator patter! [peek the code](https://github.com/tygriffin/SEZ/blob/master/app/decorators/article_decorator.rb)
++ All [illustrations](http://simpleenglishzine.com/article/a-picture-of-solidarity-yuri-kochiyama) were drawn by me!
+
 Where to check the live app:
 ----------------------------
 

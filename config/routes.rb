@@ -5,18 +5,14 @@ SEZWebsite::Application.routes.draw do
   get  '/about'       => 'sez_core#about'
   get  '/archive'     => 'sez_core#archive'
   get  '/contribute'  => 'sez_core#contribute'
-  get  '/contact'     => 'contact#new',         :as => 'contact'
-  post '/contact'     => 'contact#create',      :as => 'contact_create'
-  get  '/game/:id'    => 'sez_core#game',       :as => 'game'
-  get  '/feed'        => 'article#feed',        :as => :feed,    :defaults => { :format => 'rss' }
+  get  '/contact'     => 'contacts#new',         :as => 'contact'
+  post '/contact'     => 'contacts#create',      :as => 'contact_create'
+  get  '/game/:id'    => 'sez_core#game',        :as => 'game'
+  get  '/feed'        => 'articles#feed',        :as => :feed,    :defaults => { :format => 'rss' }
 
-  resources :article
-  resources :vocabulary_word
-  resources :culture_note
-  resources :tag
-  resources :topic
+  resources :articles
+  resources :topics
   resources :quizzes
-  resource  :quiz
 
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
