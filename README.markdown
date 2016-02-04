@@ -15,7 +15,7 @@ Skills I'm showing off:
 Where to check the live app:
 ----------------------------
 
-[SimpleEnglishZine.com](http://simpleenglishzine.com)
+[SimpleEnglishZine](http://pacific-river-5605.herokuapp.com/)
 
 So is this app good?
 --------------------
