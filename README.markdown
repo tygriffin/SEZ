@@ -9,7 +9,7 @@ Skills I'm showing off:
 + Ruby on Rails!
 + Coffeescript! [peek the code](https://github.com/tygriffin/SEZ/blob/master/app/assets/javascripts/popup_bubble.js.coffee)
 + From scratch sassy styling! [peek the code](https://github.com/tygriffin/SEZ/blob/master/app/assets/stylesheets/desktop/components/catalog.css.scss)
-+ Decorator patter! [peek the code](https://github.com/tygriffin/SEZ/blob/master/app/decorators/article_decorator.rb)
++ Decorator pattern! [peek the code](https://github.com/tygriffin/SEZ/blob/master/app/decorators/article_decorator.rb)
 + All [illustrations](http://simpleenglishzine.com/article/a-picture-of-solidarity-yuri-kochiyama) were drawn by me!
 
 Where to check the live app:
